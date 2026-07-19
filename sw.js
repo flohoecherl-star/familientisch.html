@@ -1,6 +1,6 @@
 /* Familientisch – Service Worker
-   Neben die HTML-Datei ins gleiche Verzeichnis legen. */
-const CACHE = 'familientisch-v1';
+   Network-First: HTML wird immer frisch geladen, Cache nur als Offline-Fallback. */
+const CACHE = 'familientisch-v2';
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(['./'])));
@@ -18,6 +18,20 @@ self.addEventListener('activate', e => {
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
   if (e.request.url.includes('api.anthropic.com')) return; // KI-Aufrufe nie cachen
+
+  // HTML / Navigation: immer zuerst das Netz fragen, Cache nur offline
+  if (e.request.mode === 'navigate' || e.request.destination === 'document') {
+    e.respondWith(
+      fetch(e.request).then(res => {
+        const copy = res.clone();
+        caches.open(CACHE).then(c => c.put(e.request, copy));
+        return res;
+      }).catch(() => caches.match(e.request).then(hit => hit || caches.match('./')))
+    );
+    return;
+  }
+
+  // Alles andere (Fonts etc.): Cache-First ist okay
   e.respondWith(
     caches.match(e.request).then(hit =>
       hit || fetch(e.request).then(res => {
