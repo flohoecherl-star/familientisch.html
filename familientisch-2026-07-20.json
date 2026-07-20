@@ -1,0 +1,1992 @@
+{
+ "setup": {
+  "anker": "2026-07-19",
+  "intervalle": [
+   3,
+   3,
+   2,
+   3,
+   5,
+   3,
+   2
+  ],
+  "pHaus": 3,
+  "pMit": 1,
+  "pMittag": 2,
+  "apiKey": "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"
+ },
+ "rezepte": [
+  {
+   "id": "rhy8nuhq",
+   "name": "Hähnchen-Reispfanne mit Paprika",
+   "zeit": 30,
+   "basisPortionen": 4,
+   "tags": [
+    "proteinreich",
+    "mealprep",
+    "One-Pot"
+   ],
+   "zutaten": [
+    {
+     "name": "Hähnchenbrust",
+     "menge": 600,
+     "einheit": "g",
+     "kategorie": "Fleisch & Fisch"
+    },
+    {
+     "name": "Basmatireis",
+     "menge": 300,
+     "einheit": "g",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Paprika",
+     "menge": 3,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Zwiebel",
+     "menge": 1,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Erbsen TK",
+     "menge": 200,
+     "einheit": "g",
+     "kategorie": "Tiefkühl"
+    },
+    {
+     "name": "Sojasauce",
+     "menge": 3,
+     "einheit": "EL",
+     "kategorie": "Gewürze & Öl"
+    },
+    {
+     "name": "Olivenöl",
+     "menge": 2,
+     "einheit": "EL",
+     "kategorie": "Gewürze & Öl"
+    },
+    {
+     "name": "Paprikapulver",
+     "menge": 2,
+     "einheit": "TL",
+     "kategorie": "Gewürze & Öl"
+    }
+   ],
+   "schritte": "Reis kochen. Hähnchen würfeln und scharf anbraten, Zwiebel und Paprika dazu. Erbsen und Reis unterheben, mit Sojasauce und Paprikapulver abschmecken.",
+   "protein": 38,
+   "budget": 2
+  },
+  {
+   "id": "rh4jbfqg",
+   "name": "Linsenbolognese mit Vollkornnudeln",
+   "zeit": 35,
+   "basisPortionen": 4,
+   "tags": [
+    "proteinreich",
+    "vegetarisch",
+    "mealprep",
+    "kindgerecht"
+   ],
+   "zutaten": [
+    {
+     "name": "Rote Linsen",
+     "menge": 250,
+     "einheit": "g",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Vollkornnudeln",
+     "menge": 500,
+     "einheit": "g",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Passierte Tomaten",
+     "menge": 700,
+     "einheit": "g",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Karotte",
+     "menge": 2,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Zwiebel",
+     "menge": 1,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Knoblauchzehen",
+     "menge": 2,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Parmesan",
+     "menge": 80,
+     "einheit": "g",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Olivenöl",
+     "menge": 2,
+     "einheit": "EL",
+     "kategorie": "Gewürze & Öl"
+    },
+    {
+     "name": "Oregano",
+     "menge": 2,
+     "einheit": "TL",
+     "kategorie": "Gewürze & Öl"
+    }
+   ],
+   "schritte": "Zwiebel, Knoblauch und geraspelte Karotte anschwitzen. Linsen und Tomaten dazu, 20 Minuten köcheln. Nudeln kochen, mit Parmesan servieren.",
+   "protein": 24,
+   "budget": 1
+  },
+  {
+   "id": "rvz6fx4r",
+   "name": "Ofengemüse mit Feta und Kichererbsen",
+   "zeit": 40,
+   "basisPortionen": 4,
+   "tags": [
+    "vegetarisch",
+    "mealprep",
+    "leicht"
+   ],
+   "zutaten": [
+    {
+     "name": "Süßkartoffel",
+     "menge": 600,
+     "einheit": "g",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Zucchini",
+     "menge": 2,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Rote Zwiebel",
+     "menge": 2,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Kichererbsen",
+     "menge": 2,
+     "einheit": "Dose",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Feta",
+     "menge": 200,
+     "einheit": "g",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Olivenöl",
+     "menge": 4,
+     "einheit": "EL",
+     "kategorie": "Gewürze & Öl"
+    },
+    {
+     "name": "Kreuzkümmel",
+     "menge": 2,
+     "einheit": "TL",
+     "kategorie": "Gewürze & Öl"
+    }
+   ],
+   "schritte": "Gemüse würfeln, mit Kichererbsen, Öl und Gewürzen mischen, 30 Minuten bei 200 °C backen. Feta darüber bröseln.",
+   "protein": 20,
+   "budget": 2
+  },
+  {
+   "id": "revaln6s",
+   "name": "Rindergulasch mit Kartoffeln",
+   "zeit": 150,
+   "basisPortionen": 5,
+   "tags": [
+    "soulfood",
+    "mealprep"
+   ],
+   "zutaten": [
+    {
+     "name": "Rindergulasch",
+     "menge": 900,
+     "einheit": "g",
+     "kategorie": "Fleisch & Fisch"
+    },
+    {
+     "name": "Zwiebel",
+     "menge": 4,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Kartoffeln",
+     "menge": 1200,
+     "einheit": "g",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Tomatenmark",
+     "menge": 2,
+     "einheit": "EL",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Rinderbrühe",
+     "menge": 700,
+     "einheit": "ml",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Paprikapulver",
+     "menge": 2,
+     "einheit": "EL",
+     "kategorie": "Gewürze & Öl"
+    },
+    {
+     "name": "Rapsöl",
+     "menge": 3,
+     "einheit": "EL",
+     "kategorie": "Gewürze & Öl"
+    }
+   ],
+   "schritte": "Fleisch scharf anbraten, Zwiebeln dazu, Tomatenmark rösten, mit Brühe ablöschen und 2 Stunden schmoren. Kartoffeln separat kochen.",
+   "protein": 40,
+   "budget": 3
+  },
+  {
+   "id": "rkopvdgb",
+   "name": "Lachs aus dem Ofen mit Brokkoli und Kartoffeln",
+   "zeit": 35,
+   "basisPortionen": 4,
+   "tags": [
+    "proteinreich",
+    "leicht",
+    "schnell"
+   ],
+   "zutaten": [
+    {
+     "name": "Lachsfilet",
+     "menge": 600,
+     "einheit": "g",
+     "kategorie": "Fleisch & Fisch"
+    },
+    {
+     "name": "Brokkoli",
+     "menge": 700,
+     "einheit": "g",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Kartoffeln",
+     "menge": 900,
+     "einheit": "g",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Zitrone",
+     "menge": 1,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Olivenöl",
+     "menge": 3,
+     "einheit": "EL",
+     "kategorie": "Gewürze & Öl"
+    },
+    {
+     "name": "Kräuterbutter",
+     "menge": 80,
+     "einheit": "g",
+     "kategorie": "Molkerei & Eier"
+    }
+   ],
+   "schritte": "Kartoffeln vorkochen, mit Brokkoli und Lachs auf ein Blech, ölen, würzen, 18 Minuten bei 200 °C.",
+   "protein": 34,
+   "budget": 3
+  },
+  {
+   "id": "rzj3i503",
+   "name": "Chili con Carne",
+   "zeit": 50,
+   "basisPortionen": 6,
+   "tags": [
+    "proteinreich",
+    "soulfood",
+    "mealprep",
+    "One-Pot"
+   ],
+   "zutaten": [
+    {
+     "name": "Rinderhackfleisch",
+     "menge": 700,
+     "einheit": "g",
+     "kategorie": "Fleisch & Fisch"
+    },
+    {
+     "name": "Kidneybohnen",
+     "menge": 2,
+     "einheit": "Dose",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Mais",
+     "menge": 1,
+     "einheit": "Dose",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Gehackte Tomaten",
+     "menge": 800,
+     "einheit": "g",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Paprika",
+     "menge": 2,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Zwiebel",
+     "menge": 2,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Kreuzkümmel",
+     "menge": 2,
+     "einheit": "TL",
+     "kategorie": "Gewürze & Öl"
+    },
+    {
+     "name": "Chilipulver",
+     "menge": 1,
+     "einheit": "TL",
+     "kategorie": "Gewürze & Öl"
+    }
+   ],
+   "schritte": "Hack krümelig braten, Zwiebel und Paprika dazu, Tomaten, Bohnen, Mais und Gewürze zugeben, 30 Minuten köcheln.",
+   "protein": 32,
+   "budget": 2
+  },
+  {
+   "id": "re6qm596",
+   "name": "Kaiserschmarrn mit Apfelmus",
+   "zeit": 30,
+   "basisPortionen": 4,
+   "tags": [
+    "soulfood",
+    "kindgerecht",
+    "vegetarisch"
+   ],
+   "zutaten": [
+    {
+     "name": "Mehl",
+     "menge": 250,
+     "einheit": "g",
+     "kategorie": "Backwaren"
+    },
+    {
+     "name": "Eier",
+     "menge": 6,
+     "einheit": "Stück",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Milch",
+     "menge": 400,
+     "einheit": "ml",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Butter",
+     "menge": 60,
+     "einheit": "g",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Rosinen",
+     "menge": 60,
+     "einheit": "g",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Apfelmus",
+     "menge": 400,
+     "einheit": "g",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Puderzucker",
+     "menge": 30,
+     "einheit": "g",
+     "kategorie": "Backwaren"
+    }
+   ],
+   "schritte": "Teig anrühren, Eiweiß steif schlagen und unterheben. In Butter ausbacken, zerreißen, karamellisieren.",
+   "protein": 15,
+   "budget": 1
+  },
+  {
+   "id": "rmmhj176",
+   "name": "Hackfleisch-Kartoffel-Auflauf",
+   "zeit": 60,
+   "basisPortionen": 5,
+   "tags": [
+    "soulfood",
+    "kindgerecht",
+    "mealprep"
+   ],
+   "zutaten": [
+    {
+     "name": "Rinderhackfleisch",
+     "menge": 600,
+     "einheit": "g",
+     "kategorie": "Fleisch & Fisch"
+    },
+    {
+     "name": "Kartoffeln",
+     "menge": 1200,
+     "einheit": "g",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Sahne",
+     "menge": 300,
+     "einheit": "ml",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Gouda gerieben",
+     "menge": 200,
+     "einheit": "g",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Zwiebel",
+     "menge": 2,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Muskat",
+     "menge": 1,
+     "einheit": "Prise",
+     "kategorie": "Gewürze & Öl"
+    }
+   ],
+   "schritte": "Kartoffelscheiben und angebratenes Hack schichten, Sahne angießen, Käse darüber, 45 Minuten bei 190 °C.",
+   "protein": 30,
+   "budget": 2
+  },
+  {
+   "id": "rkorhop3",
+   "name": "Türkische Bulgurpfanne mit Joghurt",
+   "zeit": 30,
+   "basisPortionen": 4,
+   "tags": [
+    "schnell",
+    "vegetarisch",
+    "proteinreich"
+   ],
+   "zutaten": [
+    {
+     "name": "Bulgur",
+     "menge": 300,
+     "einheit": "g",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Kichererbsen",
+     "menge": 1,
+     "einheit": "Dose",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Tomaten",
+     "menge": 4,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Petersilie",
+     "menge": 1,
+     "einheit": "Bund",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Naturjoghurt",
+     "menge": 500,
+     "einheit": "g",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Tomatenmark",
+     "menge": 2,
+     "einheit": "EL",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Olivenöl",
+     "menge": 3,
+     "einheit": "EL",
+     "kategorie": "Gewürze & Öl"
+    }
+   ],
+   "schritte": "Bulgur quellen lassen. Tomatenmark und Tomaten anbraten, Kichererbsen dazu, mit Bulgur mischen, Joghurt und Petersilie obendrauf.",
+   "protein": 22,
+   "budget": 1
+  },
+  {
+   "id": "rty0c2i6",
+   "name": "Süßkartoffel-Hähnchen-Curry",
+   "zeit": 40,
+   "basisPortionen": 5,
+   "tags": [
+    "proteinreich",
+    "mealprep",
+    "One-Pot"
+   ],
+   "zutaten": [
+    {
+     "name": "Hähnchenschenkel ohne Knochen",
+     "menge": 700,
+     "einheit": "g",
+     "kategorie": "Fleisch & Fisch"
+    },
+    {
+     "name": "Süßkartoffel",
+     "menge": 700,
+     "einheit": "g",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Kokosmilch",
+     "menge": 800,
+     "einheit": "ml",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Currypaste",
+     "menge": 3,
+     "einheit": "EL",
+     "kategorie": "Gewürze & Öl"
+    },
+    {
+     "name": "Basmatireis",
+     "menge": 300,
+     "einheit": "g",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Limette",
+     "menge": 1,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Spinat TK",
+     "menge": 200,
+     "einheit": "g",
+     "kategorie": "Tiefkühl"
+    }
+   ],
+   "schritte": "Currypaste anrösten, Hähnchen anbraten, Süßkartoffel und Kokosmilch dazu, 25 Minuten köcheln, Spinat unterheben.",
+   "protein": 30,
+   "budget": 2
+  },
+  {
+   "id": "revvijpa",
+   "name": "Putengeschnetzeltes mit Champignons und Reis",
+   "zeit": 30,
+   "basisPortionen": 4,
+   "tags": [
+    "proteinreich",
+    "kindgerecht"
+   ],
+   "zutaten": [
+    {
+     "name": "Putenbrust",
+     "menge": 600,
+     "einheit": "g",
+     "kategorie": "Fleisch & Fisch"
+    },
+    {
+     "name": "Champignons",
+     "menge": 400,
+     "einheit": "g",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Basmatireis",
+     "menge": 300,
+     "einheit": "g",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Sahne",
+     "menge": 200,
+     "einheit": "ml",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Zwiebel",
+     "menge": 1,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Rapsöl",
+     "menge": 2,
+     "einheit": "EL",
+     "kategorie": "Gewürze & Öl"
+    }
+   ],
+   "schritte": "Pute in Streifen anbraten und herausnehmen. Champignons und Zwiebel braten, Sahne angießen, Pute zurückgeben, zu Reis servieren.",
+   "protein": 36,
+   "budget": 2
+  },
+  {
+   "id": "rw605cbz",
+   "name": "Kartoffelsuppe mit Wiener Würstchen",
+   "zeit": 40,
+   "basisPortionen": 5,
+   "tags": [
+    "soulfood",
+    "One-Pot",
+    "kindgerecht"
+   ],
+   "zutaten": [
+    {
+     "name": "Kartoffeln",
+     "menge": 1000,
+     "einheit": "g",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Karotte",
+     "menge": 3,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Lauch",
+     "menge": 1,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Gemüsebrühe",
+     "menge": 1200,
+     "einheit": "ml",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Wiener Würstchen",
+     "menge": 8,
+     "einheit": "Stück",
+     "kategorie": "Fleisch & Fisch"
+    },
+    {
+     "name": "Majoran",
+     "menge": 1,
+     "einheit": "TL",
+     "kategorie": "Gewürze & Öl"
+    }
+   ],
+   "schritte": "Gemüse würfeln und in Brühe weich kochen, teilweise pürieren. Würstchen in Scheiben darin erwärmen.",
+   "protein": 18,
+   "budget": 1
+  },
+  {
+   "id": "r7kifvuv",
+   "name": "Gemüse-Frittata mit Kartoffeln",
+   "zeit": 30,
+   "basisPortionen": 4,
+   "tags": [
+    "proteinreich",
+    "vegetarisch",
+    "schnell"
+   ],
+   "zutaten": [
+    {
+     "name": "Eier",
+     "menge": 8,
+     "einheit": "Stück",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Kartoffeln",
+     "menge": 500,
+     "einheit": "g",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Paprika",
+     "menge": 2,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Zucchini",
+     "menge": 1,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Gouda gerieben",
+     "menge": 100,
+     "einheit": "g",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Olivenöl",
+     "menge": 3,
+     "einheit": "EL",
+     "kategorie": "Gewürze & Öl"
+    }
+   ],
+   "schritte": "Gekochte Kartoffelscheiben und Gemüse anbraten, verquirlte Eier darübergeben, Käse aufstreuen, bei kleiner Hitze stocken lassen.",
+   "protein": 26,
+   "budget": 1
+  },
+  {
+   "id": "rgbuvnbx",
+   "name": "Nudelauflauf mit Brokkoli und Schinken",
+   "zeit": 45,
+   "basisPortionen": 5,
+   "tags": [
+    "kindgerecht",
+    "mealprep",
+    "soulfood"
+   ],
+   "zutaten": [
+    {
+     "name": "Nudeln",
+     "menge": 500,
+     "einheit": "g",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Brokkoli",
+     "menge": 600,
+     "einheit": "g",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Kochschinken",
+     "menge": 200,
+     "einheit": "g",
+     "kategorie": "Fleisch & Fisch"
+    },
+    {
+     "name": "Sahne",
+     "menge": 250,
+     "einheit": "ml",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Milch",
+     "menge": 250,
+     "einheit": "ml",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Gouda gerieben",
+     "menge": 200,
+     "einheit": "g",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Muskat",
+     "menge": 1,
+     "einheit": "Prise",
+     "kategorie": "Gewürze & Öl"
+    }
+   ],
+   "schritte": "Nudeln und Brokkoli vorkochen, mit Schinken mischen, Sahne-Milch angießen, Käse darüber, 25 Minuten bei 190 °C backen.",
+   "protein": 28,
+   "budget": 1
+  },
+  {
+   "id": "rgmyx1yn",
+   "name": "Hähnchen-Wraps mit Joghurtsauce",
+   "zeit": 25,
+   "basisPortionen": 4,
+   "tags": [
+    "schnell",
+    "proteinreich",
+    "kindgerecht"
+   ],
+   "zutaten": [
+    {
+     "name": "Hähnchenbrust",
+     "menge": 500,
+     "einheit": "g",
+     "kategorie": "Fleisch & Fisch"
+    },
+    {
+     "name": "Tortilla-Wraps",
+     "menge": 8,
+     "einheit": "Stück",
+     "kategorie": "Backwaren"
+    },
+    {
+     "name": "Naturjoghurt",
+     "menge": 300,
+     "einheit": "g",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Eisbergsalat",
+     "menge": 1,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Tomaten",
+     "menge": 3,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Paprikapulver",
+     "menge": 2,
+     "einheit": "TL",
+     "kategorie": "Gewürze & Öl"
+    }
+   ],
+   "schritte": "Hähnchenstreifen würzen und braten. Mit Salat, Tomaten und Joghurtsauce in die Wraps rollen.",
+   "protein": 34,
+   "budget": 2
+  },
+  {
+   "id": "r5auq4dl",
+   "name": "Couscous-Salat mit Hähnchen und Gurke",
+   "zeit": 25,
+   "basisPortionen": 4,
+   "tags": [
+    "mealprep",
+    "leicht",
+    "proteinreich"
+   ],
+   "zutaten": [
+    {
+     "name": "Couscous",
+     "menge": 300,
+     "einheit": "g",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Hähnchenbrust",
+     "menge": 500,
+     "einheit": "g",
+     "kategorie": "Fleisch & Fisch"
+    },
+    {
+     "name": "Gurke",
+     "menge": 1,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Tomaten",
+     "menge": 3,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Zitrone",
+     "menge": 1,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Minze",
+     "menge": 1,
+     "einheit": "Bund",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Olivenöl",
+     "menge": 4,
+     "einheit": "EL",
+     "kategorie": "Gewürze & Öl"
+    }
+   ],
+   "schritte": "Couscous quellen lassen, Hähnchen braten, alles mit Gemüse, Zitrone und Öl mischen. Schmeckt auch kalt – ideal zum Mitnehmen.",
+   "protein": 32,
+   "budget": 2
+  },
+  {
+   "id": "rb6csi8k",
+   "name": "Ofenkartoffeln mit Kräuterquark und Salat",
+   "zeit": 50,
+   "basisPortionen": 4,
+   "tags": [
+    "vegetarisch",
+    "leicht"
+   ],
+   "zutaten": [
+    {
+     "name": "Kartoffeln",
+     "menge": 1200,
+     "einheit": "g",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Magerquark",
+     "menge": 500,
+     "einheit": "g",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Schnittlauch",
+     "menge": 1,
+     "einheit": "Bund",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Feldsalat",
+     "menge": 200,
+     "einheit": "g",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Leinöl",
+     "menge": 2,
+     "einheit": "EL",
+     "kategorie": "Gewürze & Öl"
+    },
+    {
+     "name": "Olivenöl",
+     "menge": 2,
+     "einheit": "EL",
+     "kategorie": "Gewürze & Öl"
+    }
+   ],
+   "schritte": "Kartoffeln 45 Minuten bei 200 °C backen. Quark mit Kräutern und Leinöl anrühren, mit Salat servieren.",
+   "protein": 22,
+   "budget": 1
+  },
+  {
+   "id": "rx88wua6",
+   "name": "Asiatische Nudelpfanne mit Ei und Gemüse",
+   "zeit": 25,
+   "basisPortionen": 4,
+   "tags": [
+    "schnell",
+    "vegetarisch"
+   ],
+   "zutaten": [
+    {
+     "name": "Mie-Nudeln",
+     "menge": 400,
+     "einheit": "g",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Eier",
+     "menge": 4,
+     "einheit": "Stück",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Karotte",
+     "menge": 2,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Paprika",
+     "menge": 2,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Frühlingszwiebeln",
+     "menge": 1,
+     "einheit": "Bund",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Sojasauce",
+     "menge": 4,
+     "einheit": "EL",
+     "kategorie": "Gewürze & Öl"
+    },
+    {
+     "name": "Sesamöl",
+     "menge": 2,
+     "einheit": "EL",
+     "kategorie": "Gewürze & Öl"
+    }
+   ],
+   "schritte": "Gemüse scharf anbraten, gegarte Nudeln und verquirlte Eier dazu, mit Sojasauce und Sesamöl abschmecken.",
+   "protein": 20,
+   "budget": 1
+  },
+  {
+   "id": "rgzea326",
+   "name": "Königsberger Klopse mit Kartoffeln",
+   "zeit": 50,
+   "basisPortionen": 4,
+   "tags": [
+    "soulfood"
+   ],
+   "zutaten": [
+    {
+     "name": "Gemischtes Hackfleisch",
+     "menge": 600,
+     "einheit": "g",
+     "kategorie": "Fleisch & Fisch"
+    },
+    {
+     "name": "Kartoffeln",
+     "menge": 1000,
+     "einheit": "g",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Kapern",
+     "menge": 2,
+     "einheit": "EL",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Sahne",
+     "menge": 200,
+     "einheit": "ml",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Zwiebel",
+     "menge": 1,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Eier",
+     "menge": 1,
+     "einheit": "Stück",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Semmelbrösel",
+     "menge": 60,
+     "einheit": "g",
+     "kategorie": "Backwaren"
+    },
+    {
+     "name": "Zitrone",
+     "menge": 1,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    }
+   ],
+   "schritte": "Klopse formen und in Brühe gar ziehen lassen. Helle Sauce mit Sahne, Kapern und Zitrone binden, zu Salzkartoffeln servieren.",
+   "protein": 32,
+   "budget": 2
+  },
+  {
+   "id": "rcf0z39z",
+   "name": "Rinderhacksteaks mit Püree und Erbsen",
+   "zeit": 35,
+   "basisPortionen": 4,
+   "tags": [
+    "kindgerecht",
+    "proteinreich"
+   ],
+   "zutaten": [
+    {
+     "name": "Rinderhackfleisch",
+     "menge": 600,
+     "einheit": "g",
+     "kategorie": "Fleisch & Fisch"
+    },
+    {
+     "name": "Kartoffeln",
+     "menge": 900,
+     "einheit": "g",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Erbsen TK",
+     "menge": 400,
+     "einheit": "g",
+     "kategorie": "Tiefkühl"
+    },
+    {
+     "name": "Milch",
+     "menge": 150,
+     "einheit": "ml",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Butter",
+     "menge": 50,
+     "einheit": "g",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Zwiebel",
+     "menge": 1,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    }
+   ],
+   "schritte": "Hacksteaks würzen und braten, Kartoffeln zu Püree stampfen, Erbsen in Butter schwenken.",
+   "protein": 36,
+   "budget": 2
+  },
+  {
+   "id": "rurijita",
+   "name": "Milchreis mit Zimt und Kirschen",
+   "zeit": 35,
+   "basisPortionen": 4,
+   "tags": [
+    "kindgerecht",
+    "soulfood",
+    "vegetarisch"
+   ],
+   "zutaten": [
+    {
+     "name": "Milchreis",
+     "menge": 300,
+     "einheit": "g",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Milch",
+     "menge": 1000,
+     "einheit": "ml",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Sauerkirschen",
+     "menge": 1,
+     "einheit": "Dose",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Zucker",
+     "menge": 60,
+     "einheit": "g",
+     "kategorie": "Backwaren"
+    },
+    {
+     "name": "Zimt",
+     "menge": 2,
+     "einheit": "TL",
+     "kategorie": "Gewürze & Öl"
+    }
+   ],
+   "schritte": "Reis in Milch bei kleiner Hitze ausquellen lassen, süßen, mit Zimt und warmen Kirschen servieren.",
+   "protein": 12,
+   "budget": 1
+  },
+  {
+   "id": "rtjl63bw",
+   "name": "Garnelen-Zitronen-Pasta",
+   "zeit": 25,
+   "basisPortionen": 4,
+   "tags": [
+    "schnell",
+    "leicht"
+   ],
+   "zutaten": [
+    {
+     "name": "Garnelen",
+     "menge": 400,
+     "einheit": "g",
+     "kategorie": "Fleisch & Fisch"
+    },
+    {
+     "name": "Spaghetti",
+     "menge": 500,
+     "einheit": "g",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Zitrone",
+     "menge": 2,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Knoblauchzehen",
+     "menge": 3,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Petersilie",
+     "menge": 1,
+     "einheit": "Bund",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Olivenöl",
+     "menge": 4,
+     "einheit": "EL",
+     "kategorie": "Gewürze & Öl"
+    },
+    {
+     "name": "Parmesan",
+     "menge": 60,
+     "einheit": "g",
+     "kategorie": "Molkerei & Eier"
+    }
+   ],
+   "schritte": "Garnelen mit Knoblauch braten, mit Zitronensaft ablöschen, mit Spaghetti, Öl und Petersilie mischen.",
+   "protein": 28,
+   "budget": 3
+  },
+  {
+   "id": "rnbttmb8",
+   "name": "Rindersteak mit Ofengemüse",
+   "zeit": 40,
+   "basisPortionen": 4,
+   "tags": [
+    "proteinreich",
+    "leicht"
+   ],
+   "zutaten": [
+    {
+     "name": "Rindersteak",
+     "menge": 700,
+     "einheit": "g",
+     "kategorie": "Fleisch & Fisch"
+    },
+    {
+     "name": "Süßkartoffel",
+     "menge": 500,
+     "einheit": "g",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Zucchini",
+     "menge": 2,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Champignons",
+     "menge": 300,
+     "einheit": "g",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Olivenöl",
+     "menge": 3,
+     "einheit": "EL",
+     "kategorie": "Gewürze & Öl"
+    },
+    {
+     "name": "Rosmarin",
+     "menge": 2,
+     "einheit": "TL",
+     "kategorie": "Gewürze & Öl"
+    }
+   ],
+   "schritte": "Gemüse 25 Minuten bei 200 °C rösten, Steaks scharf anbraten und ruhen lassen.",
+   "protein": 44,
+   "budget": 3
+  },
+  {
+   "id": "rnomdqsw",
+   "name": "Erbseneintopf mit Kassler",
+   "zeit": 60,
+   "basisPortionen": 6,
+   "tags": [
+    "soulfood",
+    "One-Pot",
+    "mealprep"
+   ],
+   "zutaten": [
+    {
+     "name": "Schälerbsen",
+     "menge": 500,
+     "einheit": "g",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Kassler",
+     "menge": 500,
+     "einheit": "g",
+     "kategorie": "Fleisch & Fisch"
+    },
+    {
+     "name": "Kartoffeln",
+     "menge": 600,
+     "einheit": "g",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Karotte",
+     "menge": 3,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Lauch",
+     "menge": 1,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Gemüsebrühe",
+     "menge": 1500,
+     "einheit": "ml",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Majoran",
+     "menge": 2,
+     "einheit": "TL",
+     "kategorie": "Gewürze & Öl"
+    }
+   ],
+   "schritte": "Erbsen mit Brühe und Gemüse 45 Minuten kochen, Kassler in Würfeln zugeben und durchziehen lassen.",
+   "protein": 30,
+   "budget": 1
+  },
+  {
+   "id": "muqfgbhn",
+   "name": "Reiswaffeln mit Skyr & Beeren",
+   "zeit": 5,
+   "basisPortionen": 2,
+   "protein": 28,
+   "budget": 1,
+   "tags": [
+    "mittag",
+    "schnell",
+    "proteinreich"
+   ],
+   "schritte": "Skyr mit etwas Honig verrühren, auf die Reiswaffeln streichen oder als Bowl anrichten, Beeren dazu.",
+   "zutaten": [
+    {
+     "name": "Skyr natur",
+     "menge": 500,
+     "einheit": "g",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Reiswaffeln",
+     "menge": 8,
+     "einheit": "Stück",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Beeren (frisch oder TK)",
+     "menge": 250,
+     "einheit": "g",
+     "kategorie": "Tiefkühl"
+    },
+    {
+     "name": "Honig",
+     "menge": 2,
+     "einheit": "TL",
+     "kategorie": "Trocken & Konserven"
+    }
+   ]
+  },
+  {
+   "id": "mwruye6r",
+   "name": "Vollkornbrot mit Hüttenkäse & Ei",
+   "zeit": 10,
+   "basisPortionen": 2,
+   "protein": 30,
+   "budget": 1,
+   "tags": [
+    "mittag",
+    "schnell",
+    "proteinreich"
+   ],
+   "schritte": "Eier kochen oder als Spiegelei braten. Brot mit Hüttenkäse bestreichen, Ei darauf, Schnittlauch drüber, Pfeffer.",
+   "zutaten": [
+    {
+     "name": "Vollkornbrot",
+     "menge": 4,
+     "einheit": "Stück",
+     "kategorie": "Backwaren"
+    },
+    {
+     "name": "Hüttenkäse",
+     "menge": 300,
+     "einheit": "g",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Eier",
+     "menge": 4,
+     "einheit": "Stück",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Schnittlauch",
+     "menge": 1,
+     "einheit": "Bund",
+     "kategorie": "Obst & Gemüse"
+    }
+   ]
+  },
+  {
+   "id": "mnpltv3x",
+   "name": "Thunfisch-Wraps",
+   "zeit": 10,
+   "basisPortionen": 2,
+   "protein": 32,
+   "budget": 1,
+   "tags": [
+    "mittag",
+    "schnell",
+    "proteinreich"
+   ],
+   "schritte": "Wraps mit Frischkäse bestreichen, abgetropften Thunfisch, Gurkenstreifen und Mais darauf, einrollen.",
+   "zutaten": [
+    {
+     "name": "Tortilla-Wraps",
+     "menge": 4,
+     "einheit": "Stück",
+     "kategorie": "Backwaren"
+    },
+    {
+     "name": "Thunfisch in Wasser",
+     "menge": 2,
+     "einheit": "Dose",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Frischkäse",
+     "menge": 100,
+     "einheit": "g",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Salatgurke",
+     "menge": 1,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Mais",
+     "menge": 1,
+     "einheit": "Dose",
+     "kategorie": "Trocken & Konserven"
+    }
+   ]
+  },
+  {
+   "id": "mknmc1hc",
+   "name": "Magerquark mit Banane & Walnüssen",
+   "zeit": 5,
+   "basisPortionen": 2,
+   "protein": 30,
+   "budget": 1,
+   "tags": [
+    "mittag",
+    "schnell",
+    "proteinreich"
+   ],
+   "schritte": "Quark mit einem Schluck Milch oder Wasser cremig rühren, Banane in Scheiben dazu, Nüsse und Zimt drüber.",
+   "zutaten": [
+    {
+     "name": "Magerquark",
+     "menge": 500,
+     "einheit": "g",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Banane",
+     "menge": 2,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Walnüsse",
+     "menge": 40,
+     "einheit": "g",
+     "kategorie": "Trocken & Konserven"
+    },
+    {
+     "name": "Zimt",
+     "menge": 1,
+     "einheit": "TL",
+     "kategorie": "Gewürze & Öl"
+    }
+   ]
+  },
+  {
+   "id": "ma81l8p0",
+   "name": "Rührei mit Brot & Tomaten",
+   "zeit": 10,
+   "basisPortionen": 2,
+   "protein": 26,
+   "budget": 1,
+   "tags": [
+    "mittag",
+    "schnell",
+    "proteinreich"
+   ],
+   "schritte": "Eier verquirlen, in Butter stocken lassen, salzen und pfeffern. Mit Brot und Tomatenscheiben servieren.",
+   "zutaten": [
+    {
+     "name": "Eier",
+     "menge": 6,
+     "einheit": "Stück",
+     "kategorie": "Molkerei & Eier"
+    },
+    {
+     "name": "Vollkornbrot",
+     "menge": 4,
+     "einheit": "Stück",
+     "kategorie": "Backwaren"
+    },
+    {
+     "name": "Tomaten",
+     "menge": 2,
+     "einheit": "Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "name": "Butter",
+     "menge": 20,
+     "einheit": "g",
+     "kategorie": "Molkerei & Eier"
+    }
+   ]
+  }
+ ],
+ "plaene": {
+  "2026-07-13": {
+   "tage": {}
+  },
+  "2026-07-20": {
+   "tage": {
+    "2026-07-21": {
+     "rezeptId": "rzj3i503",
+     "rezeptName": "Chili con Carne",
+     "quelle": "frisch",
+     "kochtag": null,
+     "hinweis": "Dienstag und Donnerstag teilen ein Gericht: Chili con Carne – heute wird doppelte Menge gekocht, Donnerstag gibt es Reste. Proteinreich, soulfood, ideal zum Aufwärmen.",
+     "alternativen": [
+      "rmmhj176",
+      "rty0c2i6"
+     ],
+     "gesperrt": true,
+     "mittag": {
+      "rezeptId": "mwruye6r",
+      "rezeptName": "Vollkornbrot mit Hüttenkäse & Ei",
+      "quelle": "schnell"
+     }
+    },
+    "2026-07-22": {
+     "rezeptId": "muqfgbhn",
+     "rezeptName": "Reiswaffeln mit Skyr & Beeren",
+     "quelle": "mealprep",
+     "kochtag": "2026-07-21",
+     "hinweis": "",
+     "gesperrt": true
+    },
+    "2026-07-23": {
+     "rezeptId": "rzj3i503",
+     "rezeptName": "Chili con Carne",
+     "quelle": "doppelt",
+     "kochtag": null,
+     "hinweis": "Donnerstag ist das zweite Chili-con-Carne-Tag – Reste vom Dienstag aufgewärmt, keine Kocharbeit nötig.",
+     "alternativen": [],
+     "gesperrt": true,
+     "mittag": {
+      "rezeptId": "mnpltv3x",
+      "rezeptName": "Thunfisch-Wraps",
+      "quelle": "schnell"
+     }
+    },
+    "2026-07-25": {
+     "rezeptId": "r5auq4dl",
+     "rezeptName": "Couscous-Salat mit Hähnchen und Gurke",
+     "quelle": "mealprep",
+     "kochtag": "2026-07-24",
+     "hinweis": "Samstag ist Diensttag – Mittagessen zum Mitnehmen als Mealprep: Couscous-Salat mit Hähnchen und Gurke, am Freitag vorgekocht, kalt ideal mitzunehmen.",
+     "alternativen": [],
+     "gesperrt": false
+    },
+    "2026-07-24": {
+     "mittag": {
+      "rezeptId": "muqfgbhn",
+      "rezeptName": "Reiswaffeln mit Skyr & Beeren",
+      "quelle": "schnell"
+     }
+    },
+    "2026-07-26": {
+     "mittag": {
+      "rezeptId": "ma81l8p0",
+      "rezeptName": "Rührei mit Brot & Tomaten",
+      "quelle": "schnell"
+     }
+    }
+   }
+  },
+  "2026-07-27": {
+   "tage": {
+    "2026-07-27": {
+     "rezeptId": "r5auq4dl",
+     "rezeptName": "Couscous-Salat mit Hähnchen und Gurke",
+     "quelle": "mealprep",
+     "kochtag": "2026-07-26",
+     "hinweis": "",
+     "gesperrt": true
+    }
+   }
+  }
+ },
+ "vorrat": [
+  "Blattspinat",
+  "Karotten",
+  "Skyr",
+  "Milch",
+  "Paprika",
+  "Reis",
+  "Nudeln"
+ ],
+ "kuehlschrank": [],
+ "liste": {
+  "woche": "2026-07-20",
+  "items": [
+   {
+    "name": "Vollkornbrot",
+    "einheit": "Stück",
+    "menge": 8,
+    "kategorie": "Backwaren",
+    "fuer": [
+     "Vollkornbrot mit Hüttenkäse & Ei",
+     "Rührei mit Brot & Tomaten"
+    ],
+    "vorhanden": false,
+    "erledigt": false
+   },
+   {
+    "name": "Hüttenkäse",
+    "einheit": "g",
+    "menge": 300,
+    "kategorie": "Molkerei & Eier",
+    "fuer": [
+     "Vollkornbrot mit Hüttenkäse & Ei"
+    ],
+    "vorhanden": false,
+    "erledigt": false
+   },
+   {
+    "name": "Eier",
+    "einheit": "Stück",
+    "menge": 10,
+    "kategorie": "Molkerei & Eier",
+    "fuer": [
+     "Vollkornbrot mit Hüttenkäse & Ei",
+     "Rührei mit Brot & Tomaten"
+    ],
+    "vorhanden": false,
+    "erledigt": true
+   },
+   {
+    "name": "Schnittlauch",
+    "einheit": "Bund",
+    "menge": 1,
+    "kategorie": "Obst & Gemüse",
+    "fuer": [
+     "Vollkornbrot mit Hüttenkäse & Ei"
+    ],
+    "vorhanden": false,
+    "erledigt": true
+   },
+   {
+    "name": "Rinderhackfleisch",
+    "einheit": "g",
+    "menge": 350,
+    "kategorie": "Fleisch & Fisch",
+    "fuer": [
+     "Chili con Carne"
+    ],
+    "vorhanden": false,
+    "erledigt": false
+   },
+   {
+    "name": "Kidneybohnen",
+    "einheit": "Dose",
+    "menge": 1,
+    "kategorie": "Trocken & Konserven",
+    "fuer": [
+     "Chili con Carne"
+    ],
+    "vorhanden": false,
+    "erledigt": false
+   },
+   {
+    "name": "Mais",
+    "einheit": "Dose",
+    "menge": 1.5,
+    "kategorie": "Trocken & Konserven",
+    "fuer": [
+     "Chili con Carne",
+     "Thunfisch-Wraps"
+    ],
+    "vorhanden": false,
+    "erledigt": false
+   },
+   {
+    "name": "Gehackte Tomaten",
+    "einheit": "g",
+    "menge": 400,
+    "kategorie": "Trocken & Konserven",
+    "fuer": [
+     "Chili con Carne"
+    ],
+    "vorhanden": false,
+    "erledigt": false
+   },
+   {
+    "name": "Paprika",
+    "einheit": "Stück",
+    "menge": 1,
+    "kategorie": "Obst & Gemüse",
+    "fuer": [
+     "Chili con Carne"
+    ],
+    "vorhanden": true,
+    "erledigt": false
+   },
+   {
+    "name": "Zwiebel",
+    "einheit": "Stück",
+    "menge": 1,
+    "kategorie": "Obst & Gemüse",
+    "fuer": [
+     "Chili con Carne"
+    ],
+    "vorhanden": false,
+    "erledigt": true
+   },
+   {
+    "name": "Kreuzkümmel",
+    "einheit": "TL",
+    "menge": 1,
+    "kategorie": "Gewürze & Öl",
+    "fuer": [
+     "Chili con Carne"
+    ],
+    "vorhanden": false,
+    "erledigt": true
+   },
+   {
+    "name": "Chilipulver",
+    "einheit": "TL",
+    "menge": 0.5,
+    "kategorie": "Gewürze & Öl",
+    "fuer": [
+     "Chili con Carne"
+    ],
+    "vorhanden": false,
+    "erledigt": true
+   },
+   {
+    "name": "Tortilla-Wraps",
+    "einheit": "Stück",
+    "menge": 4,
+    "kategorie": "Backwaren",
+    "fuer": [
+     "Thunfisch-Wraps"
+    ],
+    "vorhanden": false,
+    "erledigt": false
+   },
+   {
+    "name": "Thunfisch in Wasser",
+    "einheit": "Dose",
+    "menge": 2,
+    "kategorie": "Trocken & Konserven",
+    "fuer": [
+     "Thunfisch-Wraps"
+    ],
+    "vorhanden": false,
+    "erledigt": false
+   },
+   {
+    "name": "Frischkäse",
+    "einheit": "g",
+    "menge": 100,
+    "kategorie": "Molkerei & Eier",
+    "fuer": [
+     "Thunfisch-Wraps"
+    ],
+    "vorhanden": false,
+    "erledigt": false
+   },
+   {
+    "name": "Salatgurke",
+    "einheit": "Stück",
+    "menge": 1,
+    "kategorie": "Obst & Gemüse",
+    "fuer": [
+     "Thunfisch-Wraps"
+    ],
+    "vorhanden": false,
+    "erledigt": true
+   },
+   {
+    "name": "Skyr natur",
+    "einheit": "g",
+    "menge": 750,
+    "kategorie": "Molkerei & Eier",
+    "fuer": [
+     "Reiswaffeln mit Skyr & Beeren"
+    ],
+    "vorhanden": true,
+    "erledigt": false
+   },
+   {
+    "name": "Reiswaffeln",
+    "einheit": "Stück",
+    "menge": 12,
+    "kategorie": "Trocken & Konserven",
+    "fuer": [
+     "Reiswaffeln mit Skyr & Beeren"
+    ],
+    "vorhanden": true,
+    "erledigt": false
+   },
+   {
+    "name": "Beeren (frisch oder TK)",
+    "einheit": "g",
+    "menge": 375,
+    "kategorie": "Tiefkühl",
+    "fuer": [
+     "Reiswaffeln mit Skyr & Beeren"
+    ],
+    "vorhanden": false,
+    "erledigt": true
+   },
+   {
+    "name": "Honig",
+    "einheit": "TL",
+    "menge": 3,
+    "kategorie": "Trocken & Konserven",
+    "fuer": [
+     "Reiswaffeln mit Skyr & Beeren"
+    ],
+    "vorhanden": false,
+    "erledigt": true
+   },
+   {
+    "name": "Tomaten",
+    "einheit": "Stück",
+    "menge": 2.8,
+    "kategorie": "Obst & Gemüse",
+    "fuer": [
+     "Rührei mit Brot & Tomaten",
+     "Couscous-Salat mit Hähnchen und Gurke"
+    ],
+    "vorhanden": false,
+    "erledigt": false
+   },
+   {
+    "name": "Butter",
+    "einheit": "g",
+    "menge": 20,
+    "kategorie": "Molkerei & Eier",
+    "fuer": [
+     "Rührei mit Brot & Tomaten"
+    ],
+    "vorhanden": false,
+    "erledigt": true
+   },
+   {
+    "name": "Couscous",
+    "einheit": "g",
+    "menge": 75,
+    "kategorie": "Trocken & Konserven",
+    "fuer": [
+     "Couscous-Salat mit Hähnchen und Gurke"
+    ],
+    "vorhanden": false,
+    "erledigt": true
+   },
+   {
+    "name": "Hähnchenbrust",
+    "einheit": "g",
+    "menge": 125,
+    "kategorie": "Fleisch & Fisch",
+    "fuer": [
+     "Couscous-Salat mit Hähnchen und Gurke"
+    ],
+    "vorhanden": false,
+    "erledigt": false
+   },
+   {
+    "name": "Gurke",
+    "einheit": "Stück",
+    "menge": 0.3,
+    "kategorie": "Obst & Gemüse",
+    "fuer": [
+     "Couscous-Salat mit Hähnchen und Gurke"
+    ],
+    "vorhanden": false,
+    "erledigt": true
+   },
+   {
+    "name": "Zitrone",
+    "einheit": "Stück",
+    "menge": 0.3,
+    "kategorie": "Obst & Gemüse",
+    "fuer": [
+     "Couscous-Salat mit Hähnchen und Gurke"
+    ],
+    "vorhanden": false,
+    "erledigt": true
+   },
+   {
+    "name": "Minze",
+    "einheit": "Bund",
+    "menge": 0.3,
+    "kategorie": "Obst & Gemüse",
+    "fuer": [
+     "Couscous-Salat mit Hähnchen und Gurke"
+    ],
+    "vorhanden": false,
+    "erledigt": false
+   },
+   {
+    "name": "Olivenöl",
+    "einheit": "EL",
+    "menge": 1,
+    "kategorie": "Gewürze & Öl",
+    "fuer": [
+     "Couscous-Salat mit Hähnchen und Gurke"
+    ],
+    "vorhanden": false,
+    "erledigt": true
+   }
+  ]
+ },
+ "historie": [],
+ "mittagPlanen": true,
+ "doppelt": true,
+ "stimmung": [
+  "proteinreich",
+  "ausgewogen"
+ ]
+}
