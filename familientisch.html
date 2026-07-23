@@ -1,0 +1,2561 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Familientisch</title>
+<meta name="theme-color" content="#16302B">
+<link rel="manifest" href='data:application/manifest+json,%7B%22name%22%3A%22Familientisch%22%2C%22short_name%22%3A%22Familientisch%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23F3EFE6%22%2C%22theme_color%22%3A%22%2316302B%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAECElEQVR42u3dPa4UMRBF4caalJSEkJCEkAiJgCWwCRbEJlgCARIRmyBkBWyAAAm9gJ9B3W3Xrf5OhNCDcdUcV7nteZ5HT14834DfMaQA5AA5QA6QA%2BQAOUAOkAPkADkAcoAcIAfIAXKAHCAHyIGu3KTgF18/ffz5h2ev38jGtm2PfMD4oRYPoYi2AnL8Z9n4y9%2BTAyAHyAFygBwgB8gBcoAcIAf6c91T2c/vvt//M6/ePybH1W24899exJUbIXb%2Bt41FuXHiqNfqZ8mNFse%2BdCdFbpxQSNrKUUeLfoVkMOPiI2xYOYKSnltCbrSgSJO2El2l48Y/ZFYU2W2lhxZxLWYwQ1ypcnQ1IyK6IXdizJPjCmYUj3TIl3j/RMUrGKZl6unbL/f82LcPL%2BeMp9rzSzk5zjbjTiFWiVLKj1pynGfGTidmWlLHj0JynGTG4VpMUKSIH50/Q3qqFg9fYtqi5KKV49iyMUGLs6tIheJRQo4DzViixUmKLPdjMKNsL1u%2B%2BdHn1yErmFFtJNlt5ZDJUfbNOKTFLGwu8ZWj8jRNLyEr5dhfNupnf/8IF648BjP40a2tZFXs0P6yRo6rnciHZiyyciROxMQxD1k28kJy7KmQ6Q%2BHe8Y/v7O4MA5l5Lhy2YgrHioH8uVoc5oVFMtUOWxvZOVwmGoisuZARzn6lY2UuObJYcERl0ltBbFydO0pEdGpHCAHysphNZqYz9KVo/eCo36M2grIAXKAHCAHyAFygBwgB8gBcgDkQBM5ul7%2BmhLjJDk6fcN7BebkU1sBOdBPjt7LjuLRqRwoIIc1aVwmAypH185SPy5tBeFy9CseERFNlcOyIyuHw1QTizUHysuxpyr2KB57opjcl1UOVJLjysUjqGxEVo5cP%2BJGPmTZmGvJYcMjImOpC9KsiRjaCkfuVEjJ%2BP5xriq0KyvHFfzINWNrsM9R2Y/0B%2B/FX1e%2BHXf3WanLtY7SYu3Kvc8OaZ1p2uaMcL0cB06OCu/KgWNY/sC/vq0c21wWtphj1aywFVRFju2Ei1enKXJ4xSqySXjb%2BvLzPTtVkd6/VlOocmxn3tp8uCLnaVHnbKGWHNv5t3rvtOTsUlHq1KmcHNvEW/TvFGVa76h2HllRju2S37JQ8KR6yJR4w%2BS4lB9lIx2yJsZIOdr7UTy6IYPiCnta6f0Ik6L7kFNRdJCjgR9Z409qK9EtJlHrVDmCFMmtdtkfE6yf9%2Bg%2BmF05KpeQBsvnJnLUsaTTrkw3ORYq0m%2BzrqccMy1pvMHfXI6TRLnIifGF5NjjyjXvjLiuHPgnLowDOUAOkAPkADlADpAD5AA5QA6AHCAHyAFygBwgB8gBcoAcIAdADpAD5AA5QA6QA%2BQAOUAOkAMgB/7MD4Z8f9ayGvGeAAAAAElFTkSuQmCC%22%2C%22sizes%22%3A%22180x180%22%2C%22type%22%3A%22image/png%22%7D%5D%7D'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Familientisch">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAECElEQVR42u3dPa4UMRBF4caalJSEkJCEkAiJgCWwCRbEJlgCARIRmyBkBWyAAAm9gJ9B3W3Xrf5OhNCDcdUcV7nteZ5HT14834DfMaQA5AA5QA6QA+QAOUAOkAPkADkAcoAcIAfIAXKAHCAHyIGu3KTgF18/ffz5h2ev38jGtm2PfMD4oRYPoYi2AnL8Z9n4y9+TAyAHyAFygBwgB8gBcoAcIAf6c91T2c/vvt//M6/ePybH1W24899exJUbIXb+t41FuXHiqNfqZ8mNFse+dCdFbpxQSNrKUUeLfoVkMOPiI2xYOYKSnltCbrSgSJO2El2l48Y/ZFYU2W2lhxZxLWYwQ1ypcnQ1IyK6IXdizJPjCmYUj3TIl3j/RMUrGKZl6unbL/f82LcPL+eMp9rzSzk5zjbjTiFWiVLKj1pynGfGTidmWlLHj0JynGTG4VpMUKSIH50/Q3qqFg9fYtqi5KKV49iyMUGLs6tIheJRQo4DzViixUmKLPdjMKNsL1u++dHn1yErmFFtJNlt5ZDJUfbNOKTFLGwu8ZWj8jRNLyEr5dhfNupnf/8IF648BjP40a2tZFXs0P6yRo6rnciHZiyyciROxMQxD1k28kJy7KmQ6Q+He8Y/v7O4MA5l5Lhy2YgrHioH8uVoc5oVFMtUOWxvZOVwmGoisuZARzn6lY2UuObJYcERl0ltBbFydO0pEdGpHCAHysphNZqYz9KVo/eCo36M2grIAXKAHCAHyAFygBwgB8gBcgDkQBM5ul7+mhLjJDk6fcN7BebkU1sBOdBPjt7LjuLRqRwoIIc1aVwmAypH185SPy5tBeFy9CseERFNlcOyIyuHw1QTizUHysuxpyr2KB57opjcl1UOVJLjysUjqGxEVo5cP+JGPmTZmGvJYcMjImOpC9KsiRjaCkfuVEjJ+P5xriq0KyvHFfzINWNrsM9R2Y/0B+/FX1e+HXf3WanLtY7SYu3Kvc8OaZ1p2uaMcL0cB06OCu/KgWNY/sC/vq0c21wWtphj1aywFVRFju2Ei1enKXJ4xSqySXjb+vLzPTtVkd6/VlOocmxn3tp8uCLnaVHnbKGWHNv5t3rvtOTsUlHq1KmcHNvEW/TvFGVa76h2HllRju2S37JQ8KR6yJR4w+S4lB9lIx2yJsZIOdr7UTy6IYPiCnta6f0Ik6L7kFNRdJCjgR9Z409qK9EtJlHrVDmCFMmtdtkfE6yf9+g+mF05KpeQBsvnJnLUsaTTrkw3ORYq0m+zrqccMy1pvMHfXI6TRLnIifGF5NjjyjXvjLiuHPgnLowDOUAOkAPkADlADpAD5AA5QA6AHCAHyAFygBwgB8gBcoAcIAdADpAD5AA5QA6QA+QAOUAOkAMgB/7MD4Z8f9ayGvGeAAAAAElFTkSuQmCC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F3EFE6;
+  --paper-2:#EAE4D7;
+  --ink:#1A1E1B;
+  --ink-soft:#5E6560;
+  --pine:#16302B;
+  --pine-2:#2F5D50;
+  --amber:#D89A1E;
+  --amber-soft:#F6E4B8;
+  --alarm:#B4372B;
+  --line:rgba(26,30,27,.14);
+  --line-2:rgba(26,30,27,.28);
+  --r:4px;
+  --display:'Barlow Condensed',Impact,sans-serif;
+  --body:'Inter',system-ui,-apple-system,sans-serif;
+  --mono:ui-monospace,'SF Mono',Menlo,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:15px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:env(safe-area-inset-bottom);
+}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:600;letter-spacing:.01em}
+button,input,select,textarea{font-family:inherit;font-size:inherit;color:inherit}
+button{cursor:pointer}
+.wrap{max-width:820px;margin:0 auto;padding:0 14px 90px}
+
+/* ---------- Kopf ---------- */
+header{
+  background:var(--pine);color:var(--paper);
+  padding:calc(14px + env(safe-area-inset-top)) 0 0;
+  border-bottom:3px solid var(--amber);
+}
+.head-in{max-width:820px;margin:0 auto;padding:0 14px 12px;display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+.brand{font-family:var(--display);font-size:30px;line-height:.95;text-transform:uppercase;letter-spacing:.04em}
+.brand small{display:block;font-family:var(--body);font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.65;margin-top:5px;font-weight:500}
+.nextshift{text-align:right;font-family:var(--mono);font-size:11px;line-height:1.4;opacity:.85}
+.nextshift b{display:block;font-family:var(--display);font-size:20px;color:var(--amber);letter-spacing:.02em}
+
+/* ---------- Schichtstreifen (Signature) ---------- */
+.streifen{background:var(--pine);padding:0 0 12px}
+.streifen-in{max-width:820px;margin:0 auto;padding:0 14px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.band{display:flex;gap:2px;min-width:max-content}
+.tick{width:26px;flex:0 0 26px;text-align:center}
+.tick .wd{font-family:var(--mono);font-size:8px;letter-spacing:.06em;color:rgba(243,239,230,.45);margin-bottom:3px}
+.tick .blk{height:26px;border-radius:2px;background:rgba(243,239,230,.10);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:13px;color:rgba(243,239,230,.55)}
+.tick.shift .blk{background:var(--amber);color:var(--pine);font-weight:700}
+.tick.today .blk{outline:2px solid var(--paper);outline-offset:1px}
+.tick.past{opacity:.4}
+
+/* ---------- Tabs ---------- */
+nav.tabs{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line-2)}
+.tabs-in{max-width:820px;margin:0 auto;padding:0 6px;display:flex;overflow-x:auto}
+.tab{
+  background:none;border:0;padding:12px 12px 10px;white-space:nowrap;
+  font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.06em;
+  color:var(--ink-soft);border-bottom:3px solid transparent;margin-bottom:-1px
+}
+.tab[aria-selected="true"]{color:var(--pine);border-bottom-color:var(--pine)}
+.tab .cnt{font-family:var(--mono);font-size:10px;background:var(--pine);color:var(--paper);border-radius:9px;padding:1px 5px;margin-left:4px;vertical-align:2px}
+
+/* ---------- Bausteine ---------- */
+section{display:none;padding-top:16px}
+section.on{display:block}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);margin-bottom:12px}
+.card-h{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px;border-bottom:1px solid var(--line)}
+.card-h h2{font-size:19px;text-transform:uppercase;letter-spacing:.05em}
+.card-b{padding:12px}
+.eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.btn{
+  background:var(--pine);color:var(--paper);border:1px solid var(--pine);border-radius:var(--r);
+  padding:9px 14px;font-family:var(--display);font-size:16px;text-transform:uppercase;letter-spacing:.06em
+}
+.btn:disabled{opacity:.45}
+.btn.ghost{background:transparent;color:var(--pine)}
+.btn.amber{background:var(--amber);border-color:var(--amber);color:var(--pine)}
+.btn.sm{padding:5px 9px;font-size:13px}
+.btn.danger{background:transparent;border-color:var(--alarm);color:var(--alarm)}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+label.f{display:block;margin-bottom:10px}
+label.f span{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:4px}
+input[type=text],input[type=number],input[type=date],input[type=password],select,textarea{
+  width:100%;padding:8px 10px;background:var(--paper);border:1px solid var(--line-2);border-radius:var(--r)
+}
+textarea{min-height:70px;resize:vertical}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{
+  border:1px solid var(--line-2);background:var(--paper);border-radius:20px;padding:5px 11px;
+  font-size:13px;line-height:1
+}
+.chip[aria-pressed="true"]{background:var(--pine);border-color:var(--pine);color:var(--paper)}
+.muted{color:var(--ink-soft);font-size:13px}
+.hr{height:1px;background:var(--line);margin:12px 0}
+
+/* ---------- Plan ---------- */
+.day{border:1px solid var(--line);border-radius:var(--r);background:#fff;margin-bottom:8px;overflow:hidden}
+.day.shift{border-left:5px solid var(--amber)}
+.day.free{border-left:5px solid var(--pine-2)}
+.day.istheute .day-h{background:var(--amber-soft)}
+.day.istheute .day-h .dd::after{content:' · heute'}
+.day-h{display:flex;gap:10px;align-items:baseline;padding:9px 12px;background:var(--paper-2)}
+.day-h .dt{font-family:var(--display);font-size:19px;text-transform:uppercase;letter-spacing:.05em}
+.day-h .dd{font-family:var(--mono);font-size:11px;color:var(--ink-soft)}
+.day-h .tagtyp{margin-left:auto;font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:2px 6px;border-radius:2px;background:var(--pine);color:var(--paper)}
+.day.shift .tagtyp{background:var(--amber);color:var(--pine)}
+.day-b{padding:10px 12px}
+.meal{font-family:var(--display);font-size:21px;line-height:1.15}
+.slot{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:2px}
+.src{display:inline-block;font-size:11px;padding:2px 7px;border-radius:20px;background:var(--amber-soft);border:1px solid rgba(216,154,30,.5);margin-top:6px}
+.day-actions{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+
+/* ---------- Liste ---------- */
+.katgroup{margin-bottom:14px}
+.katgroup h3{font-size:15px;text-transform:uppercase;letter-spacing:.1em;color:var(--pine);border-bottom:2px solid var(--pine);padding-bottom:3px;margin-bottom:6px}
+.item{display:flex;align-items:center;gap:10px;padding:7px 2px;border-bottom:1px solid var(--line)}
+.item input{width:20px;height:20px;flex:0 0 20px;accent-color:var(--pine)}
+.item .nm{flex:1}
+.item .qt{font-family:var(--mono);font-size:12px;color:var(--ink-soft);white-space:nowrap}
+.item.done .nm,.item.done .qt{text-decoration:line-through;opacity:.4}
+.item .why{display:block;font-size:11px;color:var(--ink-soft)}
+
+/* ---------- Rezepte ---------- */
+.rez{border-bottom:1px solid var(--line);padding:9px 0;display:flex;gap:10px;align-items:flex-start}
+.rez .info{flex:1;min-width:0}
+.rez .nm{font-family:var(--display);font-size:18px}
+.tagline{display:flex;flex-wrap:wrap;gap:4px;margin-top:3px}
+.tg{font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;background:var(--paper-2);border:1px solid var(--line);padding:1px 5px;border-radius:2px}
+.star{background:none;border:0;cursor:pointer;font-size:19px;line-height:1;padding:2px 4px;color:var(--line-2)}
+.star[aria-pressed="true"]{color:var(--amber)}
+.rez.staub .nm::after{content:'staubt';font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;
+  background:var(--amber-soft);border:1px solid var(--amber);padding:1px 5px;border-radius:2px;margin-left:7px;vertical-align:middle}
+.sortrow{display:flex;gap:8px;align-items:center;margin-bottom:10px;flex-wrap:wrap}
+.sortrow select{width:auto;flex:1;min-width:150px}
+.mgrp{border:1px solid var(--line);border-radius:var(--r);padding:10px 11px;margin-bottom:8px;background:var(--paper-2)}
+.mgrp .keep{font-family:var(--display);font-size:17px}
+.mgrp .gone{font-size:13px;color:var(--ink-soft);margin:3px 0 6px}
+.mgrp .why{font-size:12.5px;margin:0 0 8px}
+.ordrow{display:flex;align-items:center;gap:6px;padding:6px 0;border-bottom:1px solid var(--line)}
+.ordrow:last-child{border-bottom:0}
+.ordrow .n{flex:1;font-size:14px}
+.ordrow .pos{font-family:var(--mono);font-size:11px;color:var(--ink-soft);width:20px}
+
+/* ---------- Overlay ---------- */
+.sheet{position:fixed;inset:0;background:rgba(22,48,43,.55);display:none;z-index:60;align-items:flex-end;justify-content:center}
+.sheet.on{display:flex}
+.sheet-in{background:var(--paper);width:100%;max-width:820px;max-height:90vh;overflow-y:auto;border-radius:10px 10px 0 0;padding:16px 14px calc(20px + env(safe-area-inset-bottom))}
+.zeile{display:grid;grid-template-columns:1fr 62px 74px;gap:5px;margin-bottom:5px}
+.zeile select{padding:6px}
+.status{font-family:var(--mono);font-size:12px;padding:9px 11px;border-radius:var(--r);margin-bottom:10px;display:none}
+.status.on{display:block}
+.status.work{background:var(--amber-soft);border:1px solid var(--amber)}
+.status.bad{background:#F6DEDA;border:1px solid var(--alarm);color:#7A2018}
+.empty{text-align:center;padding:26px 14px;color:var(--ink-soft)}
+.empty p{margin:0 0 12px}
+@media (max-width:520px){.grid2{grid-template-columns:1fr}.brand{font-size:25px}}
+@media (prefers-reduced-motion:no-preference){.day,.card{transition:border-color .15s}}
+
+/* ---------- Bewertung / Kochplan / Rezeptwahl ---------- */
+.day-actions .btn[aria-pressed="true"]{background:var(--pine);color:var(--paper);border-color:var(--pine)}
+.kp{display:grid;grid-template-columns:64px 1fr;gap:2px 10px;padding:8px 0;border-bottom:1px solid var(--line)}
+.kp:last-child{border-bottom:0}
+.kpd{font-family:var(--mono);font-size:12px;color:var(--pine);font-weight:600;padding-top:2px}
+.kpn{font-family:var(--display);font-size:17px}
+.kpp{grid-column:2;font-size:12px;color:var(--ink-soft)}
+.pk{display:flex;gap:10px;align-items:center;width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:9px 11px;margin-bottom:6px}
+.pk:active{background:var(--paper-2)}
+.pk .nm{font-family:var(--display);font-size:17px;flex:1}
+.pk .mt{font-family:var(--mono);font-size:11px;color:var(--ink-soft);white-space:nowrap}
+.pk.rest{border-left:4px solid var(--amber);background:var(--amber-soft)}
+.pk.frost{border-left:4px solid var(--pine-2);background:#E9F0EB}
+
+/* ---------- Tagesstatus & Kühlschrank ---------- */
+.stbadge{display:inline-block;font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:2px 7px;border-radius:2px;margin-left:6px}
+.stbadge.ok{background:var(--pine-2);color:var(--paper)}
+.stbadge.aus{background:var(--paper-2);border:1px solid var(--line-2);color:var(--ink-soft)}
+.heute-card{border:1px solid var(--pine);border-left:6px solid var(--amber)}
+.fr-item{display:flex;gap:8px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line)}
+.fr-item:last-child{border-bottom:0}
+.fr-item .nm{flex:1;min-width:0}
+.fr-item .nm b{font-family:var(--display);font-size:17px;font-weight:600;display:block}
+.fr-meta{font-family:var(--mono);font-size:11px;color:var(--ink-soft)}
+.fr-meta.alt{color:var(--alarm)}
+
+/* ---------- Mahlzeit-Blöcke & Drag ---------- */
+.mealblock{border-radius:var(--r);padding:6px 6px 8px;margin:0 -6px}
+.mealblock+.mealblock{border-top:1px dashed var(--line);margin-top:8px;padding-top:9px}
+.grip{display:inline-block;cursor:grab;touch-action:none;padding:0 6px 0 0;color:var(--ink-soft);
+  font-size:14px;letter-spacing:-2px;user-select:none;-webkit-user-select:none}
+.mealblock.dragsrc{opacity:.35}
+.mealblock.dragover{background:var(--amber-soft);outline:2px dashed var(--amber);outline-offset:-2px}
+.draghost{position:fixed;z-index:200;pointer-events:none;background:#fff;border:1px solid var(--pine);
+  box-shadow:0 8px 24px rgba(22,48,43,.28);opacity:.95;margin:0;padding:8px 10px;max-width:420px}
+body.dragging{overflow:hidden;-webkit-user-select:none;user-select:none}
+.dragtip{font-family:var(--mono);font-size:10px;color:var(--ink-soft);letter-spacing:.08em;text-transform:uppercase;margin:2px 0 8px}
+
+/* ---------- Nährwerte ---------- */
+.nw{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:8px 0}
+.nw div{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);padding:6px 4px;text-align:center}
+.nw b{display:block;font-family:var(--display);font-size:20px;line-height:1}
+.nw span{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.nwhint{font-size:11.5px;color:var(--ink-soft);margin:-2px 0 10px}
+.swline{display:flex;align-items:center;gap:8px;margin:2px 0 8px;font-size:13px}
+.swline input{width:18px;height:18px;flex:0 0 18px;accent-color:var(--pine)}
+
+/* ---------- Einkaufsliste bearbeiten ---------- */
+.item .edt{background:none;border:0;padding:2px 4px;color:var(--ink-soft);font-size:15px;line-height:1}
+.iedit{display:grid;grid-template-columns:1fr 62px 84px;gap:5px;padding:8px 0;border-bottom:1px solid var(--line)}
+.iedit .full{grid-column:1/-1}
+.iedit input,.iedit select{padding:6px 8px}
+.item.man .nm b{font-weight:600}
+.addbox{display:grid;grid-template-columns:1fr 62px 84px;gap:5px;margin-top:10px}
+.addbox .full{grid-column:1/-1}
+
+/* ---------- Kochmodus ---------- */
+.sheet.cook{align-items:stretch}
+.sheet.cook .sheet-in{max-height:100vh;height:100dvh;border-radius:0;padding-top:calc(12px + env(safe-area-inset-top));
+  display:flex;flex-direction:column;background:var(--paper)}
+.cookhead{display:flex;align-items:flex-start;gap:10px;justify-content:space-between;margin-bottom:8px}
+.cookhead h2{font-size:23px;text-transform:uppercase;line-height:1}
+.stepper{display:flex;align-items:center;gap:8px}
+.stepper button{width:34px;height:34px;border:1px solid var(--line-2);background:#fff;border-radius:var(--r);
+  font-family:var(--display);font-size:20px;line-height:1}
+.stepper b{font-family:var(--display);font-size:20px;min-width:74px;text-align:center}
+.cookzut{border:1px solid var(--line);background:#fff;border-radius:var(--r);padding:4px 10px;margin-bottom:12px}
+.cookzut .item{padding:6px 0}
+.cookzut summary{font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.05em;
+  padding:8px 0;cursor:pointer;list-style:none}
+.cookzut summary::-webkit-details-marker{display:none}
+.cookzut summary::after{content:'▾';float:right;color:var(--ink-soft)}
+.cookzut[open] summary::after{content:'▴'}
+.cookbody{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.cstep{background:#fff;border:1px solid var(--line);border-left:5px solid var(--line-2);border-radius:var(--r);
+  padding:12px;margin-bottom:8px}
+.cstep.now{border-left-color:var(--amber);box-shadow:0 2px 10px rgba(22,48,43,.10)}
+.cstep.fin{opacity:.45}
+.cstep .no{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--ink-soft);text-transform:uppercase}
+.cstep p{margin:4px 0 0;font-size:16.5px;line-height:1.5}
+.cstep.now p{font-size:19px}
+.timerbar{display:flex;align-items:center;gap:8px;margin-top:10px;flex-wrap:wrap}
+.tdisp{font-family:var(--mono);font-size:26px;font-weight:600;letter-spacing:.02em}
+.tdisp.ring{color:var(--alarm);animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:.25}}
+.cookfoot{display:flex;gap:8px;padding:10px 0 calc(6px + env(safe-area-inset-bottom));border-top:1px solid var(--line-2)}
+.cookfoot .btn{flex:1}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="head-in">
+    <div class="brand">Familientisch<small>Wochenplan für Familie &amp; 24-h-Dienst</small></div>
+    <div class="nextshift" id="nextShift"></div>
+  </div>
+</header>
+<div class="streifen"><div class="streifen-in"><div class="band" id="band"></div></div></div>
+
+<nav class="tabs"><div class="tabs-in">
+  <button class="tab" data-t="plan" aria-selected="true">Plan</button>
+  <button class="tab" data-t="liste" aria-selected="false">Einkauf<span class="cnt" id="cntListe">0</span></button>
+  <button class="tab" data-t="rezepte" aria-selected="false">Rezepte<span class="cnt" id="cntRez">0</span></button>
+  <button class="tab" data-t="vorrat" aria-selected="false">Vorrat</button>
+  <button class="tab" data-t="setup" aria-selected="false">Dienst</button>
+</div></nav>
+
+<div class="wrap">
+
+<!-- ================= PLAN ================= -->
+<section id="s-plan" class="on">
+  <div class="card">
+    <div class="card-h"><h2 id="wochenTitel">Woche</h2>
+      <div class="row">
+        <button class="btn ghost sm" id="wPrev">&larr;</button>
+        <button class="btn ghost sm" id="wNext">&rarr;</button>
+      </div>
+    </div>
+    <div class="card-b">
+      <div class="eyebrow" style="margin-bottom:6px">Ausrichtung der Woche</div>
+      <div class="chips" id="stimmung"></div>
+      <div class="chips" style="margin-top:8px">
+        <button class="chip" id="dblChip">Ein Gericht darf 2 Abende halten</button>
+        <button class="chip" id="mittagChip">Mittagessen mitplanen</button>
+        <button class="chip" id="fruehChip">Frühstück mitplanen</button>
+      </div>
+      <div class="eyebrow" style="margin:14px 0 6px">Protein</div>
+      <div class="chips">
+        <button class="chip" id="protChip">Protein-Boost</button>
+        <button class="chip" id="trainChip">Trainingstage extra</button>
+      </div>
+      <div id="protBox" style="margin-top:8px">
+        <label class="f"><span>Ziel Protein pro Portion (g)</span><input type="number" id="protZiel" min="15" max="70" step="5"></label>
+      </div>
+      <label class="f" style="margin-top:12px"><span>Wünsche oder Reste, die weg müssen</span>
+        <input type="text" id="wunsch" placeholder="z.B. Hackfleisch auftauen, Sophie mag gerade Kürbis"></label>
+      <div class="row">
+        <button class="btn amber" id="genBtn">Wochenplan erstellen</button>
+        <button class="btn ghost sm" id="clearWeek">Woche leeren</button>
+      </div>
+      <div class="status" id="genStatus"></div>
+      <p class="muted" style="margin:10px 0 0">Gesperrte Tage (🔒) bleiben beim Neu-Erstellen unverändert. Mahlzeiten lassen sich am ⠿-Griff auf einen anderen Tag ziehen – dabei werden zwei Tage getauscht.</p>
+    </div>
+  </div>
+  <div id="heuteBox"></div>
+  <div id="planListe"></div>
+  <div class="card"><div class="card-h"><h2>Kochplan</h2></div>
+    <div class="card-b" id="kochplanBody"><p class="muted" style="margin:0">Noch nichts geplant.</p></div></div>
+  <button class="btn" id="toListe" style="width:100%;margin-top:4px">Einkaufsliste aus diesem Plan</button>
+</section>
+
+<!-- ================= LISTE ================= -->
+<section id="s-liste">
+  <div class="card"><div class="card-h"><h2>Einkaufsliste</h2>
+    <div class="row"><button class="btn ghost sm" id="shareListe">Teilen</button>
+    <button class="btn ghost sm" id="copyListe">Kopieren</button>
+    <button class="btn ghost sm" id="rebuildListe">Neu berechnen</button></div></div>
+    <div class="card-b" id="listeBody"><div class="empty"><p>Noch keine Liste.</p>
+      <button class="btn" onclick="tabTo('plan')">Zum Plan</button></div></div>
+  </div>
+  <div class="card"><div class="card-h"><h2>Eigene Position</h2></div><div class="card-b">
+    <p class="muted" style="margin-top:0">Alles, was du hier einträgst, bleibt beim Neu-Berechnen erhalten.</p>
+    <div class="addbox">
+      <input type="text" id="addName" placeholder="z.B. Spülmaschinentabs" class="full">
+      <input type="number" id="addMenge" placeholder="1" step="0.5">
+      <select id="addEinheit"></select>
+      <select id="addKat" class="full"></select>
+    </div>
+    <button class="btn sm" id="addItem" style="margin-top:8px">Auf die Liste</button>
+  </div></div>
+</section>
+
+<!-- ================= REZEPTE ================= -->
+<section id="s-rezepte">
+  <div class="card">
+    <div class="card-h"><h2>Neue Rezepte</h2></div>
+    <div class="card-b">
+      <p class="muted" style="margin-top:0">Füllt den Pool auf. Alles Neue landet sofort unten in der Liste – dort prüfen, anpassen oder wieder löschen.</p>
+      <div class="eyebrow" style="margin-bottom:6px">Wofür</div>
+      <div class="chips" id="genArt"></div>
+      <div class="eyebrow" style="margin:14px 0 6px">Richtung (optional)</div>
+      <div class="chips" id="genRicht"></div>
+      <label class="f" style="margin-top:14px"><span>Wunsch in eigenen Worten</span>
+        <input type="text" id="genWunsch" placeholder="z.B. mit Heringsfilet, Ofengerichte, was aufgewärmt taugt"></label>
+      <div class="grid2">
+        <label class="f"><span>Wie viele Rezepte</span><input type="number" id="genAnzahl" min="1" max="30" step="1" value="10"></label>
+      </div>
+      <div class="row">
+        <button class="btn amber" id="genRezBtn">Rezepte generieren</button>
+        <button class="btn ghost sm" id="genRezStop" style="display:none">Abbrechen</button>
+      </div>
+      <div class="status" id="genRezStatus"></div>
+      <div id="genRezNeu"></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-h"><h2>Rezept einfügen</h2></div>
+    <div class="card-b">
+      <p class="muted" style="margin-top:0">Rezept von einer Website oder aus dem Kochbuch hier reinkopieren – egal wie unsortiert. Wird in Zutaten, Kategorien und Schritte zerlegt und landet im Pool.</p>
+      <label class="f"><span>Rezepttext</span><textarea id="impRezText" placeholder="Zutaten für 4 Personen: 500 g Hackfleisch, 2 Zwiebeln …&#10;Zubereitung: Zwiebeln anbraten …"></textarea></label>
+      <div class="row">
+        <button class="btn amber" id="impRezBtn">Übernehmen</button>
+        <button class="btn ghost sm" id="impRezClear">Feld leeren</button>
+      </div>
+      <div class="status" id="impRezStatus"></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-h"><h2>Pool aufräumen</h2><button class="btn sm" id="dedupBtn">Prüfen</button></div>
+    <div class="card-b">
+      <p class="muted" style="margin-top:0">Sucht Dubletten und Rezepte, die sich kaum unterscheiden. Beim Zusammenlegen bleibt eins übrig – bestehende Pläne werden auf das behaltene Rezept umgehängt.</p>
+      <div class="status" id="dedupStatus"></div>
+      <div id="dedupBody"></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-h"><h2>Rezeptpool</h2><button class="btn sm" id="newRez">Neu</button></div>
+    <div class="card-b">
+      <input type="text" id="rezSuche" placeholder="Suchen …" style="margin-bottom:10px">
+      <div class="sortrow">
+        <span class="eyebrow">Sortierung</span>
+        <select id="rezSort">
+          <option value="fav">Favoriten zuerst</option>
+          <option value="staub">Länger nicht gekocht zuerst</option>
+          <option value="name">A – Z</option>
+          <option value="neu">Zuletzt angelegt</option>
+        </select>
+      </div>
+      <div class="chips" id="rezFilter"></div>
+      <div id="rezListe" style="margin-top:10px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VORRAT ================= -->
+<section id="s-vorrat">
+  <div class="card"><div class="card-h"><h2>Kühlschrank</h2></div><div class="card-b">
+    <p class="muted" style="margin-top:0">Reste und ausgefallene Gerichte. Füllt sich, wenn du am Plan einen Tagesstatus setzt – und taucht bei der Rezeptwahl ganz oben auf.</p>
+    <div id="kuehlListe"></div>
+  </div></div>
+  <div class="card"><div class="card-h"><h2>Vorrat</h2></div><div class="card-b">
+    <p class="muted" style="margin-top:0">Was hier steht, wird von der Einkaufsliste abgezogen. Beim Abhaken auf der Liste landet nichts automatisch hier – das bleibt deine Entscheidung.</p>
+    <div class="row"><input type="text" id="vorratNeu" placeholder="z.B. Reis" style="flex:1;min-width:160px">
+      <button class="btn sm" id="vorratAdd">Aufnehmen</button></div>
+    <div id="vorratListe" style="margin-top:12px"></div>
+  </div></div>
+</section>
+
+<!-- ================= SETUP ================= -->
+<section id="s-setup">
+  <div class="card"><div class="card-h"><h2>Schichtrhythmus</h2></div><div class="card-b">
+    <label class="f"><span>Erste Schicht (Ankertag)</span><input type="date" id="anker"></label>
+    <label class="f"><span>Abstände in Tagen bis zur nächsten Schicht</span>
+      <input type="text" id="intervalle" placeholder="3,3,2,3,5,3,2"></label>
+    <p class="muted" style="margin-top:-4px">Der Zyklus wiederholt sich endlos. Prüf die Vorschau – wenn ein Datum nicht stimmt, korrigier den Abstand davor.</p>
+    <div class="eyebrow" style="margin:12px 0 5px">Vorschau der nächsten Dienste</div>
+    <div id="vorschau" style="font-family:var(--mono);font-size:12.5px;line-height:1.8"></div>
+  </div></div>
+
+  <div class="card"><div class="card-h"><h2>Portionen</h2></div><div class="card-b">
+    <div class="grid2">
+      <label class="f"><span>Abendessen zu Hause</span><input type="number" id="pHaus" min="1" step="1"></label>
+      <label class="f"><span>Zum Dienst mitnehmen</span><input type="number" id="pMit" min="1" step="1"></label>
+      <label class="f"><span>Mittagessen zu Hause</span><input type="number" id="pMittag" min="1" step="1"></label>
+      <label class="f"><span>Frühstück zu Hause</span><input type="number" id="pFrueh" min="1" step="1"></label>
+    </div>
+    <p class="muted" style="margin:0">An einem Abend vor dem Dienst wird automatisch die Mitnahme-Portion mitgekocht und in den Mengen berücksichtigt.</p>
+  </div></div>
+
+  <div class="card"><div class="card-h"><h2>Reihenfolge im Laden</h2>
+    <button class="btn ghost sm" id="ordReset">Standard</button></div><div class="card-b">
+    <p class="muted" style="margin-top:0">So läufst du durch deinen Markt. Die Einkaufsliste – auch die geteilte und kopierte – wird genau in dieser Reihenfolge gruppiert.</p>
+    <div id="ordListe"></div>
+  </div></div>
+
+  <div class="card"><div class="card-h"><h2>KI &amp; Daten</h2></div><div class="card-b">
+    <label class="f"><span>Anthropic API-Key (nur nötig, wenn du die Datei selbst hostest)</span>
+      <input type="password" id="apiKey" placeholder="sk-ant-…" autocomplete="off"></label>
+    <div class="row">
+      <button class="btn ghost sm" id="expBtn">Daten sichern</button>
+      <button class="btn ghost sm" id="impBtn">Sicherung laden</button>
+      <button class="btn danger sm" id="resetBtn">Alles zurücksetzen</button>
+    </div>
+    <input type="file" id="impFile" accept="application/json" hidden>
+  </div></div>
+</section>
+</div>
+
+<!-- Rezept-Editor -->
+<div class="sheet" id="sheet"><div class="sheet-in">
+  <div class="row" style="justify-content:space-between;margin-bottom:12px">
+    <h2 style="font-size:22px;text-transform:uppercase">Rezept</h2>
+    <button class="btn ghost sm" id="sheetClose">Schließen</button>
+  </div>
+  <label class="f"><span>Name</span><input type="text" id="eName"></label>
+  <div class="grid2">
+    <label class="f"><span>Zeit in Minuten</span><input type="number" id="eZeit" min="5" step="5"></label>
+    <label class="f"><span>Rezept reicht für … Portionen</span><input type="number" id="ePort" min="1" step="1"></label>
+    <label class="f"><span>Preisstufe</span><select id="eBud">
+      <option value="1">€ – günstig</option><option value="2">€€ – mittel</option><option value="3">€€€ – teuer</option>
+    </select></label>
+  </div>
+  <div class="eyebrow">Nährwerte pro Portion</div>
+  <div class="nw" id="eNW"></div>
+  <div class="nwhint" id="eNWHint"></div>
+  <label class="swline"><input type="checkbox" id="eAuto" checked><span>Automatisch aus den Zutaten berechnen</span></label>
+  <div class="grid2" id="eManuell" style="display:none">
+    <label class="f"><span>kcal</span><input type="number" id="eKcal" min="0" step="10"></label>
+    <label class="f"><span>Protein (g)</span><input type="number" id="eProt" min="0" step="1"></label>
+    <label class="f"><span>Kohlenhydrate (g)</span><input type="number" id="eKh" min="0" step="1"></label>
+    <label class="f"><span>Fett (g)</span><input type="number" id="eFett" min="0" step="1"></label>
+  </div>
+  <label class="f"><span>Merkmale</span></label>
+  <div class="chips" id="eTags" style="margin:-6px 0 12px"></div>
+  <div class="eyebrow" style="margin-bottom:5px">Zutaten</div>
+  <div id="eZutaten"></div>
+  <button class="btn ghost sm" id="eAddZ" style="margin-top:6px">Zutat hinzufügen</button>
+  <label class="f" style="margin-top:12px"><span>Zubereitung</span><textarea id="eSchritte"></textarea></label>
+  <p class="muted" style="margin:-4px 0 10px">Tipp: jeder Satz wird im Kochmodus zu einem eigenen Schritt. Zeitangaben wie „20 Minuten" werden automatisch zum Timer.</p>
+  <div class="status" id="eStatus"></div>
+  <div class="row" style="margin-top:6px">
+    <button class="btn amber" id="eSave">Rezept speichern</button>
+    <button class="btn ghost sm" id="eFav">☆ Favorit</button>
+    <button class="btn ghost sm" id="eCook">Kochmodus</button>
+    <button class="btn ghost sm" id="eBoost">Mehr Protein (KI)</button>
+    <button class="btn danger sm" id="eDel">Löschen</button>
+  </div>
+</div></div>
+
+<!-- Kochmodus -->
+<div class="sheet cook" id="cook"><div class="sheet-in">
+  <div class="cookhead">
+    <h2 id="cookName">Kochmodus</h2>
+    <button class="btn ghost sm" id="cookClose">Fertig</button>
+  </div>
+  <div class="row" style="justify-content:space-between;margin-bottom:10px">
+    <div class="stepper">
+      <button id="cookMinus">−</button><b id="cookPort">4 Port.</b><button id="cookPlus">+</button>
+    </div>
+    <span class="eyebrow" id="cookMeta"></span>
+  </div>
+  <div class="cookbody" id="cookBody"></div>
+  <div class="cookfoot">
+    <button class="btn ghost" id="cookPrev">Zurück</button>
+    <button class="btn amber" id="cookNext">Schritt erledigt</button>
+  </div>
+</div></div>
+
+<div class="sheet" id="pick"><div class="sheet-in">
+  <div class="row" style="justify-content:space-between;margin-bottom:12px">
+    <h2 style="font-size:22px;text-transform:uppercase">Rezept wählen</h2>
+    <button class="btn ghost sm" id="pickClose">Schließen</button>
+  </div>
+  <input type="text" id="pickSuche" placeholder="Suchen …" style="margin-bottom:10px">
+  <div id="pickRest"></div>
+  <div id="pickListe"></div>
+</div></div>
+
+<script>
+/* =========================================================
+   Speicher: window.storage (Artifact) mit Fallback localStorage
+   ========================================================= */
+const KEY='schichtkueche:v1';
+const Store={
+  async load(){
+    try{ if(window.storage){ const r=await window.storage.get(KEY,false); if(r&&r.value) return JSON.parse(r.value);} }catch(e){}
+    try{ const r=localStorage.getItem(KEY); if(r) return JSON.parse(r); }catch(e){}
+    return null;
+  },
+  async save(obj){
+    const s=JSON.stringify(obj);
+    try{ if(window.storage){ await window.storage.set(KEY,s,false); } }catch(e){}
+    try{ localStorage.setItem(KEY,s); }catch(e){}
+  }
+};
+
+const KATS=['Obst & Gemüse','Fleisch & Fisch','Molkerei & Eier','Trocken & Konserven','Tiefkühl','Gewürze & Öl','Backwaren','Sonstiges'];
+/* Reihenfolge, in der die Einkaufsliste gruppiert wird – frei sortierbar im Setup */
+function katReihe(){
+  const r=(S.setup&&S.setup.ladenReihe||[]).filter(k=>KATS.includes(k));
+  return r.concat(KATS.filter(k=>!r.includes(k)));
+}
+const EINH=['g','ml','Stück','EL','TL','Bund','Dose','Packung','Prise'];
+const TAGS=['proteinreich','soulfood','schnell','kindgerecht','leicht','mealprep','vegetarisch','One-Pot','mittag','frühstück'];
+const STIMMUNG=['ausgewogen','proteinreich','soulfood','schnell','leicht','vegetarisch-lastig'];
+const WD=['So','Mo','Di','Mi','Do','Fr','Sa'];
+const WDL=['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
+
+let S=null;        // State
+let weekOffset=0;  // 0 = aktuelle Woche
+const esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+
+/* =========================================================
+   Nährwerte – kleine Lebensmittel-Tabelle (pro 100 g, Näherung)
+   [regex, kcal, protein, kh, fett, {Einheit:Gramm}?]
+   ========================================================= */
+const FOODS=[
+ [/kräuterbutter|kraeuterbutter/,720,1,1,80],
+ [/hähnchenschenkel|haehnchenschenkel/,170,18,0,11],
+ [/hähnchen|haehnchen|hühnchen|huhn\b/,110,23,0,2],
+ [/pute/,105,24,0,1],
+ [/rinderhack/,240,19,0,18],
+ [/hackfleisch|\bhack\b/,250,18,0,20],
+ [/gulasch/,150,22,0,7],
+ [/steak|rinderfilet/,160,22,0,8],
+ [/kassler/,155,20,0,8],
+ [/würstchen|wuerstchen|wiener/,280,12,2,25,{'Stück':50}],
+ [/schinken/,110,19,1,3],
+ [/lachs|forelle/,200,20,0,13],
+ [/garnele/,90,19,0,1],
+ [/thunfisch/,110,25,0,1,{'Dose':140}],
+ [/\beier?\b/,155,13,1,11,{'Stück':60}],
+ [/kokosmilch/,180,2,3,18],
+ [/milchreis/,350,7,78,1],
+ [/\bmilch\b|vollmilch/,47,3.4,4.8,1.5],
+ [/sahne/,300,2,3,30],
+ [/\bbutter\b/,740,1,1,82],
+ [/frischkäse|frischkaese/,250,6,4,23],
+ [/hüttenkäse|huettenkaese/,100,12,3,4],
+ [/skyr/,63,11,4,0.2],
+ [/quark/,67,12,4,0.3],
+ [/joghurt/,62,4,5,3.5],
+ [/feta/,260,17,1,21],
+ [/parmesan/,400,33,0,29],
+ [/gouda|käse|kaese/,360,25,0,28],
+ [/haferflocken/,370,13,59,7],
+ [/reiswaffel/,380,8,80,3,{'Stück':8}],
+ [/basmatireis|\breis\b/,350,8,77,1],
+ [/vollkornnudel/,350,13,65,3],
+ [/nudel|spaghetti|penne|makkaroni/,360,12,72,2],
+ [/couscous/,350,12,72,2],
+ [/bulgur/,340,12,69,2],
+ [/\bmehl\b/,340,10,72,1],
+ [/vollkornbrot|\bbrot\b/,210,8,38,2,{'Stück':45}],
+ [/tortilla|wrap/,300,8,50,7,{'Stück':60}],
+ [/semmelbrösel|semmelbroesel|paniermehl/,350,10,72,2],
+ [/linsen/,350,25,52,2],
+ [/schälerbsen|schaelerbsen/,340,22,55,2],
+ [/kichererbsen/,120,7,16,2,{'Dose':265}],
+ [/bohnen/,100,8,14,0.5,{'Dose':255}],
+ [/\bmais\b/,80,3,13,1,{'Dose':140}],
+ [/erbsen/,80,5,12,0.5],
+ [/süßkartoffel|suesskartoffel/,90,1.6,20,0.1],
+ [/kartoffel/,75,2,16,0.1],
+ [/karotte|möhre|moehre/,36,1,7,0.2,{'Stück':80}],
+ [/frühlingszwiebel|fruehlingszwiebel/,30,2,5,0.2,{'Bund':80}],
+ [/zwiebel/,30,1,6,0.1,{'Stück':90}],
+ [/paprika\b/,30,1,5,0.3,{'Stück':150}],
+ [/zucchini/,20,2,2,0.2,{'Stück':200}],
+ [/passierte tomaten|gehackte tomaten/,25,1.3,4,0.2],
+ [/tomatenmark/,90,5,15,0.5],
+ [/tomate/,20,1,3,0.2,{'Stück':100}],
+ [/brokkoli/,34,3.8,3,0.4],
+ [/champignon|pilz/,22,3,1,0.3],
+ [/lauch|porree/,30,2,4,0.3,{'Stück':150}],
+ [/gurke/,13,0.6,2,0.1,{'Stück':300}],
+ [/spinat/,23,2.9,1,0.4],
+ [/banane/,90,1,21,0.3,{'Stück':120}],
+ [/beeren|himbeer|blaubeer|erdbeer/,45,1,8,0.4],
+ [/apfelmus/,80,0.3,19,0.2],
+ [/kirsch/,65,0.9,14,0.2,{'Dose':350}],
+ [/salat/,15,1.3,2,0.2,{'Stück':300}],
+ [/zitrone|limette/,35,0.6,3,0.3,{'Stück':60}],
+ [/rosinen/,300,2.5,68,0.5],
+ [/nüsse|nuesse|walnu|mandel/,650,15,11,62],
+ [/honig/,300,0.4,82,0,{'TL':8,'EL':20}],
+ [/zucker/,400,0,100,0],
+ [/sojasauce/,60,8,5,0,{'EL':15}],
+ [/currypaste/,120,2,8,8,{'EL':15}],
+ [/öl\b|oel\b|olivenöl|rapsöl|sesamöl|leinöl/,884,0,0,100,{'EL':10,'TL':4}]
+];
+const NW_IGNORE=/brühe|bruehe|salz|pfeffer|wasser|kapern|muskat|zimt|majoran|oregano|rosmarin|thymian|basilikum|paprikapulver|chili|kreuzkümmel|kreuzkuemmel|curry\b|petersilie|schnittlauch|minze|dill|gewürz|gewuerz|kräuter|kraeuter|essig|senf|backpulver|vanille/;
+function zuGramm(z,ov){
+  const u=z.einheit||'g';
+  if(u==='g'||u==='ml') return z.menge;
+  if(ov&&ov[u]!=null) return z.menge*ov[u];
+  const std={'Stück':100,'EL':15,'TL':5,'Bund':25,'Dose':400,'Packung':250,'Prise':0};
+  return z.menge*(std[u]??0);
+}
+function nwBerechnen(r){
+  let k=0,p=0,c=0,f=0; const unbek=[];
+  (r.zutaten||[]).forEach(z=>{
+    const n=(z.name||'').toLowerCase();
+    const hit=FOODS.find(x=>x[0].test(n));
+    if(!hit){ if(n&&!NW_IGNORE.test(n)) unbek.push(z.name); return; }
+    const g=zuGramm(z,hit[5]);
+    k+=hit[1]*g/100; p+=hit[2]*g/100; c+=hit[3]*g/100; f+=hit[4]*g/100;
+  });
+  const port=r.basisPortionen||4;
+  return {kcal:Math.round(k/port),protein:Math.round(p/port),kh:Math.round(c/port),fett:Math.round(f/port),unbekannt:unbek};
+}
+function nwVon(r){
+  if(!r) return null;
+  if(r.nwManuell) return {...r.nwManuell,manuell:true};
+  const n=nwBerechnen(r);
+  if(!n.protein&&r.protein) n.protein=r.protein;   // Fallback auf alten Handwert
+  return n;
+}
+function protVon(r){const n=nwVon(r);return n?(n.protein||null):null;}
+function nwTxt(r){
+  const n=nwVon(r); if(!n) return '';
+  let t=''; if(n.kcal) t+=' · ~'+n.kcal+' kcal';
+  if(n.protein) t+=' · ~'+n.protein+' g Protein';
+  return t;
+}
+
+/* ---------- Datum ---------- */
+const iso=d=>{const x=new Date(d);return x.getFullYear()+'-'+String(x.getMonth()+1).padStart(2,'0')+'-'+String(x.getDate()).padStart(2,'0');};
+const parse=s=>{const[a,b,c]=s.split('-').map(Number);return new Date(a,b-1,c);};
+const addD=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x;};
+const heute=()=>{const d=new Date();d.setHours(0,0,0,0);return d;};
+const fmt=d=>String(d.getDate()).padStart(2,'0')+'.'+String(d.getMonth()+1).padStart(2,'0')+'.';
+function montag(off){const d=heute();const s=(d.getDay()+6)%7;return addD(d,-s+off*7);}
+
+/* ---------- Schichtlogik ---------- */
+function schichtenIn(von,bis){
+  const iv=S.setup.intervalle; if(!iv.length) return [];
+  let d=parse(S.setup.anker), i=0;
+  let guard=0;
+  while(d>von && guard++<4000){ i=(i-1+iv.length)%iv.length; d=addD(d,-iv[i]); }
+  const out=[]; guard=0;
+  while(d<=bis && guard++<4000){ if(d>=von) out.push(iso(d)); d=addD(d,iv[i]); i=(i+1)%iv.length; }
+  return out;
+}
+const istSchicht=dstr=>schichtenIn(parse(dstr),parse(dstr)).length>0;
+function naechsteSchicht(){
+  const l=schichtenIn(heute(),addD(heute(),40));
+  return l.length?l[0]:null;
+}
+
+/* =========================================================
+   Startzustand
+   ========================================================= */
+function seed(){
+  const r=(name,zeit,port,tags,zut,schritte)=>({
+    id:'r'+Math.random().toString(36).slice(2,9),name,zeit,basisPortionen:port,tags,
+    zutaten:zut.map(z=>({name:z[0],menge:z[1],einheit:z[2],kategorie:z[3]})),schritte
+  });
+  const list=[
+    r('Hähnchen-Reispfanne mit Paprika',30,4,['proteinreich','mealprep','One-Pot'],
+      [['Hähnchenbrust',600,'g','Fleisch & Fisch'],['Basmatireis',300,'g','Trocken & Konserven'],['Paprika',3,'Stück','Obst & Gemüse'],['Zwiebel',1,'Stück','Obst & Gemüse'],['Erbsen TK',200,'g','Tiefkühl'],['Sojasauce',3,'EL','Gewürze & Öl'],['Olivenöl',2,'EL','Gewürze & Öl'],['Paprikapulver',2,'TL','Gewürze & Öl']],
+      'Reis kochen. Hähnchen würfeln und scharf anbraten, Zwiebel und Paprika dazu. Erbsen und Reis unterheben, mit Sojasauce und Paprikapulver abschmecken.'),
+    r('Linsenbolognese mit Vollkornnudeln',35,4,['proteinreich','vegetarisch','mealprep','kindgerecht'],
+      [['Rote Linsen',250,'g','Trocken & Konserven'],['Vollkornnudeln',500,'g','Trocken & Konserven'],['Passierte Tomaten',700,'g','Trocken & Konserven'],['Karotte',2,'Stück','Obst & Gemüse'],['Zwiebel',1,'Stück','Obst & Gemüse'],['Knoblauchzehen',2,'Stück','Obst & Gemüse'],['Parmesan',80,'g','Molkerei & Eier'],['Olivenöl',2,'EL','Gewürze & Öl'],['Oregano',2,'TL','Gewürze & Öl']],
+      'Zwiebel, Knoblauch und geraspelte Karotte anschwitzen. Linsen und Tomaten dazu, 20 Minuten köcheln. Nudeln kochen, mit Parmesan servieren.'),
+    r('Ofengemüse mit Feta und Kichererbsen',40,4,['vegetarisch','mealprep','leicht'],
+      [['Süßkartoffel',600,'g','Obst & Gemüse'],['Zucchini',2,'Stück','Obst & Gemüse'],['Rote Zwiebel',2,'Stück','Obst & Gemüse'],['Kichererbsen',2,'Dose','Trocken & Konserven'],['Feta',200,'g','Molkerei & Eier'],['Olivenöl',4,'EL','Gewürze & Öl'],['Kreuzkümmel',2,'TL','Gewürze & Öl']],
+      'Gemüse würfeln, mit Kichererbsen, Öl und Gewürzen mischen, 30 Minuten bei 200 °C backen. Feta darüber bröseln.'),
+    r('Rindergulasch mit Kartoffeln',150,5,['soulfood','mealprep'],
+      [['Rindergulasch',900,'g','Fleisch & Fisch'],['Zwiebel',4,'Stück','Obst & Gemüse'],['Kartoffeln',1200,'g','Obst & Gemüse'],['Tomatenmark',2,'EL','Trocken & Konserven'],['Rinderbrühe',700,'ml','Trocken & Konserven'],['Paprikapulver',2,'EL','Gewürze & Öl'],['Rapsöl',3,'EL','Gewürze & Öl']],
+      'Fleisch scharf anbraten, Zwiebeln dazu, Tomatenmark rösten, mit Brühe ablöschen und 2 Stunden schmoren. Kartoffeln separat kochen.'),
+    r('Lachs aus dem Ofen mit Brokkoli und Kartoffeln',35,4,['proteinreich','leicht','schnell'],
+      [['Lachsfilet',600,'g','Fleisch & Fisch'],['Brokkoli',700,'g','Obst & Gemüse'],['Kartoffeln',900,'g','Obst & Gemüse'],['Zitrone',1,'Stück','Obst & Gemüse'],['Olivenöl',3,'EL','Gewürze & Öl'],['Kräuterbutter',80,'g','Molkerei & Eier']],
+      'Kartoffeln vorkochen, mit Brokkoli und Lachs auf ein Blech, ölen, würzen, 18 Minuten bei 200 °C.'),
+    r('Chili con Carne',50,6,['proteinreich','soulfood','mealprep','One-Pot'],
+      [['Rinderhackfleisch',700,'g','Fleisch & Fisch'],['Kidneybohnen',2,'Dose','Trocken & Konserven'],['Mais',1,'Dose','Trocken & Konserven'],['Gehackte Tomaten',800,'g','Trocken & Konserven'],['Paprika',2,'Stück','Obst & Gemüse'],['Zwiebel',2,'Stück','Obst & Gemüse'],['Kreuzkümmel',2,'TL','Gewürze & Öl'],['Chilipulver',1,'TL','Gewürze & Öl']],
+      'Hack krümelig braten, Zwiebel und Paprika dazu, Tomaten, Bohnen, Mais und Gewürze zugeben, 30 Minuten köcheln.'),
+    r('Kaiserschmarrn mit Apfelmus',30,4,['soulfood','kindgerecht','vegetarisch'],
+      [['Mehl',250,'g','Backwaren'],['Eier',6,'Stück','Molkerei & Eier'],['Milch',400,'ml','Molkerei & Eier'],['Butter',60,'g','Molkerei & Eier'],['Rosinen',60,'g','Trocken & Konserven'],['Apfelmus',400,'g','Trocken & Konserven'],['Puderzucker',30,'g','Backwaren']],
+      'Teig anrühren, Eiweiß steif schlagen und unterheben. In Butter ausbacken, zerreißen, karamellisieren.'),
+    r('Hackfleisch-Kartoffel-Auflauf',60,5,['soulfood','kindgerecht','mealprep'],
+      [['Rinderhackfleisch',600,'g','Fleisch & Fisch'],['Kartoffeln',1200,'g','Obst & Gemüse'],['Sahne',300,'ml','Molkerei & Eier'],['Gouda gerieben',200,'g','Molkerei & Eier'],['Zwiebel',2,'Stück','Obst & Gemüse'],['Muskat',1,'Prise','Gewürze & Öl']],
+      'Kartoffelscheiben und angebratenes Hack schichten, Sahne angießen, Käse darüber, 45 Minuten bei 190 °C.'),
+    r('Türkische Bulgurpfanne mit Joghurt',30,4,['schnell','vegetarisch','proteinreich'],
+      [['Bulgur',300,'g','Trocken & Konserven'],['Kichererbsen',1,'Dose','Trocken & Konserven'],['Tomaten',4,'Stück','Obst & Gemüse'],['Petersilie',1,'Bund','Obst & Gemüse'],['Naturjoghurt',500,'g','Molkerei & Eier'],['Tomatenmark',2,'EL','Trocken & Konserven'],['Olivenöl',3,'EL','Gewürze & Öl']],
+      'Bulgur quellen lassen. Tomatenmark und Tomaten anbraten, Kichererbsen dazu, mit Bulgur mischen, Joghurt und Petersilie obendrauf.'),
+    r('Süßkartoffel-Hähnchen-Curry',40,5,['proteinreich','mealprep','One-Pot'],
+      [['Hähnchenschenkel ohne Knochen',700,'g','Fleisch & Fisch'],['Süßkartoffel',700,'g','Obst & Gemüse'],['Kokosmilch',800,'ml','Trocken & Konserven'],['Currypaste',3,'EL','Gewürze & Öl'],['Basmatireis',300,'g','Trocken & Konserven'],['Limette',1,'Stück','Obst & Gemüse'],['Spinat TK',200,'g','Tiefkühl']],
+      'Currypaste anrösten, Hähnchen anbraten, Süßkartoffel und Kokosmilch dazu, 25 Minuten köcheln, Spinat unterheben.'),
+    r('Putengeschnetzeltes mit Champignons und Reis',30,4,['proteinreich','kindgerecht'],
+      [['Putenbrust',600,'g','Fleisch & Fisch'],['Champignons',400,'g','Obst & Gemüse'],['Basmatireis',300,'g','Trocken & Konserven'],['Sahne',200,'ml','Molkerei & Eier'],['Zwiebel',1,'Stück','Obst & Gemüse'],['Rapsöl',2,'EL','Gewürze & Öl']],
+      'Pute in Streifen anbraten und herausnehmen. Champignons und Zwiebel braten, Sahne angießen, Pute zurückgeben, zu Reis servieren.'),
+    r('Kartoffelsuppe mit Wiener Würstchen',40,5,['soulfood','One-Pot','kindgerecht'],
+      [['Kartoffeln',1000,'g','Obst & Gemüse'],['Karotte',3,'Stück','Obst & Gemüse'],['Lauch',1,'Stück','Obst & Gemüse'],['Gemüsebrühe',1200,'ml','Trocken & Konserven'],['Wiener Würstchen',8,'Stück','Fleisch & Fisch'],['Majoran',1,'TL','Gewürze & Öl']],
+      'Gemüse würfeln und in Brühe weich kochen, teilweise pürieren. Würstchen in Scheiben darin erwärmen.'),
+    r('Gemüse-Frittata mit Kartoffeln',30,4,['proteinreich','vegetarisch','schnell'],
+      [['Eier',8,'Stück','Molkerei & Eier'],['Kartoffeln',500,'g','Obst & Gemüse'],['Paprika',2,'Stück','Obst & Gemüse'],['Zucchini',1,'Stück','Obst & Gemüse'],['Gouda gerieben',100,'g','Molkerei & Eier'],['Olivenöl',3,'EL','Gewürze & Öl']],
+      'Gekochte Kartoffelscheiben und Gemüse anbraten, verquirlte Eier darübergeben, Käse aufstreuen, bei kleiner Hitze stocken lassen.'),
+    r('Nudelauflauf mit Brokkoli und Schinken',45,5,['kindgerecht','mealprep','soulfood'],
+      [['Nudeln',500,'g','Trocken & Konserven'],['Brokkoli',600,'g','Obst & Gemüse'],['Kochschinken',200,'g','Fleisch & Fisch'],['Sahne',250,'ml','Molkerei & Eier'],['Milch',250,'ml','Molkerei & Eier'],['Gouda gerieben',200,'g','Molkerei & Eier'],['Muskat',1,'Prise','Gewürze & Öl']],
+      'Nudeln und Brokkoli vorkochen, mit Schinken mischen, Sahne-Milch angießen, Käse darüber, 25 Minuten bei 190 °C backen.'),
+    r('Hähnchen-Wraps mit Joghurtsauce',25,4,['schnell','proteinreich','kindgerecht'],
+      [['Hähnchenbrust',500,'g','Fleisch & Fisch'],['Tortilla-Wraps',8,'Stück','Backwaren'],['Naturjoghurt',300,'g','Molkerei & Eier'],['Eisbergsalat',1,'Stück','Obst & Gemüse'],['Tomaten',3,'Stück','Obst & Gemüse'],['Paprikapulver',2,'TL','Gewürze & Öl']],
+      'Hähnchenstreifen würzen und braten. Mit Salat, Tomaten und Joghurtsauce in die Wraps rollen.'),
+    r('Couscous-Salat mit Hähnchen und Gurke',25,4,['mealprep','leicht','proteinreich'],
+      [['Couscous',300,'g','Trocken & Konserven'],['Hähnchenbrust',500,'g','Fleisch & Fisch'],['Gurke',1,'Stück','Obst & Gemüse'],['Tomaten',3,'Stück','Obst & Gemüse'],['Zitrone',1,'Stück','Obst & Gemüse'],['Minze',1,'Bund','Obst & Gemüse'],['Olivenöl',4,'EL','Gewürze & Öl']],
+      'Couscous quellen lassen, Hähnchen braten, alles mit Gemüse, Zitrone und Öl mischen. Schmeckt auch kalt – ideal zum Mitnehmen.'),
+    r('Ofenkartoffeln mit Kräuterquark und Salat',50,4,['vegetarisch','leicht'],
+      [['Kartoffeln',1200,'g','Obst & Gemüse'],['Magerquark',500,'g','Molkerei & Eier'],['Schnittlauch',1,'Bund','Obst & Gemüse'],['Feldsalat',200,'g','Obst & Gemüse'],['Leinöl',2,'EL','Gewürze & Öl'],['Olivenöl',2,'EL','Gewürze & Öl']],
+      'Kartoffeln 45 Minuten bei 200 °C backen. Quark mit Kräutern und Leinöl anrühren, mit Salat servieren.'),
+    r('Asiatische Nudelpfanne mit Ei und Gemüse',25,4,['schnell','vegetarisch'],
+      [['Mie-Nudeln',400,'g','Trocken & Konserven'],['Eier',4,'Stück','Molkerei & Eier'],['Karotte',2,'Stück','Obst & Gemüse'],['Paprika',2,'Stück','Obst & Gemüse'],['Frühlingszwiebeln',1,'Bund','Obst & Gemüse'],['Sojasauce',4,'EL','Gewürze & Öl'],['Sesamöl',2,'EL','Gewürze & Öl']],
+      'Gemüse scharf anbraten, gegarte Nudeln und verquirlte Eier dazu, mit Sojasauce und Sesamöl abschmecken.'),
+    r('Königsberger Klopse mit Kartoffeln',50,4,['soulfood'],
+      [['Gemischtes Hackfleisch',600,'g','Fleisch & Fisch'],['Kartoffeln',1000,'g','Obst & Gemüse'],['Kapern',2,'EL','Trocken & Konserven'],['Sahne',200,'ml','Molkerei & Eier'],['Zwiebel',1,'Stück','Obst & Gemüse'],['Eier',1,'Stück','Molkerei & Eier'],['Semmelbrösel',60,'g','Backwaren'],['Zitrone',1,'Stück','Obst & Gemüse']],
+      'Klopse formen und in Brühe gar ziehen lassen. Helle Sauce mit Sahne, Kapern und Zitrone binden, zu Salzkartoffeln servieren.'),
+    r('Rinderhacksteaks mit Püree und Erbsen',35,4,['kindgerecht','proteinreich'],
+      [['Rinderhackfleisch',600,'g','Fleisch & Fisch'],['Kartoffeln',900,'g','Obst & Gemüse'],['Erbsen TK',400,'g','Tiefkühl'],['Milch',150,'ml','Molkerei & Eier'],['Butter',50,'g','Molkerei & Eier'],['Zwiebel',1,'Stück','Obst & Gemüse']],
+      'Hacksteaks würzen und braten, Kartoffeln zu Püree stampfen, Erbsen in Butter schwenken.'),
+    r('Milchreis mit Zimt und Kirschen',35,4,['kindgerecht','soulfood','vegetarisch'],
+      [['Milchreis',300,'g','Trocken & Konserven'],['Milch',1000,'ml','Molkerei & Eier'],['Sauerkirschen',1,'Dose','Trocken & Konserven'],['Zucker',60,'g','Backwaren'],['Zimt',2,'TL','Gewürze & Öl']],
+      'Reis in Milch bei kleiner Hitze ausquellen lassen, süßen, mit Zimt und warmen Kirschen servieren.'),
+    r('Garnelen-Zitronen-Pasta',25,4,['schnell','leicht'],
+      [['Garnelen',400,'g','Fleisch & Fisch'],['Spaghetti',500,'g','Trocken & Konserven'],['Zitrone',2,'Stück','Obst & Gemüse'],['Knoblauchzehen',3,'Stück','Obst & Gemüse'],['Petersilie',1,'Bund','Obst & Gemüse'],['Olivenöl',4,'EL','Gewürze & Öl'],['Parmesan',60,'g','Molkerei & Eier']],
+      'Garnelen mit Knoblauch braten, mit Zitronensaft ablöschen, mit Spaghetti, Öl und Petersilie mischen.'),
+    r('Rindersteak mit Ofengemüse',40,4,['proteinreich','leicht'],
+      [['Rindersteak',700,'g','Fleisch & Fisch'],['Süßkartoffel',500,'g','Obst & Gemüse'],['Zucchini',2,'Stück','Obst & Gemüse'],['Champignons',300,'g','Obst & Gemüse'],['Olivenöl',3,'EL','Gewürze & Öl'],['Rosmarin',2,'TL','Gewürze & Öl']],
+      'Gemüse 25 Minuten bei 200 °C rösten, Steaks scharf anbraten und ruhen lassen.'),
+    r('Erbseneintopf mit Kassler',60,6,['soulfood','One-Pot','mealprep'],
+      [['Schälerbsen',500,'g','Trocken & Konserven'],['Kassler',500,'g','Fleisch & Fisch'],['Kartoffeln',600,'g','Obst & Gemüse'],['Karotte',3,'Stück','Obst & Gemüse'],['Lauch',1,'Stück','Obst & Gemüse'],['Gemüsebrühe',1500,'ml','Trocken & Konserven'],['Majoran',2,'TL','Gewürze & Öl']],
+      'Erbsen mit Brühe und Gemüse 45 Minuten kochen, Kassler in Würfeln zugeben und durchziehen lassen.')
+  ];
+  const PROT={'Putengeschnetzeltes mit Champignons und Reis':36,'Kartoffelsuppe mit Wiener Würstchen':18,
+   'Gemüse-Frittata mit Kartoffeln':26,'Nudelauflauf mit Brokkoli und Schinken':28,
+   'Hähnchen-Wraps mit Joghurtsauce':34,'Couscous-Salat mit Hähnchen und Gurke':32,
+   'Ofenkartoffeln mit Kräuterquark und Salat':22,'Asiatische Nudelpfanne mit Ei und Gemüse':20,
+   'Königsberger Klopse mit Kartoffeln':32,'Rinderhacksteaks mit Püree und Erbsen':36,
+   'Milchreis mit Zimt und Kirschen':12,'Garnelen-Zitronen-Pasta':28,
+   'Rindersteak mit Ofengemüse':44,'Erbseneintopf mit Kassler':30,'Hähnchen-Reispfanne mit Paprika':38,'Linsenbolognese mit Vollkornnudeln':24,
+   'Ofengemüse mit Feta und Kichererbsen':20,'Rindergulasch mit Kartoffeln':40,
+   'Lachs aus dem Ofen mit Brokkoli und Kartoffeln':34,'Chili con Carne':32,
+   'Kaiserschmarrn mit Apfelmus':15,'Hackfleisch-Kartoffel-Auflauf':30,
+   'Türkische Bulgurpfanne mit Joghurt':22,'Süßkartoffel-Hähnchen-Curry':30};
+  const BUDGET={'Hähnchen-Reispfanne mit Paprika':2,'Linsenbolognese mit Vollkornnudeln':1,
+   'Ofengemüse mit Feta und Kichererbsen':2,'Rindergulasch mit Kartoffeln':3,
+   'Lachs aus dem Ofen mit Brokkoli und Kartoffeln':3,'Chili con Carne':2,
+   'Kaiserschmarrn mit Apfelmus':1,'Hackfleisch-Kartoffel-Auflauf':2,
+   'Türkische Bulgurpfanne mit Joghurt':1,'Süßkartoffel-Hähnchen-Curry':2,
+   'Putengeschnetzeltes mit Champignons und Reis':2,'Kartoffelsuppe mit Wiener Würstchen':1,
+   'Gemüse-Frittata mit Kartoffeln':1,'Nudelauflauf mit Brokkoli und Schinken':1,
+   'Hähnchen-Wraps mit Joghurtsauce':2,'Couscous-Salat mit Hähnchen und Gurke':2,
+   'Ofenkartoffeln mit Kräuterquark und Salat':1,'Asiatische Nudelpfanne mit Ei und Gemüse':1,
+   'Königsberger Klopse mit Kartoffeln':2,'Rinderhacksteaks mit Püree und Erbsen':2,
+   'Milchreis mit Zimt und Kirschen':1,'Garnelen-Zitronen-Pasta':3,
+   'Rindersteak mit Ofengemüse':3,'Erbseneintopf mit Kassler':1};
+  return list.map(x=>({...x,protein:PROT[x.name]??null,budget:BUDGET[x.name]??2}));
+}
+function leer(){
+  return {
+    setup:{anker:'2026-07-19',intervalle:[3,3,2,3,5,3,2],pHaus:3,pMit:1,pMittag:2,pFrueh:2,apiKey:''},
+    rezepte:seed(), plaene:{}, vorrat:[], kuehlschrank:[], liste:null, historie:[]
+  };
+}
+
+/* ---------- Kühlschrank-Helfer ---------- */
+function wochenKey(dstr){const d=parse(dstr);const s=(d.getDay()+6)%7;return iso(addD(d,-s));}
+function planVon(dstr){const k=wochenKey(dstr);return S.plaene[k]||(S.plaene[k]={tage:{}});}
+function haltbarkeit(k){
+  const n=(k.rezeptName||'').toLowerCase();
+  if(/fisch|lachs|garnel|forelle|thunfisch|scholle|meeresfr/.test(n)) return 1;
+  if(/hack|geschnetzelt|h\u00e4hnchen|haehnchen|pute|huhn|frikadel/.test(n)) return 2;
+  return 3;
+}
+function kuehlAlter(k){return Math.round((heute()-parse(k.gekochtAm))/864e5);}
+function statusBadge(e,sc){
+  if(e.status==='gekocht') return ' <span class="stbadge ok">'+(sc?'Gegessen':'Gekocht')+(e.restId?' \u00b7 Rest im K\u00fchlschrank':'')+'</span>';
+  if(e.status==='ausgefallen') return ' <span class="stbadge aus">Ausgefallen</span>';
+  return '';
+}
+
+/* =========================================================
+   Rendering
+   ========================================================= */
+function renderKopf(){
+  const n=naechsteSchicht();
+  const el=document.getElementById('nextShift');
+  if(!n){el.textContent='';}
+  else{
+    const d=parse(n), tage=Math.round((d-heute())/864e5);
+    el.innerHTML='<span>Nächster Dienst</span><b>'+WD[d.getDay()]+' '+fmt(d)+'</b>'+
+      (tage===0?'heute':tage===1?'morgen':'in '+tage+' Tagen');
+  }
+  // Streifen: 21 Tage ab heute-2
+  const start=addD(heute(),-2), band=document.getElementById('band');
+  const sch=new Set(schichtenIn(start,addD(start,23)));
+  band.innerHTML='';
+  for(let i=0;i<24;i++){
+    const d=addD(start,i), s=iso(d);
+    const div=document.createElement('div');
+    div.className='tick'+(sch.has(s)?' shift':'')+(iso(d)===iso(heute())?' today':'')+(d<heute()?' past':'');
+    div.innerHTML='<div class="wd">'+WD[d.getDay()]+'</div><div class="blk">'+d.getDate()+'</div>';
+    band.appendChild(div);
+  }
+}
+
+function planKey(){ return iso(montag(weekOffset)); }
+function getPlan(){ return S.plaene[planKey()] || (S.plaene[planKey()]={tage:{}}); }
+
+/* ---------- Mahlzeit-Blöcke (geteilt von Wochenplan und Heute-Karte) ---------- */
+function blockAbend(s,e,sc,drag){
+  let inner='<div class="mealblock" data-slot="abend" data-d="'+s+'">';
+  const grip=drag?'<span class="grip" data-grip title="Auf anderen Tag ziehen">⠿</span>':'';
+  if(e&&e.rezeptId){
+    const r=rezept(e.rezeptId);
+    const rName=r?r.name:(e.rezeptName?e.rezeptName+' <span class="muted">(Rezept gelöscht)</span>':'—');
+    inner+='<div class="slot">'+grip+(sc?'Mittagessen zum Mitnehmen':'Abendessen')+(e.gesperrt?' · 🔒 gesperrt':'')+statusBadge(e,sc)+'</div>'+
+      '<div class="meal">'+rName+'</div>';
+    if(r) inner+='<div class="muted">'+r.zeit+' min'+nwTxt(r)+' · '+EUR(r.budget)+' · '+r.tags.slice(0,3).join(' · ')+'</div>';
+    if(e.quelle==='rest') inner+='<span class="src">Rest vom Vorabend</span>';
+    if(e.quelle==='mealprep') inner+='<span class="src">Mealprep · gekocht am '+(e.kochtag?fmt(parse(e.kochtag)):'?')+'</span>';
+    if(e.quelle==='doppelt') inner+='<span class="src">Vom Vortag – doppelt gekocht</span>';
+    if(e.quelle==='kuehlschrank') inner+='<span class="src">Aus dem Kühlschrank – nichts kochen</span>';
+    if(e.quelle==='nachholen') inner+='<span class="src">Nachgeholt – Zutaten schon da</span>';
+    if(e.hinweis) inner+='<div class="muted" style="margin-top:6px">'+e.hinweis+'</div>';
+    const alts=(e.alternativen||[]).map(id=>rezept(id)).filter(Boolean);
+    if(alts.length){
+      inner+='<div class="slot" style="margin-top:9px">Stattdessen?</div><div class="row">'+
+        alts.map(a=>'<button class="btn ghost sm" data-act="alt" data-d="'+s+'" data-r="'+a.id+'">'+a.name+' · '+EUR(a.budget)+'</button>').join('')+'</div>';
+    }
+    inner+='<div class="day-actions">';
+    if(s<=iso(heute())){
+      if(!e.status){
+        inner+='<button class="btn ghost sm" data-act="stG" data-d="'+s+'">✓ '+(sc?'Gegessen':'Gekocht')+'</button>'+
+          (sc?'':'<button class="btn ghost sm" data-act="stR" data-d="'+s+'">Rest übrig</button>')+
+          '<button class="btn ghost sm" data-act="stA" data-d="'+s+'">'+(sc?'Nicht gegessen':'Nicht gekocht')+'</button>';
+      }else{
+        inner+='<button class="btn ghost sm" data-act="stX" data-d="'+s+'">Status zurück</button>';
+      }
+    }
+    inner+='<button class="btn ghost sm" data-act="rup" data-d="'+s+'" aria-pressed="'+(e.rating==='up')+'">👍</button>'+
+      '<button class="btn ghost sm" data-act="rdn" data-d="'+s+'" aria-pressed="'+(e.rating==='down')+'">👎</button>'+
+      '<button class="btn ghost sm" data-act="lock" data-d="'+s+'">'+(e.gesperrt?'Entsperren':'Sperren')+'</button>'+
+      '<button class="btn ghost sm" data-act="swap" data-d="'+s+'">Anderes Rezept</button>'+
+      (r?'<button class="btn ghost sm" data-act="cook" data-d="'+s+'">Kochmodus</button>':'')+
+      (r?'<button class="btn ghost sm" data-act="show" data-d="'+s+'">Rezept ansehen</button>':'')+
+      '<button class="btn ghost sm" data-act="clear" data-d="'+s+'">Leeren</button></div>';
+  }else{
+    inner+='<div class="slot">'+(sc?'Mittagessen zum Mitnehmen':'Abendessen')+'</div>'+
+      '<div class="muted">Noch nichts geplant.</div>'+
+      '<div class="day-actions"><button class="btn ghost sm" data-act="swap" data-d="'+s+'">Rezept wählen</button></div>';
+  }
+  return inner+'</div>';
+}
+
+function blockMittag(s,e,drag){
+  const m=e&&e.mittag;
+  const grip=(drag&&m)?'<span class="grip" data-grip title="Auf anderen Tag ziehen">⠿</span>':'';
+  let inner='<div class="mealblock" data-slot="mittag" data-d="'+s+'"><div class="slot">'+grip+'Mittagessen</div>';
+  if(m&&(rezept(m.rezeptId)||m.rezeptName)){
+    const mr=rezept(m.rezeptId);
+    inner+='<div class="meal" style="font-size:17px">'+(mr?mr.name:m.rezeptName)+(m.ok?' <span class="stbadge ok">Gegessen</span>':'')+'</div>';
+    if(mr) inner+='<div class="muted">'+mr.zeit+' min'+nwTxt(mr)+'</div>';
+    if(m.quelle==='rest') inner+='<span class="src">Rest vom Abendessen gestern – abends mehr kochen</span>';
+    if(m.quelle==='kuehlschrank') inner+='<span class="src">Aus dem Kühlschrank – nichts kochen</span>';
+    if(m.quelle==='nachholen') inner+='<span class="src">Nachgeholt – Zutaten schon da</span>';
+    inner+='<div class="day-actions">'+
+      (!m.ok&&s<=iso(heute())?'<button class="btn ghost sm" data-act="mok" data-d="'+s+'">✓ Gegessen</button>':'')+
+      '<button class="btn ghost sm" data-act="mswap" data-d="'+s+'">Anderes</button>'+
+      (mr?'<button class="btn ghost sm" data-act="mcook" data-d="'+s+'">Kochmodus</button>':'')+
+      (mr?'<button class="btn ghost sm" data-act="mshow" data-d="'+s+'">Rezept ansehen</button>':'')+
+      '<button class="btn ghost sm" data-act="mclear" data-d="'+s+'">Leeren</button></div>';
+  }else{
+    inner+='<div class="day-actions"><button class="btn ghost sm" data-act="mswap" data-d="'+s+'">Mittag wählen</button></div>';
+  }
+  return inner+'</div>';
+}
+
+function blockFrueh(s,e,drag){
+  const fr=e&&e.frueh;
+  const grip=(drag&&fr)?'<span class="grip" data-grip title="Auf anderen Tag ziehen">⠿</span>':'';
+  let inner='<div class="mealblock" data-slot="frueh" data-d="'+s+'"><div class="slot">'+grip+'Frühstück</div>';
+  if(fr&&(rezept(fr.rezeptId)||fr.rezeptName)){
+    const frR=rezept(fr.rezeptId);
+    inner+='<div class="meal" style="font-size:17px">'+(frR?frR.name:fr.rezeptName)+(fr.ok?' <span class="stbadge ok">Gegessen</span>':'')+'</div>';
+    if(frR) inner+='<div class="muted">'+frR.zeit+' min'+nwTxt(frR)+'</div>';
+    inner+='<div class="day-actions">'+
+      (!fr.ok&&s<=iso(heute())?'<button class="btn ghost sm" data-act="fok" data-d="'+s+'">✓ Gegessen</button>':'')+
+      '<button class="btn ghost sm" data-act="fswap" data-d="'+s+'">Anderes</button>'+
+      (frR?'<button class="btn ghost sm" data-act="fcook" data-d="'+s+'">Kochmodus</button>':'')+
+      (frR?'<button class="btn ghost sm" data-act="fshow" data-d="'+s+'">Rezept ansehen</button>':'')+
+      '<button class="btn ghost sm" data-act="fclear" data-d="'+s+'">Leeren</button></div>';
+  }else{
+    inner+='<div class="day-actions"><button class="btn ghost sm" data-act="fswap" data-d="'+s+'">Frühstück wählen</button></div>';
+  }
+  return inner+'</div>';
+}
+
+function renderPlan(){
+  const mo=montag(weekOffset);
+  document.getElementById('wochenTitel').textContent='Woche '+fmt(mo)+' – '+fmt(addD(mo,6));
+  const p=getPlan(), box=document.getElementById('planListe');
+  box.innerHTML='';
+  for(let i=0;i<7;i++){
+    const d=addD(mo,i), s=iso(d), sc=istSchicht(s), e=p.tage[s];
+    const div=document.createElement('div');
+    div.className='day '+(sc?'shift':'free')+(s===iso(heute())?' istheute':'');
+    let inner='<div class="day-h"><span class="dt">'+WDL[d.getDay()]+'</span><span class="dd">'+fmt(d)+'</span>'+
+      '<span class="tagtyp">'+(sc?'24-h-Dienst · nur Mitnahme':'Familienessen')+'</span></div><div class="day-b">';
+    inner+=blockAbend(s,e,sc,true);
+    if(!sc){
+      inner+='<div class="hr" style="margin:10px 0 8px"></div>'+blockMittag(s,e,true);
+      if(S.fruehPlanen||(e&&e.frueh)) inner+='<div class="hr" style="margin:10px 0 8px"></div>'+blockFrueh(s,e,true);
+    }
+    div.innerHTML=inner+'</div>';
+    box.appendChild(div);
+  }
+  renderKochplan();
+  renderHeute();
+}
+
+/* ---------- Heute-Karte ---------- */
+function renderHeute(){
+  const box=document.getElementById('heuteBox'); if(!box) return;
+  if(weekOffset!==0){box.innerHTML='';return;}
+  const d=heute(), s=iso(d), e=(S.plaene[planKey()]||{tage:{}}).tage[s], sc=istSchicht(s);
+  let h='<div class="card heute-card"><div class="card-h"><h2>Heute · '+WDL[d.getDay()]+' '+fmt(d)+'</h2>'+
+    '<span class="eyebrow">'+(sc?'24-h-Dienst':'Familienessen')+'</span></div><div class="card-b">';
+  h+=blockAbend(s,e,sc,false);
+  if(!sc){
+    h+=blockMittag(s,e,false);
+    if(S.fruehPlanen||(e&&e.frueh)) h+=blockFrueh(s,e,false);
+  }
+  const frisch=S.kuehlschrank.filter(k=>k.art==='rest'&&(!e||e.kuehlId!==k.id));
+  if(frisch.length){
+    h+='<div class="hr"></div><div class="slot">Außerdem im Kühlschrank</div>'+frisch.map(k=>{
+      const a=kuehlAlter(k);
+      return '<div class="fr-meta'+(a>haltbarkeit(k)?' alt':'')+'">'+k.rezeptName+' · '+k.portionen+' Port. · '+
+        (a<=0?'von heute':a===1?'von gestern':'vor '+a+' Tagen')+(a>haltbarkeit(k)?' · besser prüfen':'')+'</div>';
+    }).join('');
+  }
+  h+='</div></div>';
+  box.innerHTML=h;
+}
+const rezept=id=>S.rezepte.find(r=>r.id===id);
+const EUR=b=>'€'.repeat(Math.min(3,Math.max(1,b||2)));
+
+/* ---------- Kochhistorie ---------- */
+function kochHistorie(){
+  const out={};
+  const add=(id,d,gek)=>{
+    if(!id) return;
+    const o=out[id]||(out[id]={geplant:null,gekocht:null,anzahl:0});
+    if(!o.geplant||d>o.geplant) o.geplant=d;
+    if(gek){o.anzahl++; if(!o.gekocht||d>o.gekocht) o.gekocht=d;}
+  };
+  Object.values(S.plaene||{}).forEach(p=>Object.entries(p.tage||{}).forEach(([d,e])=>{
+    add(e.rezeptId,d,e.status==='gekocht');
+    if(e.mittag) add(e.mittag.rezeptId,d,!!e.mittag.ok);
+    if(e.frueh) add(e.frueh.rezeptId,d,!!e.frueh.ok);
+  }));
+  return out;
+}
+const TAGE_STAUB=60;
+function tageHer(dstr){ return dstr?Math.round((heute()-parse(dstr))/864e5):null; }
+function histTxt(h){
+  if(!h) return ' · noch nie eingeplant';
+  if(h.gekocht){
+    const t=tageHer(h.gekocht);
+    return ' · zuletzt gekocht '+fmt(parse(h.gekocht))+(t>0?' ('+t+' Tage her)':'')+(h.anzahl>1?' · '+h.anzahl+'×':'');
+  }
+  if(h.geplant) return ' · geplant am '+fmt(parse(h.geplant))+', nie als gekocht markiert';
+  return ' · noch nie eingeplant';
+}
+function staubt(h,aktiv){
+  if(!aktiv) return false;
+  if(!h||!h.gekocht) return true;
+  return tageHer(h.gekocht)>TAGE_STAUB;
+}
+
+function renderRezepte(){
+  document.getElementById('cntRez').textContent=S.rezepte.length;
+  const q=(document.getElementById('rezSuche').value||'').toLowerCase();
+  const f=S.filter||[];
+  const sortEl=document.getElementById('rezSort');
+  const sort=sortEl?sortEl.value:'fav';
+  const box=document.getElementById('rezListe');
+  const hist=kochHistorie();
+  const histAktiv=Object.values(hist).some(h=>h.gekocht);
+  const alter=r=>{const h=hist[r.id]; return h&&h.gekocht?tageHer(h.gekocht):99999;};
+  const list=S.rezepte
+    .map((r,i)=>({r,i}))
+    .filter(({r})=>(!q||r.name.toLowerCase().includes(q))&&(!f.length||f.every(t=>r.tags.includes(t))))
+    .sort((a,b)=>{
+      if(sort==='name') return a.r.name.localeCompare(b.r.name,'de');
+      if(sort==='neu') return b.i-a.i;
+      if(sort==='staub') return alter(b.r)-alter(a.r)||a.r.name.localeCompare(b.r.name,'de');
+      return (b.r.fav?1:0)-(a.r.fav?1:0)||a.r.name.localeCompare(b.r.name,'de');
+    })
+    .map(x=>x.r);
+  box.innerHTML=list.length?'':'<div class="empty"><p>Kein Rezept passt.</p></div>';
+  list.forEach(r=>{
+    const h=hist[r.id];
+    const d=document.createElement('div');d.className='rez'+(staubt(h,histAktiv)?' staub':'');
+    d.innerHTML='<button class="star" data-fav="'+r.id+'" aria-pressed="'+(!!r.fav)+'" title="Favorit">'+(r.fav?'★':'☆')+'</button>'+
+      '<div class="info"><div class="nm">'+r.name+'</div>'+
+      '<div class="muted">'+r.zeit+' min · '+r.basisPortionen+' Portionen'+nwTxt(r)+' · '+EUR(r.budget)+' · '+r.zutaten.length+' Zutaten</div>'+
+      '<div class="muted">'+histTxt(h).replace(/^ · /,'')+'</div>'+
+      '<div class="tagline">'+r.tags.map(t=>'<span class="tg">'+t+'</span>').join('')+'</div></div>'+
+      '<button class="btn ghost sm" data-edit="'+r.id+'">Öffnen</button>';
+    box.appendChild(d);
+  });
+  genChips();
+}
+
+/* ---------- Rezepte generieren ---------- */
+const GEN_ARTEN=['Abendessen','Mittagessen','Frühstück'];
+let genArt='Abendessen', genRicht=[], genLaeuft=false, genAbbruch=false;
+
+function genChips(){
+  const a=document.getElementById('genArt'); if(!a) return;
+  a.innerHTML='';
+  GEN_ARTEN.forEach(t=>{
+    const b=document.createElement('button');b.className='chip';b.type='button';b.textContent=t;
+    b.setAttribute('aria-pressed',genArt===t);
+    b.onclick=()=>{genArt=t;genChips();};
+    a.appendChild(b);
+  });
+  const r=document.getElementById('genRicht'); r.innerHTML='';
+  TAGS.filter(t=>t!=='mittag'&&t!=='frühstück').forEach(t=>{
+    const b=document.createElement('button');b.className='chip';b.type='button';b.textContent=t;
+    b.setAttribute('aria-pressed',genRicht.includes(t));
+    b.onclick=()=>{genRicht=genRicht.includes(t)?genRicht.filter(x=>x!==t):genRicht.concat(t);genChips();};
+    r.appendChild(b);
+  });
+}
+
+function renderGenNeu(neu){
+  const box=document.getElementById('genRezNeu'); if(!box) return;
+  const list=neu.filter(id=>rezept(id)).map(id=>rezept(id));
+  if(!list.length){box.innerHTML='';return;}
+  box.innerHTML='<div class="eyebrow" style="margin:16px 0 6px">Frisch im Pool ('+list.length+')</div>'+
+    list.map(r=>'<div class="rez"><div class="info"><div class="nm">'+r.name+'</div>'+
+      '<div class="muted">'+r.zeit+' min · '+r.basisPortionen+' Portionen'+nwTxt(r)+' · '+EUR(r.budget)+' · '+r.zutaten.length+' Zutaten</div>'+
+      '<div class="tagline">'+r.tags.map(t=>'<span class="tg">'+t+'</span>').join('')+'</div></div>'+
+      '<button class="btn ghost sm" data-edit="'+r.id+'">Öffnen</button>'+
+      '<button class="btn ghost sm" data-gdel="'+r.id+'">Weg</button></div>').join('');
+}
+
+async function generiereRezepte(){
+  if(genLaeuft) return;
+  const st=document.getElementById('genRezStatus');
+  const btn=document.getElementById('genRezBtn'), stopBtn=document.getElementById('genRezStop');
+  const anzEl=document.getElementById('genAnzahl');
+  const n=Math.max(1,Math.min(30,Number(anzEl.value)||10));
+  anzEl.value=n;
+  const wunsch=document.getElementById('genWunsch').value.trim();
+  const artTag=genArt==='Mittagessen'?'mittag':genArt==='Frühstück'?'frühstück':null;
+  const port=genArt==='Mittagessen'?(S.setup.pMittag||2):genArt==='Frühstück'?(S.setup.pFrueh||2):(S.setup.pHaus||4);
+  const monat=['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'][new Date().getMonth()];
+  const neu=[]; const BATCH=5;
+  genLaeuft=true; genAbbruch=false;
+  btn.disabled=true; stopBtn.style.display=''; stopBtn.disabled=false;
+  document.getElementById('genRezNeu').innerHTML='';
+  try{
+    for(let done=0;done<n;done+=BATCH){
+      if(genAbbruch) break;
+      const k=Math.min(BATCH,n-done);
+      st.className='status work on'; st.style.background='';
+      st.textContent=n>BATCH?'Erfinde Rezepte … '+neu.length+' von '+n+' fertig':'Erfinde '+n+' Rezept'+(n===1?'':'e')+' …';
+      const vorhanden=S.rezepte.map(r=>r.name);
+      const prompt=
+`Du erfindest neue Rezepte für den Rezeptpool einer Familie in Deutschland. Antworte ausschließlich mit JSON, ohne Markdown und ohne Vorrede.
+
+RAHMEN
+- Haushalt: zwei Erwachsene, ein Kleinkind, ein Baby unterwegs. Ein Erwachsener trainiert 5x pro Woche CrossFit.
+- Gesucht: ${k} neue Rezepte für ${genArt}, alltagstauglich, kindgerecht, Zutaten aus dem normalen deutschen Supermarkt.
+- Alle Mengen gelten für ${port} Portionen.
+- Saison: aktueller Monat ist ${monat}. Wähle saisonal passendes Gemüse und Obst.
+${genArt==='Frühstück'?'- Frühstück: maximal 10 Minuten aktive Zeit, proteinreich, morgens vor der Arbeit machbar.':''}
+${genArt==='Mittagessen'?'- Mittagessen: maximal 15 Minuten, proteinreich, muss auch kalt oder aufgewärmt schmecken (wird teilweise zur Arbeit mitgenommen).':''}
+${genArt==='Abendessen'?'- Abendessen: Familienessen, 20-45 Minuten, ein Teil davon soll am Folgetag aufgewärmt noch gut sein.':''}
+${genRicht.length?'- Gewünschte Richtung: '+genRicht.join(', ')+'. Vergib diese Merkmale nur, wenn sie wirklich zutreffen.':''}
+${wunsch?'- Ausdrücklicher Wunsch, der Vorrang hat: '+wunsch:''}
+${S.protBoost?'- Ziel: mindestens '+(S.protZiel||40)+' g Protein pro Portion. Bemiss die Proteinquelle rechnerisch passend.':''}
+- Bewertungen aus früheren Wochen – kam gut an: ${vorlieben().mag.join(', ')||'noch nichts'}. Kam nicht an: ${vorlieben().mied.join(', ')||'nichts'} (Richtung bitte meiden).
+${S.rezepte.filter(r=>r.fav).length?'- Erklärte Favoriten der Familie: '+S.rezepte.filter(r=>r.fav).map(r=>r.name).join(', ')+'. Triff diesen Geschmack, ohne die Gerichte zu kopieren.':''}
+- Diese Rezepte gibt es schon. Keine Namensdopplung und nichts, was sich nur minimal davon unterscheidet: ${vorhanden.join(', ')||'noch keine'}
+- Die ${k} Rezepte sollen sich auch untereinander deutlich unterscheiden: verschiedene Proteinquellen, Beilagen und Garmethoden.
+
+AUSGABE
+{"rezepte":[{"name":"","zeit":30,"basisPortionen":${port},"tags":["aus: ${TAGS.join(', ')}"],"zutaten":[{"name":"","menge":0,"einheit":"aus: ${EINH.join(', ')}","kategorie":"aus: ${KATS.join(' | ')}"}],"protein":Zahl in g pro Portion,"budget":1|2|3,"schritte":"2-4 Sätze Zubereitung"}]}
+
+REGELN
+- Genau ${k} Rezepte, nicht mehr und nicht weniger.
+- Mengen realistisch für ${port} Portionen, in Gramm, Milliliter oder Stück.
+- protein ehrlich pro Portion schätzen. budget: 1 günstig, 2 mittel, 3 teuer.
+- Jeder Satz in schritte wird später ein eigener Kochschritt. Zeitangaben wie "20 Minuten" ausschreiben, damit daraus ein Timer wird.`;
+
+      const headers={'Content-Type':'application/json'};
+      if(S.setup.apiKey){headers['x-api-key']=S.setup.apiKey;headers['anthropic-version']='2023-06-01';headers['anthropic-dangerous-direct-browser-access']='true';}
+      const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers,
+        body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:4000,messages:[{role:'user',content:prompt}]})});
+      if(!res.ok) throw new Error('Antwort '+res.status);
+      const data=await res.json();
+      const txt=data.content.map(c=>c.text||'').join('').replace(/```json|```/g,'').trim();
+      const out=JSON.parse(txt.slice(txt.indexOf('{'),txt.lastIndexOf('}')+1));
+      (out.rezepte||[]).forEach(nr=>{
+        if(!nr||!nr.name) return;
+        const name=String(nr.name).trim();
+        if(S.rezepte.some(r=>r.name.toLowerCase()===name.toLowerCase())) return;
+        const tags=[...new Set((nr.tags||[]).filter(t=>TAGS.includes(t)).concat(artTag?[artTag]:[]))];
+        const id=legeNeuesRezeptAn({
+          name,zeit:Number(nr.zeit)||30,basisPortionen:Number(nr.basisPortionen)||port,tags,
+          zutaten:(nr.zutaten||[]).map(z=>({name:z.name,menge:z.menge,
+            einheit:EINH.includes(z.einheit)?z.einheit:'g',kategorie:z.kategorie})),
+          protein:nr.protein,budget:nr.budget,schritte:nr.schritte});
+        neu.push(id);
+      });
+      save(); renderRezepte(); renderGenNeu(neu);
+    }
+    st.className='status on'; st.style.background='var(--paper-2)';
+    st.textContent=neu.length
+      ? neu.length+' Rezept'+(neu.length===1?'':'e')+' im Pool'+(genAbbruch?' (abgebrochen)':'')+'. Schau sie durch – was nicht passt, kannst du direkt wieder löschen.'
+      : 'Es kam nichts Neues zurück. Formulier den Wunsch etwas anders.';
+  }catch(err){
+    st.className='status bad on'; st.style.background='';
+    st.textContent='Hat nicht geklappt: '+err.message+(S.setup.apiKey?'':' – wenn du die Datei selbst hostest, trag unter Setup einen API-Key ein.')+
+      (neu.length?' '+neu.length+' Rezept'+(neu.length===1?'':'e')+' waren schon durch und sind gespeichert.':'');
+  }finally{
+    genLaeuft=false; btn.disabled=false; stopBtn.style.display='none';
+    renderGenNeu(neu);
+  }
+}
+
+/* ---------- Pool aufräumen ---------- */
+let dedupGruppen=[];
+function renderDedup(){
+  const body=document.getElementById('dedupBody'); if(!body) return;
+  const offen=dedupGruppen.map((g,i)=>({g,i})).filter(({g})=>!g.erledigt&&rezept(g.behalten)&&g.weg.some(id=>rezept(id)));
+  if(!offen.length){body.innerHTML='';return;}
+  body.innerHTML=offen.map(({g,i})=>{
+    const keep=rezept(g.behalten);
+    const weg=g.weg.filter(id=>id!==g.behalten).map(id=>rezept(id)).filter(Boolean);
+    return '<div class="mgrp"><div class="keep">Bleibt: '+esc(keep.name)+'</div>'+
+      '<div class="gone">Geht weg: '+weg.map(r=>esc(r.name)).join(', ')+'</div>'+
+      '<div class="why">'+esc(g.grund||'')+'</div>'+
+      '<div class="row"><button class="btn sm" data-merge="'+i+'">Zusammenlegen</button>'+
+      '<button class="btn ghost sm" data-mskip="'+i+'">Beide behalten</button>'+
+      '<button class="btn ghost sm" data-mswapk="'+i+'">Anderes behalten</button></div></div>';
+  }).join('');
+}
+function mergeGruppe(i){
+  const g=dedupGruppen[i]; if(!g) return;
+  const keep=rezept(g.behalten); if(!keep) return;
+  const weg=g.weg.filter(id=>id!==g.behalten&&rezept(id));
+  if(!weg.length){g.erledigt=true;renderDedup();return;}
+  let n=0;
+  Object.values(S.plaene||{}).forEach(p=>Object.values(p.tage||{}).forEach(e=>{
+    if(weg.includes(e.rezeptId)){e.rezeptId=keep.id;e.rezeptName=keep.name;n++;}
+    if(e.mittag&&weg.includes(e.mittag.rezeptId)){e.mittag.rezeptId=keep.id;e.mittag.rezeptName=keep.name;n++;}
+    if(e.frueh&&weg.includes(e.frueh.rezeptId)){e.frueh.rezeptId=keep.id;e.frueh.rezeptName=keep.name;n++;}
+    if(e.alternativen) e.alternativen=[...new Set(e.alternativen.map(x=>weg.includes(x)?keep.id:x))].filter(x=>x!==e.rezeptId);
+  }));
+  S.kuehlschrank.forEach(k=>{if(weg.includes(k.rezeptId)){k.rezeptId=keep.id;k.rezeptName=keep.name;}});
+  if(weg.some(id=>(rezept(id)||{}).fav)) keep.fav=true;
+  S.rezepte=S.rezepte.filter(r=>!weg.includes(r.id));
+  g.erledigt=true;
+  save(); renderRezepte(); renderPlan(); renderKuehl(); renderDedup();
+  const st=document.getElementById('dedupStatus');
+  st.className='status on'; st.style.background='var(--paper-2)';
+  st.textContent='Zusammengelegt zu „'+keep.name+'"'+(n?' · '+n+(n===1?' Plan-Eintrag':' Plan-Einträge')+' umgehängt':'')+'.';
+}
+async function poolPruefen(){
+  const st=document.getElementById('dedupStatus'), btn=document.getElementById('dedupBtn');
+  const body=document.getElementById('dedupBody');
+  if(S.rezepte.length<3){
+    st.className='status on'; st.style.background='var(--paper-2)';
+    st.textContent='Dafür sind noch zu wenige Rezepte im Pool.'; return;
+  }
+  btn.disabled=true; body.innerHTML=''; dedupGruppen=[];
+  st.className='status work on'; st.style.background='';
+  st.textContent='Vergleiche '+S.rezepte.length+' Rezepte …';
+  const kurz=S.rezepte.map(r=>({id:r.id,name:r.name,tags:r.tags,zeit:r.zeit,
+    zutaten:r.zutaten.slice(0,8).map(z=>z.name)}));
+  const prompt=
+`Du räumst den Rezeptpool einer Familie auf. Antworte ausschließlich mit JSON, ohne Markdown und ohne Vorrede.
+
+AUFGABE
+Finde Gruppen von Rezepten, die dasselbe Gericht sind oder sich so wenig unterscheiden, dass zwei Einträge im Pool keinen Sinn ergeben: dasselbe Gericht unter anderem Namen, dieselbe Basis mit nur minimal anderer Beilage, Schreibvarianten desselben Rezepts.
+Unterschiedliche Proteinquellen, Garmethoden, Küchen oder Zubereitungszeiten sind KEINE Dublette. Auch bewusst schnelle und aufwendige Fassungen desselben Gerichts dürfen nebeneinander stehen.
+Lieber zu wenig als zu viel vorschlagen – im Zweifel nichts.
+
+AUSGABE
+{"gruppen":[{"behalten":"id","weg":["id"],"grund":"ein Satz, warum das dasselbe ist"}]}
+Wenn nichts zusammengehört: {"gruppen":[]}
+
+REGELN
+- behalten: die id des vollständigeren oder treffender benannten Rezepts.
+- weg: nur ids aus derselben Gruppe, nie dieselbe id wie in behalten.
+- Jede id kommt in höchstens einer Gruppe vor.
+
+REZEPTE
+${JSON.stringify(kurz)}`;
+  try{
+    const headers={'Content-Type':'application/json'};
+    if(S.setup.apiKey){headers['x-api-key']=S.setup.apiKey;headers['anthropic-version']='2023-06-01';headers['anthropic-dangerous-direct-browser-access']='true';}
+    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers,
+      body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:2000,messages:[{role:'user',content:prompt}]})});
+    if(!res.ok) throw new Error('Antwort '+res.status);
+    const data=await res.json();
+    const txt=data.content.map(c=>c.text||'').join('').replace(/```json|```/g,'').trim();
+    const out=JSON.parse(txt.slice(txt.indexOf('{'),txt.lastIndexOf('}')+1));
+    const gesehen=new Set();
+    dedupGruppen=(out.gruppen||[]).map(g=>{
+      if(!g||!rezept(g.behalten)||gesehen.has(g.behalten)) return null;
+      const weg=[...new Set((g.weg||[]))].filter(id=>id!==g.behalten&&rezept(id)&&!gesehen.has(id));
+      if(!weg.length) return null;
+      gesehen.add(g.behalten); weg.forEach(id=>gesehen.add(id));
+      return {behalten:g.behalten,weg,grund:g.grund||''};
+    }).filter(Boolean);
+    renderDedup();
+    st.className='status on'; st.style.background='var(--paper-2)';
+    st.textContent=dedupGruppen.length
+      ? dedupGruppen.length+' Vorschlag'+(dedupGruppen.length===1?'':'e')+' – jede Gruppe einzeln entscheiden.'
+      : 'Nichts doppelt. Der Pool ist sauber.';
+  }catch(err){
+    st.className='status bad on'; st.style.background='';
+    st.textContent='Hat nicht geklappt: '+err.message;
+  }finally{ btn.disabled=false; }
+}
+
+/* ---------- Rezept aus Text ---------- */
+async function rezeptAusText(){
+  const st=document.getElementById('impRezStatus'), btn=document.getElementById('impRezBtn');
+  const roh=document.getElementById('impRezText').value.trim();
+  if(roh.length<40){
+    st.className='status bad on'; st.style.background='';
+    st.textContent='Da steht zu wenig drin – Zutaten und Zubereitung mit reinkopieren.'; return;
+  }
+  btn.disabled=true;
+  st.className='status work on'; st.style.background=''; st.textContent='Zerlege das Rezept …';
+  const port=S.setup.pHaus||4;
+  const prompt=
+`Du überträgst ein Rezept in eine strukturierte Form. Antworte ausschließlich mit JSON, ohne Markdown und ohne Vorrede.
+
+AUFGABE
+- Übertrage den Text so genau wie möglich. Nichts dazuerfinden, nichts Wesentliches weglassen.
+- Steht im Text eine Portionszahl, übernimm sie in basisPortionen. Steht keine da, nimm ${port}.
+- Jede Zutat einzeln, Menge als Zahl. Unbestimmte Angaben wie "etwas", "nach Belieben" oder "n. B." werden zu 1 Prise.
+- Passende kategorie für jede Zutat wählen.
+- tags nur vergeben, wenn sie wirklich zutreffen.
+- schritte: die Zubereitung in ganzen Sätzen. Jeder Satz wird später ein eigener Kochschritt, deshalb Zeitangaben wie "20 Minuten" ausschreiben.
+- zeit: geschätzte Gesamtzeit in Minuten. budget: 1 günstig, 2 mittel, 3 teuer. protein: ehrliche Schätzung in g pro Portion.
+
+AUSGABE
+{"rezept":{"name":"","zeit":30,"basisPortionen":${port},"tags":["aus: ${TAGS.join(', ')}"],"zutaten":[{"name":"","menge":0,"einheit":"aus: ${EINH.join(', ')}","kategorie":"aus: ${KATS.join(' | ')}"}],"protein":0,"budget":2,"schritte":""},"hinweis":"ein Satz, falls etwas unklar oder unvollständig war, sonst leerer String"}
+
+TEXT
+${roh.slice(0,6000)}`;
+  try{
+    const headers={'Content-Type':'application/json'};
+    if(S.setup.apiKey){headers['x-api-key']=S.setup.apiKey;headers['anthropic-version']='2023-06-01';headers['anthropic-dangerous-direct-browser-access']='true';}
+    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers,
+      body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:2000,messages:[{role:'user',content:prompt}]})});
+    if(!res.ok) throw new Error('Antwort '+res.status);
+    const data=await res.json();
+    const txt=data.content.map(c=>c.text||'').join('').replace(/```json|```/g,'').trim();
+    const out=JSON.parse(txt.slice(txt.indexOf('{'),txt.lastIndexOf('}')+1));
+    const nr=out.rezept;
+    if(!nr||!nr.name) throw new Error('kein Rezept erkannt');
+    const id=legeNeuesRezeptAn({
+      name:String(nr.name).trim(),zeit:Number(nr.zeit)||30,
+      basisPortionen:Number(nr.basisPortionen)||port,
+      tags:[...new Set((nr.tags||[]).filter(t=>TAGS.includes(t)))],
+      zutaten:(nr.zutaten||[]).map(z=>({name:z.name,menge:z.menge,
+        einheit:EINH.includes(z.einheit)?z.einheit:'g',kategorie:z.kategorie})),
+      protein:nr.protein,budget:nr.budget,schritte:nr.schritte});
+    save(); renderRezepte();
+    document.getElementById('impRezText').value='';
+    st.className='status on'; st.style.background='var(--paper-2)';
+    st.textContent='„'+rezept(id).name+'" liegt im Pool. '+(out.hinweis||'Schau die Mengen einmal durch.');
+    oeffneEditor(id);
+  }catch(err){
+    st.className='status bad on'; st.style.background='';
+    st.textContent='Hat nicht geklappt: '+err.message;
+  }finally{ btn.disabled=false; }
+}
+
+function renderVorrat(){
+  const box=document.getElementById('vorratListe');
+  box.innerHTML=S.vorrat.length?'':'<p class="muted">Noch nichts erfasst.</p>';
+  S.vorrat.forEach((v,i)=>{
+    const d=document.createElement('div');d.className='item';
+    d.innerHTML='<span class="nm">'+v+'</span><button class="btn ghost sm" data-vdel="'+i+'">Entfernen</button>';
+    box.appendChild(d);
+  });
+  renderKuehl();
+}
+function renderKuehl(){
+  const box=document.getElementById('kuehlListe'); if(!box) return;
+  if(!S.kuehlschrank.length){
+    box.innerHTML='<p class="muted" style="margin:0">Leer. Setz am Plan einen Tagesstatus („Rest übrig" oder „Nicht gekocht"), dann füllt sich das hier.</p>';
+    renderHeute(); return;
+  }
+  box.innerHTML=S.kuehlschrank.map(k=>{
+    const a=kuehlAlter(k), halt=haltbarkeit(k);
+    const meta=k.art==='rest'
+      ?k.portionen+' Port. · gekocht '+fmt(parse(k.gekochtAm))+(a>halt?' · schon '+a+' Tage alt – prüfen':' · gut bis ~'+fmt(addD(parse(k.gekochtAm),halt)))
+      :'noch nicht gekocht · Zutaten vom '+fmt(parse(k.gekochtAm));
+    return '<div class="fr-item"><span class="nm"><b>'+k.rezeptName+(k.art==='ungekocht'?' · nachholen':'')+'</b>'+
+      '<span class="fr-meta'+(k.art==='rest'&&a>halt?' alt':'')+'">'+meta+
+      (k.geplantFuer?' · eingeplant für '+fmt(parse(k.geplantFuer)):'')+'</span></span>'+
+      (k.geplantFuer?'':'<button class="btn ghost sm" data-kplan="'+k.id+'">Einplanen</button>')+
+      '<button class="btn ghost sm" data-kdel="'+k.id+'">Weg</button></div>';
+  }).join('');
+  renderHeute();
+}
+
+function renderSetup(){
+  document.getElementById('anker').value=S.setup.anker;
+  document.getElementById('intervalle').value=S.setup.intervalle.join(',');
+  document.getElementById('pHaus').value=S.setup.pHaus;
+  document.getElementById('pMit').value=S.setup.pMit;
+  document.getElementById('pMittag').value=S.setup.pMittag||2;
+  document.getElementById('pFrueh').value=S.setup.pFrueh||2;
+  document.getElementById('apiKey').value=S.setup.apiKey||'';
+  const l=schichtenIn(heute(),addD(heute(),80)).slice(0,10);
+  document.getElementById('vorschau').innerHTML=l.map((s,i)=>{
+    const d=parse(s), prev=i?parse(l[i-1]):null;
+    return WD[d.getDay()]+'  '+fmt(d)+(prev?'   <span style="color:var(--ink-soft)">+'+Math.round((d-prev)/864e5)+' Tage</span>':'');
+  }).join('<br>');
+  renderOrd();
+}
+
+function renderOrd(){
+  const box=document.getElementById('ordListe'); if(!box) return;
+  const r=katReihe();
+  box.innerHTML=r.map((k,i)=>'<div class="ordrow"><span class="pos">'+(i+1)+'</span><span class="n">'+k+'</span>'+
+    '<button class="btn ghost sm" data-ord="up" data-i="'+i+'"'+(i===0?' disabled':'')+'>▲</button>'+
+    '<button class="btn ghost sm" data-ord="down" data-i="'+i+'"'+(i===r.length-1?' disabled':'')+'>▼</button></div>').join('');
+}
+
+/* =========================================================
+   Einkaufsliste
+   ========================================================= */
+let listEdit=null;
+function kocheinheiten(){
+  const p=getPlan(), mo=montag(weekOffset), out=[];
+  const mp={};
+  for(let i=0;i<7;i++){
+    const s=iso(addD(mo,i)), e=p.tage[s]; if(!e) continue;
+    const sc=istSchicht(s);
+    if(!sc&&e.mittag&&e.mittag.rezeptId&&e.mittag.quelle!=='kuehlschrank'&&e.mittag.quelle!=='rest'){
+      const mr=rezept(e.mittag.rezeptId);
+      out.push({rezeptId:e.mittag.rezeptId,portionen:S.setup.pMittag||2,kochdatum:s,
+        einkauf:e.mittag.quelle!=='nachholen',schnell:!!(mr&&mr.zeit<=15),
+        fuer:[WD[parse(s).getDay()]+' Mittag'+(e.mittag.quelle==='nachholen'?' · Zutaten schon da':'')]});
+    }
+    if(!sc&&e.frueh&&e.frueh.rezeptId){
+      const fr=rezept(e.frueh.rezeptId);
+      out.push({rezeptId:e.frueh.rezeptId,portionen:S.setup.pFrueh||2,kochdatum:s,einkauf:true,
+        schnell:!!(fr&&fr.zeit<=15),fuer:[WD[parse(s).getDay()]+' Frühstück']});
+    }
+    if(!e.rezeptId) continue;
+    if(sc){
+      if(e.quelle==='rest'||e.quelle==='kuehlschrank') continue; // Vorabend bzw. schon fertig
+      const k=(e.kochtag||s)+'|'+e.rezeptId;
+      mp[k]=mp[k]||{rezeptId:e.rezeptId,portionen:0,fuer:[],kochdatum:e.kochtag||s,einkauf:true};
+      mp[k].portionen+=S.setup.pMit; mp[k].fuer.push('Dienst '+fmt(parse(s)));
+      if(e.quelle==='nachholen') mp[k].einkauf=false;
+    }else{
+      if(e.quelle==='doppelt'||e.quelle==='kuehlschrank') continue; // Vortag bzw. schon fertig
+      const naechster=iso(addD(parse(s),1));
+      const ne=p.tage[naechster];
+      let extra=0; const zusatz=[];
+      if(istSchicht(naechster)&&ne&&ne.quelle==='rest'){extra+=S.setup.pMit;zusatz.push('+ Mitnahme');}
+      const neM=planVon(naechster).tage[naechster];
+      if(!istSchicht(naechster)&&neM&&neM.mittag&&neM.mittag.quelle==='rest'){extra+=(S.setup.pMittag||2);zusatz.push('+ Mittag Folgetag');}
+      if(!istSchicht(naechster)&&ne&&ne.quelle==='doppelt'){
+        extra+=S.setup.pHaus;zusatz.push('+ 2. Abend');
+        const uebern=iso(addD(parse(s),2)), ue=p.tage[uebern];
+        if(istSchicht(uebern)&&ue&&ue.quelle==='rest'){extra+=S.setup.pMit;zusatz.push('+ Mitnahme');}
+      }
+      out.push({rezeptId:e.rezeptId,portionen:S.setup.pHaus+extra,kochdatum:s,einkauf:e.quelle!=='nachholen',
+        fuer:[WD[parse(s).getDay()]+' Abendessen'+(zusatz.length?' '+zusatz.join(' '):'')+(e.quelle==='nachholen'?' · Zutaten schon da':'')]});
+    }
+  }
+  Object.values(mp).forEach(m=>out.push(m));
+  return out;
+}
+function imVorrat(name){
+  const n=name.toLowerCase().trim();
+  return S.vorrat.some(v=>{
+    const w=v.toLowerCase().trim();
+    if(w===n) return true;
+    if(w.length>=4&&n.includes(w)) return true;
+    if(n.length>=4&&w.includes(n)) return true;
+    return false;
+  });
+}
+function baueListe(){
+  const ke=kocheinheiten(), agg={};
+  const alt={};
+  if(S.liste&&S.liste.items) S.liste.items.forEach(i=>{alt[(i.name+'|'+i.einheit).toLowerCase()]=!!i.erledigt;});
+  ke.forEach(k=>{
+    if(k.einkauf===false) return;                     // Zutaten sind schon im Haus
+    const r=rezept(k.rezeptId); if(!r) return;
+    const f=k.portionen/r.basisPortionen;
+    r.zutaten.forEach(z=>{
+      const id=(z.name+'|'+z.einheit).toLowerCase();
+      agg[id]=agg[id]||{name:z.name,einheit:z.einheit,menge:0,kategorie:z.kategorie||'Sonstiges',fuer:[]};
+      agg[id].menge+=z.menge*f;
+      if(!agg[id].fuer.includes(r.name)) agg[id].fuer.push(r.name);
+    });
+  });
+  const items=Object.values(agg).map(a=>({...a,
+    menge:Math.round(a.menge*10)/10,
+    vorhanden:imVorrat(a.name),
+    erledigt:alt[(a.name+'|'+a.einheit).toLowerCase()]||false}));
+  const manuelle=((S.liste&&S.liste.items)||[]).filter(i=>i.manuell);
+  S.liste={woche:planKey(),items:items.concat(manuelle)};
+  listEdit=null;
+  save(); renderListe(); tabTo('liste');
+}
+function renderListe(){
+  const box=document.getElementById('listeBody');
+  if(!S.liste||!S.liste.items.length){
+    box.innerHTML='<div class="empty"><p>Noch keine Liste.</p><button class="btn" onclick="tabTo(\'plan\')">Zum Plan</button></div>';
+    document.getElementById('cntListe').textContent='0'; return;
+  }
+  const offen=S.liste.items.filter(i=>!i.erledigt&&!i.vorhanden).length;
+  document.getElementById('cntListe').textContent=offen;
+  let h='<p class="muted" style="margin:0 0 12px">Woche ab '+fmt(parse(S.liste.woche))+' · '+offen+' offen</p>';
+  katReihe().forEach(k=>{
+    const it=S.liste.items.filter(i=>i.kategorie===k); if(!it.length) return;
+    h+='<div class="katgroup"><h3>'+k+'</h3>';
+    it.forEach(i=>{
+      const idx=S.liste.items.indexOf(i);
+      if(idx===listEdit){
+        h+='<div class="iedit"><input type="text" class="len full" value="'+esc(i.name)+'">'+
+          '<input type="number" class="lem" value="'+i.menge+'" step="0.5" style="grid-column:1">'+
+          '<select class="lee">'+EINH.map(u=>'<option'+(u===i.einheit?' selected':'')+'>'+u+'</option>').join('')+'</select>'+
+          '<select class="lek">'+KATS.map(k2=>'<option'+(k2===i.kategorie?' selected':'')+'>'+k2+'</option>').join('')+'</select>'+
+          '<div class="row full"><button class="btn sm" data-lsave="'+idx+'">Übernehmen</button>'+
+          '<button class="btn ghost sm" data-lcancel>Abbrechen</button>'+
+          '<button class="btn danger sm" data-ldel="'+idx+'">Entfernen</button></div></div>';
+        return;
+      }
+      h+='<label class="item'+((i.erledigt||i.vorhanden)?' done':'')+(i.manuell?' man':'')+'">'+
+        '<input type="checkbox" data-li="'+idx+'"'+((i.erledigt||i.vorhanden)?' checked':'')+'>'+
+        '<span class="nm">'+esc(i.name)+(i.vorhanden?' <span class="muted">(im Vorrat)</span>':'')+
+        '<span class="why">'+i.fuer.join(', ')+(i.bearbeitet?' · angepasst':'')+'</span></span>'+
+        '<span class="qt">'+i.menge+' '+i.einheit+'</span>'+
+        '<button type="button" class="edt" data-ledit="'+idx+'" title="Bearbeiten">✎</button></label>';
+    });
+    h+='</div>';
+  });
+  box.innerHTML=h;
+}
+function listeText(){
+  if(!S.liste) return '';
+  let t='Einkauf – Woche ab '+fmt(parse(S.liste.woche))+'\n';
+  katReihe().forEach(k=>{
+    const it=S.liste.items.filter(i=>i.kategorie===k&&!i.vorhanden&&!i.erledigt);
+    if(!it.length) return;
+    t+='\n'+k.toUpperCase()+'\n'+it.map(i=>'- '+i.name+'  '+i.menge+' '+i.einheit).join('\n')+'\n';
+  });
+  return t;
+}
+
+/* ---------- Kochplan ---------- */
+function renderKochplan(){
+  const box=document.getElementById('kochplanBody'); if(!box) return;
+  const ke=kocheinheiten().filter(k=>!k.schnell).sort((a,b)=>(a.kochdatum||'').localeCompare(b.kochdatum||''));
+  if(!ke.length){box.innerHTML='<p class="muted" style="margin:0">Noch nichts geplant.</p>';return;}
+  box.innerHTML=ke.map(k=>{
+    const r=rezept(k.rezeptId); if(!r) return '';
+    const d=parse(k.kochdatum);
+    return '<div class="kp"><span class="kpd">'+WD[d.getDay()]+' '+fmt(d)+'</span>'+
+      '<span class="kpn">'+r.name+'</span>'+
+      '<span class="kpp">'+k.portionen+' Portionen · für '+k.fuer.join(', ')+'</span></div>';
+  }).join('');
+}
+
+/* ---------- Bewertungen ---------- */
+function vorlieben(){
+  const sc={};
+  Object.values(S.plaene).forEach(p=>Object.values(p.tage||{}).forEach(e=>{
+    if(!e.rating||!e.rezeptId) return;
+    const r=rezept(e.rezeptId); if(!r) return;
+    sc[r.name]=(sc[r.name]||0)+(e.rating==='up'?1:-1);
+  }));
+  return {mag:Object.keys(sc).filter(n=>sc[n]>0),mied:Object.keys(sc).filter(n=>sc[n]<0)};
+}
+
+/* ---------- Rezeptwahl ---------- */
+let pickDatum=null, pickSlot='abend';
+function letzterFreierTag(d){
+  let x=addD(parse(d),-1),g=0;
+  while(istSchicht(iso(x))&&g++<10)x=addD(x,-1);
+  return iso(x);
+}
+function openPicker(d,slot){
+  pickDatum=d; pickSlot=slot||'abend';
+  document.getElementById('pickSuche').value='';
+  renderPicker();
+  document.getElementById('pick').classList.add('on');
+}
+function renderPicker(){
+  const q=(document.getElementById('pickSuche').value||'').toLowerCase();
+  const rest=document.getElementById('pickRest'); rest.innerHTML='';
+  if(pickSlot==='frueh'){
+    const sortiert=S.rezepte.slice().sort((a,b)=>{
+      const af=(a.tags||[]).includes('frühstück')?0:1, bf=(b.tags||[]).includes('frühstück')?0:1;
+      return af-bf||a.zeit-b.zeit;
+    });
+    document.getElementById('pickListe').innerHTML=sortiert
+      .filter(r=>!q||r.name.toLowerCase().includes(q))
+      .map(r=>'<button class="pk" data-pick="'+r.id+'"><span class="nm">'+r.name+'</span>'+
+        '<span class="mt">'+r.zeit+' min'+(protVon(r)?' · '+protVon(r)+' g P':'')+' · '+EUR(r.budget)+'</span></button>').join('');
+    return;
+  }
+  S.kuehlschrank.forEach(k=>{
+    if(k.geplantFuer&&k.geplantFuer!==pickDatum) return;
+    const a=kuehlAlter(k);
+    if(k.art==='rest'){
+      rest.innerHTML+='<button class="pk frost" data-pick="k:'+k.id+'"><span class="nm">Im Kühlschrank: '+k.rezeptName+'</span>'+
+        '<span class="mt">'+k.portionen+' Port. · '+(a<=0?'frisch':a===1?'von gestern':'vor '+a+' Tg')+'</span></button>';
+    }else{
+      rest.innerHTML+='<button class="pk frost" data-pick="n:'+k.id+'"><span class="nm">Nachholen: '+k.rezeptName+'</span>'+
+        '<span class="mt">Zutaten schon da</span></button>';
+    }
+  });
+  if(pickSlot==='mittag'){
+    const prev=iso(addD(parse(pickDatum),-1)), pe=planVon(prev).tage[prev];
+    if(!istSchicht(prev)&&pe&&pe.rezeptId){
+      const nm=(rezept(pe.rezeptId)||{}).name||pe.rezeptName;
+      if(nm) rest.innerHTML+='<button class="pk rest" data-pick="mrest"><span class="nm">Rest vom Abendessen gestern: '+nm+'</span><span class="mt">abends +'+(S.setup.pMittag||2)+' Port. kochen</span></button>';
+    }
+    const sortiert=S.rezepte.slice().sort((a,b)=>{
+      const am=(a.tags||[]).includes('mittag')?0:1, bm=(b.tags||[]).includes('mittag')?0:1;
+      return am-bm||a.zeit-b.zeit;
+    });
+    document.getElementById('pickListe').innerHTML=sortiert
+      .filter(r=>!q||r.name.toLowerCase().includes(q))
+      .map(r=>'<button class="pk" data-pick="'+r.id+'"><span class="nm">'+r.name+'</span>'+
+        '<span class="mt">'+r.zeit+' min'+(protVon(r)?' · '+protVon(r)+' g P':'')+' · '+EUR(r.budget)+'</span></button>').join('');
+    return;
+  }
+  if(istSchicht(pickDatum)){
+    const prev=iso(addD(parse(pickDatum),-1)), pe=getPlan().tage[prev];
+    if(!istSchicht(prev)&&pe&&pe.rezeptId){
+      const r=rezept(pe.rezeptId);
+      if(r) rest.innerHTML+='<button class="pk rest" data-pick="rest"><span class="nm">Rest vom Vorabend: '+r.name+'</span><span class="mt">+'+S.setup.pMit+' Port.</span></button>';
+    }
+  }else{
+    const prev=iso(addD(parse(pickDatum),-1)), pe=getPlan().tage[prev];
+    if(!istSchicht(prev)&&pe&&pe.rezeptId&&pe.quelle!=='doppelt'){
+      const r=rezept(pe.rezeptId);
+      if(r) rest.innerHTML+='<button class="pk rest" data-pick="doppelt"><span class="nm">Nochmal wie gestern: '+r.name+'</span><span class="mt">wird am Vortag mitgekocht</span></button>';
+    }
+  }
+  document.getElementById('pickListe').innerHTML=S.rezepte
+    .filter(r=>!q||r.name.toLowerCase().includes(q))
+    .map(r=>'<button class="pk" data-pick="'+r.id+'"><span class="nm">'+r.name+'</span>'+
+      '<span class="mt">'+r.zeit+' min'+(protVon(r)?' · '+protVon(r)+' g P':'')+' · '+EUR(r.budget)+'</span></button>').join('');
+}
+function pickChoose(val){
+  const p=getPlan();
+  if(pickSlot==='frueh'){
+    p.tage[pickDatum]=p.tage[pickDatum]||{};
+    p.tage[pickDatum].frueh={rezeptId:val,rezeptName:(rezept(val)||{}).name,quelle:'schnell'};
+    save(); renderPlan();
+    document.getElementById('pick').classList.remove('on'); return;
+  }
+  if(pickSlot==='mittag'){
+    p.tage[pickDatum]=p.tage[pickDatum]||{};
+    const tgt=p.tage[pickDatum];
+    if(val.startsWith('k:')||val.startsWith('n:')){
+      const k=S.kuehlschrank.find(x=>x.id===val.slice(2)); if(!k) return;
+      tgt.mittag={rezeptId:k.rezeptId,rezeptName:k.rezeptName,
+        quelle:val.startsWith('k:')?'kuehlschrank':'nachholen',kuehlId:k.id};
+      k.geplantFuer=pickDatum;
+    }else if(val==='mrest'){
+      const prev=iso(addD(parse(pickDatum),-1)), pe=planVon(prev).tage[prev];
+      if(!pe||!pe.rezeptId) return;
+      tgt.mittag={rezeptId:pe.rezeptId,rezeptName:(rezept(pe.rezeptId)||{}).name||pe.rezeptName,quelle:'rest'};
+    }else{
+      tgt.mittag={rezeptId:val,rezeptName:(rezept(val)||{}).name,quelle:'schnell'};
+    }
+    save(); renderPlan(); renderKuehl();
+    document.getElementById('pick').classList.remove('on'); return;
+  }
+  if(val.startsWith('k:')||val.startsWith('n:')){
+    const k=S.kuehlschrank.find(x=>x.id===val.slice(2)); if(!k) return;
+    const sc=istSchicht(pickDatum);
+    if(val.startsWith('k:')){
+      p.tage[pickDatum]={rezeptId:k.rezeptId,rezeptName:k.rezeptName,quelle:'kuehlschrank',kuehlId:k.id,
+        kochtag:null,hinweis:'Steht schon fertig im Kühlschrank.',gesperrt:true};
+    }else{
+      p.tage[pickDatum]={rezeptId:k.rezeptId,rezeptName:k.rezeptName,quelle:'nachholen',kuehlId:k.id,
+        kochtag:sc?letzterFreierTag(pickDatum):null,hinweis:'Zutaten sind schon eingekauft.',gesperrt:true};
+    }
+    k.geplantFuer=pickDatum;
+    save(); renderPlan(); renderKuehl();
+    document.getElementById('pick').classList.remove('on'); return;
+  }
+  if(val==='rest'||val==='doppelt'){
+    const prev=iso(addD(parse(pickDatum),-1)), pe=p.tage[prev];
+    p.tage[pickDatum]={rezeptId:pe.rezeptId,rezeptName:(rezept(pe.rezeptId)||{}).name,quelle:val,kochtag:null,
+      hinweis:'Wird am Vortag mitgekocht.',gesperrt:true};
+  }else{
+    const sc=istSchicht(pickDatum);
+    p.tage[pickDatum]={rezeptId:val,rezeptName:(rezept(val)||{}).name,quelle:sc?'mealprep':'frisch',
+      kochtag:sc?letzterFreierTag(pickDatum):null,hinweis:'',gesperrt:true};
+  }
+  save(); renderPlan();
+  document.getElementById('pick').classList.remove('on');
+}
+
+/* ---------- Tagesstatus ---------- */
+function setzeStatus(d,art){
+  const p=planVon(d), e=p.tage[d]; if(!e) return;
+  const sc=istSchicht(d);
+  if(art==='gekocht'){
+    e.status='gekocht';
+    if(e.kuehlId) S.kuehlschrank=S.kuehlschrank.filter(k=>k.id!==e.kuehlId);
+  }
+  if(art==='rest'){
+    const n=prompt('Wie viele Portionen sind übrig?','2');
+    if(n===null) return;
+    e.status='gekocht';
+    const id='k'+Math.random().toString(36).slice(2,9);
+    S.kuehlschrank.push({id,art:'rest',rezeptId:e.rezeptId,
+      rezeptName:(rezept(e.rezeptId)||{}).name||e.rezeptName||'?',
+      portionen:Math.max(1,Number(n)||1),gekochtAm:d});
+    e.restId=id;
+    if(e.kuehlId) S.kuehlschrank=S.kuehlschrank.filter(k=>k.id!==e.kuehlId);
+  }
+  if(art==='ausgefallen'){
+    e.status='ausgefallen';
+    const r=rezept(e.rezeptId);
+    if(e.quelle==='kuehlschrank'&&e.kuehlId){
+      const k=S.kuehlschrank.find(x=>x.id===e.kuehlId); if(k) delete k.geplantFuer;   // Rest bleibt im Pool
+    }else if(sc&&(e.quelle==='mealprep'||e.quelle==='rest')){
+      // Essen war schon gekocht, wurde aber nicht gegessen -> als Rest in den Kühlschrank
+      const id='k'+Math.random().toString(36).slice(2,9);
+      S.kuehlschrank.push({id,art:'rest',rezeptId:e.rezeptId,
+        rezeptName:(r||{}).name||e.rezeptName||'?',portionen:S.setup.pMit,
+        gekochtAm:e.kochtag||iso(addD(parse(d),-1))});
+      e.offenId=id;
+    }else if(r&&e.quelle!=='rest'&&e.quelle!=='doppelt'){
+      const id='k'+Math.random().toString(36).slice(2,9);
+      S.kuehlschrank.push({id,art:'ungekocht',rezeptId:e.rezeptId,rezeptName:r.name,
+        portionen:S.setup.pHaus,gekochtAm:d});
+      e.offenId=id;
+      if(r.zutaten.length&&confirm('Sind die Zutaten noch da? Dann nehme ich sie in den Vorrat auf, damit sie nicht nochmal auf der Einkaufsliste landen.')){
+        r.zutaten.forEach(z=>{ if(!S.vorrat.some(v=>v.toLowerCase()===z.name.toLowerCase())) S.vorrat.push(z.name); });
+      }
+    }
+  }
+  if(art==='reset'){
+    if(e.restId){S.kuehlschrank=S.kuehlschrank.filter(k=>k.id!==e.restId);delete e.restId;}
+    if(e.offenId){S.kuehlschrank=S.kuehlschrank.filter(k=>k.id!==e.offenId);delete e.offenId;}
+    delete e.status;
+  }
+  save(); renderPlan(); renderVorrat();
+}
+
+/* =========================================================
+   KI-Planung
+   ========================================================= */
+function legeNeuesRezeptAn(nr){
+  const n={id:'r'+Math.random().toString(36).slice(2,9),name:nr.name,
+    zeit:nr.zeit||30,basisPortionen:nr.basisPortionen||4,
+    tags:nr.tags||[],zutaten:(nr.zutaten||[]).map(z=>({
+      name:z.name,menge:Number(z.menge)||0,einheit:z.einheit||'g',
+      kategorie:KATS.includes(z.kategorie)?z.kategorie:'Sonstiges'})),
+    protein:Number(nr.protein)||null,
+    budget:[1,2,3].includes(Number(nr.budget))?Number(nr.budget):2,
+    schritte:nr.schritte||''};
+  S.rezepte.push(n); return n.id;
+}
+function stimmungAktiv(){ return S.stimmung||['ausgewogen']; }
+function letzteRezepte(){
+  const ids=[];
+  Object.keys(S.plaene).sort().slice(-3).forEach(k=>Object.values(S.plaene[k].tage||{}).forEach(e=>e.rezeptId&&ids.push(e.rezeptId)));
+  return [...new Set(ids)].map(id=>{const r=rezept(id);return r?r.name:null}).filter(Boolean);
+}
+async function generiere(){
+  const st=document.getElementById('genStatus');
+  const btn=document.getElementById('genBtn');
+  const mo=montag(weekOffset), p=getPlan();
+  const tage=[];
+  for(let i=0;i<7;i++){
+    const s=iso(addD(mo,i));
+    tage.push({datum:s,wochentag:WDL[parse(s).getDay()],dienst:istSchicht(s),
+      gesperrt:!!(p.tage[s]&&p.tage[s].gesperrt),
+      belegt:p.tage[s]&&p.tage[s].gesperrt?(rezept(p.tage[s].rezeptId)||{}).name||null:null});
+  }
+  const kh=kochHistorie();
+  const pool=S.rezepte.map(r=>{
+    const h=kh[r.id];
+    const o={id:r.id,name:r.name,tags:r.tags,zeit:r.zeit,budget:r.budget||2,
+      tageSeitGekocht:(h&&h.gekocht)?tageHer(h.gekocht):null};
+    if(r.fav) o.favorit=true;
+    return o;
+  });
+  const prompt=
+`Du planst die Essenswoche einer Familie in Deutschland. Antworte ausschließlich mit JSON, ohne Markdown und ohne Vorrede.
+
+RAHMEN
+- Haushalt: zwei Erwachsene, ein Kleinkind, ein Baby unterwegs. Der Planer trainiert 5x pro Woche CrossFit.
+- An Diensttagen ist er 24 Stunden bei der Feuerwehr; die Familie zu Hause versorgt sich an diesen Tagen selbst, es wird KEIN Familienessen geplant. Er braucht genau EIN Essen: ein Mittagessen zum Mitnehmen.
+  Dafür gibt es zwei erlaubte Wege:
+  "rest"     = das Abendessen des Vortags wird in größerer Menge gekocht. Nur möglich, wenn der Vortag KEIN Diensttag ist und ein Gericht hat, das kalt oder aufgewärmt gut schmeckt.
+  "mealprep" = ein eigenes Gericht, das an einem früheren Nicht-Diensttag der Woche vorgekocht wird. Feld "kochtag" mit Datum angeben.
+- An Nicht-Diensttagen: ein Abendessen für die Familie, alltagstauglich.
+${S.mittagPlanen?'- ZUSÄTZLICH an Nicht-Diensttagen: ein MITTAGESSEN für '+(S.setup.pMittag||2)+' Personen im Feld "mittag". Bevorzugt sehr schnell (max 15 Minuten, z.B. Skyr mit Reiswaffeln, Brot mit Hüttenkäse und Ei, Wraps, Quark mit Obst) und proteinreich – nutze Poolrezepte mit Tag "mittag" oder erfinde einfache neue mit Tag "mittag". ODER quelle "rest": Reste des Vorabend-Abendessens, nur wenn der Vortag frei ist und das Gericht aufgewärmt taugt; abends wird dann mehr gekocht. An Diensttagen mittag null lassen.':''}
+${S.fruehPlanen?'- ZUSÄTZLICH an Nicht-Diensttagen: ein FRÜHSTÜCK für '+(S.setup.pFrueh||2)+' Personen im Feld "fruehstueck". Sehr schnell (max 10 Minuten aktive Zeit) und proteinreich (Porridge, Quark-Bowl, Skyr, Rührei, Overnight Oats) – nutze Poolrezepte mit Tag "frühstück" oder erfinde einfache neue mit Tag "frühstück". Abwechslung über die Woche, aber 2-3 Wiederholungen sind okay. An Diensttagen fruehstueck null lassen.':''}
+${S.protBoost?'- PROTEIN-BOOST aktiv: Jedes Abendessen soll mindestens '+(S.protZiel||40)+' g Protein pro Portion liefern. Bemiss die Fleisch-, Fisch- oder pflanzliche Proteinmenge so, dass dieses Ziel rechnerisch erreicht wird. Liegt ein Poolrezept darunter, schreibe in den hinweis konkret, wie aufgestockt wird (z.B. "+200 g Hähnchen extra" oder "Magerquark-Dip dazu"). Neue Rezepte direkt so auslegen.':''}
+${S.trainExtra?'- Der Planer trainiert 5x pro Woche CrossFit: Mittags- und Frühstücksvorschläge für ihn ebenfalls proteinreich (mindestens 30 g pro Portion), Kohlenhydrate nicht zu knapp bemessen.':''}
+- Ausrichtung dieser Woche: ${stimmungAktiv().join(', ')}.
+- Saison: aktueller Monat ist ${['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'][new Date().getMonth()]}. Wähle saisonal passendes Gemüse und Obst.
+- Bewertungen aus früheren Wochen – gut angekommen: ${vorlieben().mag.join(', ')||'noch keine'}. Kam nicht an: ${vorlieben().mied.join(', ')||'nichts'} (bitte meiden).
+- Budget: Jedes Poolrezept hat ein budget-Feld (1 günstig, 2 mittel, 3 teuer). Maximal 1-2 Gerichte pro Woche dürfen budget 3 haben; gleiche das mit budget-1-Gerichten aus. Neue Rezepte bekommen ebenfalls eine ehrliche Einstufung.
+${S.doppelt?'- Erlaubt und erwünscht: EIN Gericht der Woche darf an zwei aufeinanderfolgenden freien Tagen stehen. Der zweite Tag bekommt quelle "doppelt" und dieselbe rezeptId wie der erste; gekocht wird alles am ersten Tag. Wähle dafür etwas, das aufgewärmt gewinnt (Eintopf, Curry, Auflauf).':'- Jeden Tag ein anderes Gericht. quelle "doppelt" nicht verwenden.'}
+- Abwechslung: diese Gerichte kamen zuletzt vor, bitte meiden: ${letzteRezepte().join(', ')||'keine'}.
+- Rotation: Jedes Poolrezept hat "tageSeitGekocht" – Tage seit dem letzten Mal, null heißt noch nie gekocht. Greif bevorzugt zu dem, was lange nicht dran war oder noch nie gekocht wurde. Was unter 21 Tagen liegt, nur nehmen, wenn es wirklich gut passt.
+- Favoriten: Rezepte mit "favorit": true sind erklärte Lieblinge. Die dürfen häufiger und auch trotz kurzem Abstand vorkommen; plane mindestens einen davon ein, wenn er zur Ausrichtung der Woche passt.
+${S.kuehlschrank.filter(k=>!k.geplantFuer).length?'- Im Kühlschrank wartet noch: '+S.kuehlschrank.filter(k=>!k.geplantFuer).map(k=>k.rezeptName+' ('+(k.art==='rest'?k.portionen+' Portionen fertig gekocht am '+k.gekochtAm:'Zutaten eingekauft, noch nicht gekocht')+')').join('; ')+'. Plane das möglichst früh in der Woche ein: fertig Gekochtes mit quelle "kuehlschrank", Ungekochtes mit quelle "nachholen", jeweils mit der genannten rezeptId. Fertige Reste maximal 2-3 Tage nach dem Kochdatum einplanen.':''}
+${document.getElementById('wunsch').value?'- Zusätzlicher Wunsch: '+document.getElementById('wunsch').value:''}
+
+TAGE
+${JSON.stringify(tage,null,1)}
+
+REZEPTPOOL (bevorzugt nutzen, ca. zwei Drittel der Woche)
+${JSON.stringify(pool)}
+
+AUSGABE
+{"plan":[{"datum":"YYYY-MM-DD","quelle":"frisch|rest|mealprep|doppelt|kuehlschrank|nachholen","kochtag":"YYYY-MM-DD oder null","hinweis":"kurzer Satz, warum das hier passt","alternativen":["0-2 weitere rezeptIds aus dem Pool als Tauschoption"],"rezeptId":"id aus dem Pool oder null","neuesRezept":null oder {"name":"","zeit":30,"basisPortionen":4,"tags":["aus: ${TAGS.join(', ')}"],"zutaten":[{"name":"","menge":0,"einheit":"aus: ${EINH.join(', ')}","kategorie":"aus: ${KATS.join(' | ')}"}],"protein":Zahl in g pro Portion,"budget":1|2|3,"schritte":"2-4 Sätze"}${S.mittagPlanen?',"mittag":null oder {"quelle":"schnell|rest","rezeptId":"id aus dem Pool oder null","neuesRezept":"wie oben oder null"}':''}${S.fruehPlanen?',"fruehstueck":null oder {"rezeptId":"id aus dem Pool oder null","neuesRezept":"wie oben oder null"}':''}}]}
+
+REGELN
+- Für jeden Tag genau ein Eintrag, auch für gesperrte Tage: dort quelle "frisch" und rezeptId beibehalten, nichts Neues erfinden.
+- Bei quelle "rest" gehört in rezeptId dasselbe Rezept wie am Vortag.
+- Entweder rezeptId ODER neuesRezept, nie beides.
+- Mengen im neuen Rezept immer für basisPortionen, in Gramm, Milliliter oder Stück.
+- alternativen: nur vorhandene Pool-IDs, die zum Tagestyp passen (an Diensttagen mitnahmetauglich). Bei quelle "rest" oder "doppelt" leer lassen. Nie neue Rezepte als Alternative erfinden.`;
+
+  btn.disabled=true; st.className='status work on'; st.textContent='Plane die Woche …';
+  try{
+    const headers={'Content-Type':'application/json'};
+    if(S.setup.apiKey){headers['x-api-key']=S.setup.apiKey;headers['anthropic-version']='2023-06-01';headers['anthropic-dangerous-direct-browser-access']='true';}
+    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers,
+      body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:4000,messages:[{role:'user',content:prompt}]})});
+    if(!res.ok) throw new Error('Antwort '+res.status);
+    const data=await res.json();
+    const txt=data.content.map(c=>c.text||'').join('').replace(/```json|```/g,'').trim();
+    const out=JSON.parse(txt.slice(txt.indexOf('{'),txt.lastIndexOf('}')+1));
+    out.plan.forEach(e=>{
+      const alt=p.tage[e.datum];
+      if(alt&&alt.gesperrt) return;
+      const altMittag=alt&&alt.mittag, altFrueh=alt&&alt.frueh;
+      let id=e.rezeptId;
+      if(e.neuesRezept&&e.neuesRezept.name) id=legeNeuesRezeptAn(e.neuesRezept);
+      if(!id) return;
+      let quelle=e.quelle||'frisch', kuehlId;
+      const kart=quelle==='kuehlschrank'?'rest':quelle==='nachholen'?'ungekocht':null;
+      if(kart){
+        const kk=S.kuehlschrank.find(k=>k.art===kart&&k.rezeptId===id&&!k.geplantFuer);
+        if(kk){kuehlId=kk.id;kk.geplantFuer=e.datum;} else quelle='frisch';
+      }
+      p.tage[e.datum]={rezeptId:id,rezeptName:(rezept(id)||{}).name,quelle,kuehlId,kochtag:e.kochtag||null,hinweis:e.hinweis||'',
+        alternativen:(e.alternativen||[]).filter(x=>x!==id&&S.rezepte.some(r=>r.id===x)).slice(0,2),gesperrt:false};
+      if(S.mittagPlanen&&e.mittag&&!istSchicht(e.datum)){
+        if(e.mittag.quelle==='rest'){
+          const prev=iso(addD(parse(e.datum),-1)), pd=planVon(prev).tage[prev];
+          if(pd&&pd.rezeptId&&!istSchicht(prev))
+            p.tage[e.datum].mittag={rezeptId:pd.rezeptId,rezeptName:(rezept(pd.rezeptId)||{}).name,quelle:'rest'};
+        }else{
+          let mid=e.mittag.rezeptId;
+          if(e.mittag.neuesRezept&&e.mittag.neuesRezept.name) mid=legeNeuesRezeptAn(e.mittag.neuesRezept);
+          if(mid&&S.rezepte.some(r=>r.id===mid))
+            p.tage[e.datum].mittag={rezeptId:mid,rezeptName:(rezept(mid)||{}).name,quelle:'schnell'};
+        }
+      }else if(altMittag){
+        p.tage[e.datum].mittag=altMittag;
+      }
+      if(S.fruehPlanen&&e.fruehstueck&&!istSchicht(e.datum)){
+        let fid=e.fruehstueck.rezeptId;
+        if(e.fruehstueck.neuesRezept&&e.fruehstueck.neuesRezept.name) fid=legeNeuesRezeptAn(e.fruehstueck.neuesRezept);
+        if(fid&&S.rezepte.some(r=>r.id===fid))
+          p.tage[e.datum].frueh={rezeptId:fid,rezeptName:(rezept(fid)||{}).name,quelle:'schnell'};
+      }else if(altFrueh){
+        p.tage[e.datum].frueh=altFrueh;
+      }
+    });
+    save(); renderPlan(); renderRezepte(); renderKuehl();
+    st.className='status on'; st.style.background='var(--paper-2)'; st.textContent='Plan steht. Tage sperren, die du behalten willst.';
+    setTimeout(()=>{st.className='status';st.style.background='';},4000);
+  }catch(err){
+    st.className='status bad on';
+    st.textContent='Hat nicht geklappt: '+err.message+(S.setup.apiKey?'':' – wenn du die Datei selbst hostest, trag unter Schicht einen API-Key ein.');
+  }finally{btn.disabled=false;}
+}
+
+/* =========================================================
+   Rezept-Editor
+   ========================================================= */
+let editId=null;
+function oeffneEditor(id){
+  editId=id;
+  const r=id?rezept(id):{name:'',zeit:30,basisPortionen:4,tags:[],zutaten:[],schritte:''};
+  document.getElementById('eName').value=r.name;
+  document.getElementById('eZeit').value=r.zeit;
+  document.getElementById('ePort').value=r.basisPortionen;
+  document.getElementById('eSchritte').value=r.schritte||'';
+  document.getElementById('eBud').value=r.budget||2;
+  document.getElementById('eAuto').checked=!r.nwManuell;
+  const nm=r.nwManuell||{};
+  document.getElementById('eKcal').value=nm.kcal||'';
+  document.getElementById('eProt').value=nm.protein||r.protein||'';
+  document.getElementById('eKh').value=nm.kh||'';
+  document.getElementById('eFett').value=nm.fett||'';
+  const es=document.getElementById('eStatus'); es.className='status'; es.style.background='';
+  const tb=document.getElementById('eTags'); tb.innerHTML='';
+  TAGS.forEach(t=>{
+    const b=document.createElement('button');b.className='chip';b.type='button';b.textContent=t;
+    b.setAttribute('aria-pressed',r.tags.includes(t));
+    b.onclick=()=>b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!=='true');
+    tb.appendChild(b);
+  });
+  const zb=document.getElementById('eZutaten'); zb.innerHTML='';
+  (r.zutaten.length?r.zutaten:[{name:'',menge:'',einheit:'g',kategorie:'Sonstiges'}]).forEach(z=>zeile(z));
+  document.getElementById('eDel').style.display=id?'':'none';
+  editFav=!!r.fav; malFav();
+  updateNW();
+  document.getElementById('sheet').classList.add('on');
+}
+let editFav=false;
+function malFav(){
+  const b=document.getElementById('eFav');
+  b.textContent=editFav?'★ Favorit':'☆ Favorit';
+  b.setAttribute('aria-pressed',editFav);
+}
+function editorRezept(){
+  return {name:document.getElementById('eName').value.trim(),
+    basisPortionen:Number(document.getElementById('ePort').value)||4,
+    zutaten:[...document.querySelectorAll('#eZutaten .zeile')].map(z=>({
+      name:z.querySelector('.zn').value.trim(),menge:Number(z.querySelector('.zm').value)||0,
+      einheit:z.querySelector('.ze').value,kategorie:z.querySelector('.zk').value})).filter(z=>z.name)};
+}
+function updateNW(){
+  const auto=document.getElementById('eAuto').checked;
+  document.getElementById('eManuell').style.display=auto?'none':'grid';
+  let n;
+  if(auto){ n=nwBerechnen(editorRezept()); }
+  else n={kcal:Number(document.getElementById('eKcal').value)||0,
+    protein:Number(document.getElementById('eProt').value)||0,
+    kh:Number(document.getElementById('eKh').value)||0,
+    fett:Number(document.getElementById('eFett').value)||0};
+  document.getElementById('eNW').innerHTML=
+    '<div><b>'+(n.kcal||'–')+'</b><span>kcal</span></div>'+
+    '<div><b>'+(n.protein||'–')+'</b><span>Protein g</span></div>'+
+    '<div><b>'+(n.kh||'–')+'</b><span>KH g</span></div>'+
+    '<div><b>'+(n.fett||'–')+'</b><span>Fett g</span></div>';
+  document.getElementById('eNWHint').textContent=auto
+    ?(n.unbekannt&&n.unbekannt.length
+      ?'Nicht in der Nährwert-Tabelle (zählt als 0): '+n.unbekannt.join(', ')
+      :'Wird live aus den Zutaten berechnet – ändert sich automatisch mit.')
+    :'Manuell eingetragen.';
+}
+function zeile(z){
+  const d=document.createElement('div');d.className='zeile';
+  d.innerHTML='<input type="text" class="zn" placeholder="Zutat" value="'+(z.name||'')+'">'+
+    '<input type="number" class="zm" placeholder="0" value="'+(z.menge??'')+'" step="0.5">'+
+    '<select class="ze">'+EINH.map(e=>'<option'+(e===z.einheit?' selected':'')+'>'+e+'</option>').join('')+'</select>'+
+    '<select class="zk" style="grid-column:1/-1">'+KATS.map(k=>'<option'+(k===z.kategorie?' selected':'')+'>'+k+'</option>').join('')+'</select>';
+  document.getElementById('eZutaten').appendChild(d);
+}
+function speichereRezept(){
+  const zut=[...document.querySelectorAll('#eZutaten .zeile')].map(z=>({
+    name:z.querySelector('.zn').value.trim(),menge:Number(z.querySelector('.zm').value)||0,
+    einheit:z.querySelector('.ze').value,kategorie:z.querySelector('.zk').value
+  })).filter(z=>z.name);
+  const obj={
+    name:document.getElementById('eName').value.trim()||'Ohne Namen',
+    zeit:Number(document.getElementById('eZeit').value)||30,
+    basisPortionen:Number(document.getElementById('ePort').value)||4,
+    tags:[...document.querySelectorAll('#eTags .chip')].filter(c=>c.getAttribute('aria-pressed')==='true').map(c=>c.textContent),
+    zutaten:zut,
+    budget:Number(document.getElementById('eBud').value)||2,
+    fav:editFav,
+    schritte:document.getElementById('eSchritte').value.trim()
+  };
+  if(document.getElementById('eAuto').checked){
+    obj.nwManuell=null;
+    obj.protein=nwBerechnen(obj).protein||null;
+  }else{
+    obj.nwManuell={kcal:Number(document.getElementById('eKcal').value)||0,
+      protein:Number(document.getElementById('eProt').value)||0,
+      kh:Number(document.getElementById('eKh').value)||0,
+      fett:Number(document.getElementById('eFett').value)||0};
+    obj.protein=obj.nwManuell.protein||null;
+  }
+  if(editId){
+    const r0=rezept(editId); Object.assign(r0,obj);
+    if(!obj.nwManuell) delete r0.nwManuell;
+  }
+  else{obj.id='r'+Math.random().toString(36).slice(2,9); if(!obj.nwManuell) delete obj.nwManuell; S.rezepte.push(obj);}
+  save();renderRezepte();renderPlan();document.getElementById('sheet').classList.remove('on');
+}
+
+/* =========================================================
+   Kochmodus
+   ========================================================= */
+let cookR=null,cookPortN=4,cookStepIdx=0,cookTimers=[],cookTick=null,cookLock=null;
+function cookSchritte(r){
+  const raw=(r.schritte||'').replace(/\s+/g,' ').trim();
+  if(!raw) return ['Keine Zubereitung hinterlegt – Rezept öffnen und Schritte ergänzen.'];
+  return (raw.match(/[^.!?]+[.!?]?/g)||[raw]).map(s=>s.trim()).filter(s=>s.length>1);
+}
+function stepTimer(txt){
+  const m=txt.match(/(\d+)\s*(?:bis|–|-)?\s*(\d+)?\s*(minuten|min\b|stunden|std\b)/i);
+  if(!m) return 0;
+  const n=Number(m[2]||m[1]);
+  return /st/i.test(m[3])?n*3600:n*60;
+}
+function openCook(id,portionen){
+  const r=rezept(id); if(!r) return;
+  cookR=r; cookPortN=portionen||r.basisPortionen||4; cookStepIdx=0;
+  cookTimers=cookSchritte(r).map(t=>({dauer:stepTimer(t),rest:stepTimer(t),lauf:false}));
+  document.getElementById('cook').classList.add('on');
+  if(navigator.wakeLock){navigator.wakeLock.request('screen').then(l=>cookLock=l).catch(()=>{});}
+  if(!cookTick) cookTick=setInterval(cookTicker,1000);
+  renderCook();
+}
+function closeCook(){
+  document.getElementById('cook').classList.remove('on');
+  if(cookTick){clearInterval(cookTick);cookTick=null;}
+  if(cookLock){try{cookLock.release();}catch(e){} cookLock=null;}
+  cookR=null;
+}
+function cookTicker(){
+  let dirty=false;
+  cookTimers.forEach(t=>{
+    if(t.lauf&&t.rest>0){t.rest--;dirty=true;if(t.rest===0){t.lauf=false;piep();renderCook();}}
+  });
+  if(dirty) renderCookTimers();
+}
+function piep(){
+  try{
+    const ctx=new (window.AudioContext||window.webkitAudioContext)();
+    [0,.35,.7].forEach(off=>{
+      const o=ctx.createOscillator(),g=ctx.createGain();
+      o.connect(g);g.connect(ctx.destination);o.frequency.value=880;
+      g.gain.setValueAtTime(.4,ctx.currentTime+off);
+      g.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+off+.3);
+      o.start(ctx.currentTime+off);o.stop(ctx.currentTime+off+.32);
+    });
+  }catch(e){}
+  if(navigator.vibrate) navigator.vibrate([300,150,300]);
+}
+const tfmt=s=>Math.floor(s/60)+':'+String(s%60).padStart(2,'0');
+function renderCook(){
+  if(!cookR) return;
+  document.getElementById('cookName').textContent=cookR.name;
+  document.getElementById('cookPort').textContent=cookPortN+' Port.';
+  const n=nwVon(cookR);
+  document.getElementById('cookMeta').textContent=cookR.zeit+' min'+(n&&n.protein?' · '+n.protein+' g Protein/Port.':'');
+  const f=cookPortN/(cookR.basisPortionen||4);
+  const steps=cookSchritte(cookR);
+  let h='<details class="cookzut"'+(cookStepIdx===0?' open':'')+'><summary>Zutaten für '+cookPortN+' Portionen</summary>';
+  cookR.zutaten.forEach(z=>{
+    const m=Math.round(z.menge*f*10)/10;
+    h+='<div class="item"><span class="nm">'+esc(z.name)+'</span><span class="qt">'+m+' '+z.einheit+'</span></div>';
+  });
+  h+='</details>';
+  steps.forEach((s,i)=>{
+    const t=cookTimers[i];
+    h+='<div class="cstep'+(i===cookStepIdx?' now':i<cookStepIdx?' fin':'')+'" data-step="'+i+'">'+
+      '<span class="no">Schritt '+(i+1)+' von '+steps.length+'</span><p>'+esc(s)+'</p>';
+    if(t&&t.dauer){
+      h+='<div class="timerbar"><span class="tdisp'+(t.rest===0?' ring':'')+'" data-td="'+i+'">'+tfmt(t.rest)+'</span>'+
+        '<button class="btn ghost sm" data-tstart="'+i+'">'+(t.lauf?'Pause':t.rest===0?'Nochmal':t.rest<t.dauer?'Weiter':'Timer starten')+'</button>'+
+        (t.rest<t.dauer&&t.rest>0?'<button class="btn ghost sm" data-treset="'+i+'">Zurücksetzen</button>':'')+'</div>';
+    }
+    h+='</div>';
+  });
+  document.getElementById('cookBody').innerHTML=h;
+  document.getElementById('cookNext').textContent=cookStepIdx>=steps.length-1?'Fertig':'Schritt erledigt';
+  const now=document.querySelector('.cstep.now');
+  if(now) now.scrollIntoView({block:'nearest',behavior:'smooth'});
+}
+function renderCookTimers(){
+  cookTimers.forEach((t,i)=>{
+    const el=document.querySelector('[data-td="'+i+'"]');
+    if(el) el.textContent=tfmt(t.rest);
+  });
+}
+document.getElementById('cookClose').onclick=closeCook;
+document.getElementById('cookMinus').onclick=()=>{cookPortN=Math.max(1,cookPortN-1);renderCook();};
+document.getElementById('cookPlus').onclick=()=>{cookPortN++;renderCook();};
+document.getElementById('cookPrev').onclick=()=>{if(cookStepIdx>0){cookStepIdx--;renderCook();}};
+document.getElementById('cookNext').onclick=()=>{
+  if(!cookR) return;
+  if(cookStepIdx<cookSchritte(cookR).length-1){cookStepIdx++;renderCook();}
+  else closeCook();
+};
+document.getElementById('cookBody').onclick=e=>{
+  const st=e.target.closest('[data-tstart]');
+  if(st){const t=cookTimers[Number(st.dataset.tstart)];
+    if(t.lauf){t.lauf=false;}else{if(t.rest===0)t.rest=t.dauer;t.lauf=true;}
+    renderCook(); return;}
+  const tr=e.target.closest('[data-treset]');
+  if(tr){const t=cookTimers[Number(tr.dataset.treset)];t.rest=t.dauer;t.lauf=false;renderCook();return;}
+  if(e.target.closest('summary')) return;
+  const cs=e.target.closest('.cstep');
+  if(cs){cookStepIdx=Number(cs.dataset.step);renderCook();}
+};
+
+/* =========================================================
+   Drag & Drop im Wochenplan
+   ========================================================= */
+let drag=null;
+function dragCleanup(){
+  if(!drag) return;
+  drag.ghost.remove();
+  drag.blk.classList.remove('dragsrc');
+  document.body.classList.remove('dragging');
+  document.querySelectorAll('.mealblock.dragover').forEach(x=>x.classList.remove('dragover'));
+  drag=null;
+}
+document.getElementById('planListe').addEventListener('pointerdown',ev=>{
+  const g=ev.target.closest('[data-grip]'); if(!g) return;
+  const blk=g.closest('.mealblock'); if(!blk) return;
+  ev.preventDefault();
+  const rect=blk.getBoundingClientRect();
+  const ghost=blk.cloneNode(true);
+  ghost.className='mealblock draghost';
+  ghost.style.width=Math.min(rect.width,420)+'px';
+  document.body.appendChild(ghost);
+  drag={slot:blk.dataset.slot,von:blk.dataset.d,ghost,blk,ziel:null,
+    dx:ev.clientX-rect.left,dy:ev.clientY-rect.top};
+  blk.classList.add('dragsrc');
+  document.body.classList.add('dragging');
+  ghost.style.left=(ev.clientX-drag.dx)+'px';
+  ghost.style.top=(ev.clientY-drag.dy)+'px';
+});
+window.addEventListener('pointermove',ev=>{
+  if(!drag) return;
+  ev.preventDefault();
+  drag.ghost.style.left=(ev.clientX-drag.dx)+'px';
+  drag.ghost.style.top=(ev.clientY-drag.dy)+'px';
+  drag.ghost.style.display='none';
+  const under=document.elementFromPoint(ev.clientX,ev.clientY);
+  drag.ghost.style.display='';
+  const ziel=under&&under.closest?under.closest('.mealblock'):null;
+  document.querySelectorAll('.mealblock.dragover').forEach(x=>x.classList.remove('dragover'));
+  if(ziel&&ziel!==drag.blk&&ziel.dataset.slot===drag.slot&&ziel.dataset.d!==drag.von){
+    ziel.classList.add('dragover'); drag.ziel=ziel.dataset.d;
+  }else drag.ziel=null;
+  if(ev.clientY<80) window.scrollBy(0,-14);
+  else if(ev.clientY>innerHeight-80) window.scrollBy(0,14);
+},{passive:false});
+window.addEventListener('pointerup',()=>{
+  if(!drag) return;
+  const {slot,von,ziel}=drag;
+  dragCleanup();
+  if(ziel) tauscheTage(slot,von,ziel);
+});
+window.addEventListener('pointercancel',dragCleanup);
+
+const ABF=['rezeptId','rezeptName','quelle','kuehlId','kochtag','hinweis','gesperrt','status','rating','restId','offenId','alternativen'];
+function abendPaket(e){const o={};ABF.forEach(k=>{if(e&&e[k]!==undefined)o[k]=e[k];});return o;}
+function abendLoeschen(e){ABF.forEach(k=>delete e[k]);}
+function normQuelle(o,ziel){
+  if(!o.rezeptId) return o;
+  if(o.quelle==='rest'||o.quelle==='doppelt'){o.quelle='frisch';o.kochtag=null;o.hinweis='Verschoben – wird jetzt an diesem Tag frisch gekocht.';}
+  if(o.quelle==='mealprep'&&!istSchicht(ziel)){o.quelle='frisch';o.kochtag=null;}
+  if(o.quelle==='frisch'&&istSchicht(ziel)){o.quelle='mealprep';o.kochtag=letzterFreierTag(ziel);o.hinweis='Verschoben auf einen Diensttag – wird am '+fmt(parse(o.kochtag))+' vorgekocht.';}
+  if(o.kuehlId){const k=S.kuehlschrank.find(x=>x.id===o.kuehlId);if(k)k.geplantFuer=ziel;}
+  return o;
+}
+function tauscheTage(slot,d1,d2){
+  const p=getPlan();
+  p.tage[d1]=p.tage[d1]||{}; p.tage[d2]=p.tage[d2]||{};
+  const e1=p.tage[d1], e2=p.tage[d2];
+  if(slot==='abend'){
+    const a=normQuelle(abendPaket(e1),d2), b=normQuelle(abendPaket(e2),d1);
+    abendLoeschen(e1); abendLoeschen(e2);
+    Object.assign(e2,a); Object.assign(e1,b);
+  }else{
+    const key=slot==='mittag'?'mittag':'frueh';
+    const a=e1[key], b=e2[key];
+    [a,b].forEach(x=>{if(x&&x.quelle==='rest')x.quelle='schnell';});
+    if(a&&a.kuehlId){const k=S.kuehlschrank.find(x=>x.id===a.kuehlId);if(k)k.geplantFuer=d2;}
+    if(b&&b.kuehlId){const k=S.kuehlschrank.find(x=>x.id===b.kuehlId);if(k)k.geplantFuer=d1;}
+    if(a)e2[key]=a; else delete e2[key];
+    if(b)e1[key]=b; else delete e1[key];
+  }
+  if(!Object.keys(p.tage[d1]).length) delete p.tage[d1];
+  if(!Object.keys(p.tage[d2]).length) delete p.tage[d2];
+  save(); renderPlan(); renderKuehl();
+}
+
+/* =========================================================
+   Verdrahtung
+   ========================================================= */
+function tabTo(t){
+  document.querySelectorAll('.tab').forEach(b=>b.setAttribute('aria-selected',b.dataset.t===t));
+  document.querySelectorAll('section').forEach(s=>s.classList.toggle('on',s.id==='s-'+t));
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function save(){ Store.save(S); }
+
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>tabTo(b.dataset.t));
+document.getElementById('wPrev').onclick=()=>{weekOffset--;renderPlan();};
+document.getElementById('wNext').onclick=()=>{weekOffset++;renderPlan();};
+document.getElementById('clearWeek').onclick=()=>{
+  const p=getPlan();Object.keys(p.tage).forEach(k=>{if(!p.tage[k].gesperrt)delete p.tage[k];});save();renderPlan();};
+document.getElementById('genBtn').onclick=generiere;
+document.getElementById('toListe').onclick=baueListe;
+document.getElementById('rebuildListe').onclick=baueListe;
+document.getElementById('copyListe').onclick=()=>{
+  navigator.clipboard.writeText(listeText());
+  const b=document.getElementById('copyListe');b.textContent='Kopiert';setTimeout(()=>b.textContent='Kopieren',1500);};
+document.getElementById('shareListe').onclick=async()=>{
+  const t=listeText(); if(!t) return;
+  if(navigator.share){ try{ await navigator.share({title:'Einkaufsliste',text:t}); }catch(e){} }
+  else{ navigator.clipboard.writeText(t); alert('Teilen wird auf diesem Gerät nicht unterstützt – Liste wurde kopiert.'); }
+};
+document.getElementById('pickClose').onclick=()=>document.getElementById('pick').classList.remove('on');
+document.getElementById('pickSuche').oninput=renderPicker;
+document.getElementById('pick').onclick=e=>{
+  const b=e.target.closest('button[data-pick]'); if(b) pickChoose(b.dataset.pick);
+};
+
+function tagAktion(e){
+  const b=e.target.closest('button[data-act]'); if(!b) return;
+  const d=b.dataset.d, p=getPlan();
+  if(b.dataset.act==='mswap'){openPicker(d,'mittag');}
+  if(b.dataset.act==='mclear'){
+    const e0=p.tage[d];
+    if(e0&&e0.mittag){
+      if(e0.mittag.kuehlId){const k=S.kuehlschrank.find(x=>x.id===e0.mittag.kuehlId); if(k) delete k.geplantFuer;}
+      delete e0.mittag;
+      if(!e0.rezeptId) delete p.tage[d];
+      save();renderPlan();renderKuehl();
+    }
+  }
+  if(b.dataset.act==='mok'){
+    const e0=p.tage[d];
+    if(e0&&e0.mittag){
+      e0.mittag.ok=true;
+      if(e0.mittag.kuehlId) S.kuehlschrank=S.kuehlschrank.filter(k=>k.id!==e0.mittag.kuehlId);
+      save();renderPlan();renderVorrat();
+    }
+  }
+  if(b.dataset.act==='fswap'){openPicker(d,'frueh');}
+  if(b.dataset.act==='fclear'){
+    const e0=p.tage[d];
+    if(e0&&e0.frueh){delete e0.frueh;if(!e0.rezeptId&&!e0.mittag)delete p.tage[d];save();renderPlan();}
+  }
+  if(b.dataset.act==='fok'){
+    const e0=p.tage[d];
+    if(e0&&e0.frueh){e0.frueh.ok=true;save();renderPlan();}
+  }
+  if(b.dataset.act==='cook'){
+    const e0=p.tage[d];
+    if(e0&&e0.rezeptId) openCook(e0.rezeptId,istSchicht(d)?S.setup.pMit:S.setup.pHaus);
+  }
+  if(b.dataset.act==='mcook'){
+    const e0=p.tage[d];
+    if(e0&&e0.mittag&&e0.mittag.rezeptId) openCook(e0.mittag.rezeptId,S.setup.pMittag||2);
+  }
+  if(b.dataset.act==='mshow'){
+    const e0=p.tage[d];
+    if(e0&&e0.mittag&&e0.mittag.rezeptId) oeffneEditor(e0.mittag.rezeptId);
+  }
+  if(b.dataset.act==='fcook'){
+    const e0=p.tage[d];
+    if(e0&&e0.frueh&&e0.frueh.rezeptId) openCook(e0.frueh.rezeptId,S.setup.pFrueh||2);
+  }
+  if(b.dataset.act==='fshow'){
+    const e0=p.tage[d];
+    if(e0&&e0.frueh&&e0.frueh.rezeptId) oeffneEditor(e0.frueh.rezeptId);
+  }
+  if(b.dataset.act==='stG'){setzeStatus(d,'gekocht');}
+  if(b.dataset.act==='stR'){setzeStatus(d,'rest');}
+  if(b.dataset.act==='stA'){setzeStatus(d,'ausgefallen');}
+  if(b.dataset.act==='stX'){setzeStatus(d,'reset');}
+  if(b.dataset.act==='lock'){p.tage[d].gesperrt=!p.tage[d].gesperrt;save();renderPlan();}
+  if(b.dataset.act==='clear'){
+    const e0=p.tage[d];
+    if(e0&&e0.kuehlId){const k=S.kuehlschrank.find(x=>x.id===e0.kuehlId); if(k) delete k.geplantFuer;}
+    if(e0&&e0.mittag&&e0.mittag.kuehlId){const k=S.kuehlschrank.find(x=>x.id===e0.mittag.kuehlId); if(k) delete k.geplantFuer;}
+    delete p.tage[d];save();renderPlan();renderKuehl();}
+  if(b.dataset.act==='show'){oeffneEditor(p.tage[d].rezeptId);}
+  if(b.dataset.act==='swap'){openPicker(d);}
+  if(b.dataset.act==='rup'){p.tage[d].rating=p.tage[d].rating==='up'?null:'up';save();renderPlan();}
+  if(b.dataset.act==='rdn'){p.tage[d].rating=p.tage[d].rating==='down'?null:'down';save();renderPlan();}
+  if(b.dataset.act==='alt'){
+    const e2=p.tage[d], neu=b.dataset.r;
+    e2.alternativen=(e2.alternativen||[]).filter(x=>x!==neu).concat(e2.rezeptId).filter(Boolean);
+    e2.rezeptId=neu; e2.rezeptName=(rezept(neu)||{}).name; e2.rating=null; save(); renderPlan();
+  }
+}
+document.getElementById('planListe').onclick=tagAktion;
+document.getElementById('heuteBox').onclick=tagAktion;
+document.getElementById('listeBody').onchange=e=>{
+  const c=e.target.closest('input[data-li]'); if(!c) return;
+  S.liste.items[Number(c.dataset.li)].erledigt=c.checked; save(); renderListe();
+};
+document.getElementById('listeBody').onclick=e=>{
+  const ed=e.target.closest('[data-ledit]');
+  if(ed){e.preventDefault();listEdit=Number(ed.dataset.ledit);renderListe();return;}
+  if(e.target.closest('[data-lcancel]')){listEdit=null;renderListe();return;}
+  const sv=e.target.closest('[data-lsave]');
+  if(sv){
+    const box=sv.closest('.iedit'), it=S.liste.items[Number(sv.dataset.lsave)];
+    it.name=box.querySelector('.len').value.trim()||it.name;
+    it.menge=Number(box.querySelector('.lem').value)||it.menge;
+    it.einheit=box.querySelector('.lee').value;
+    it.kategorie=box.querySelector('.lek').value;
+    it.bearbeitet=true; listEdit=null; save(); renderListe(); return;
+  }
+  const dl=e.target.closest('[data-ldel]');
+  if(dl){S.liste.items.splice(Number(dl.dataset.ldel),1);listEdit=null;save();renderListe();return;}
+};
+document.getElementById('addEinheit').innerHTML=EINH.map(u=>'<option'+(u==='Stück'?' selected':'')+'>'+u+'</option>').join('');
+document.getElementById('addKat').innerHTML=KATS.map(k=>'<option'+(k==='Sonstiges'?' selected':'')+'>'+k+'</option>').join('');
+document.getElementById('addItem').onclick=()=>{
+  const n=document.getElementById('addName').value.trim(); if(!n) return;
+  if(!S.liste) S.liste={woche:planKey(),items:[]};
+  S.liste.items.push({name:n,menge:Number(document.getElementById('addMenge').value)||1,
+    einheit:document.getElementById('addEinheit').value,kategorie:document.getElementById('addKat').value,
+    fuer:['selbst ergänzt'],manuell:true,vorhanden:false,erledigt:false});
+  document.getElementById('addName').value='';document.getElementById('addMenge').value='';
+  save();renderListe();
+};
+document.getElementById('rezListe').onclick=e=>{
+  const f=e.target.closest('button[data-fav]');
+  if(f){const r=rezept(f.dataset.fav); if(r){r.fav=!r.fav;save();renderRezepte();} return;}
+  const b=e.target.closest('button[data-edit]'); if(b) oeffneEditor(b.dataset.edit);};
+document.getElementById('rezSort').onchange=renderRezepte;
+document.getElementById('eFav').onclick=()=>{editFav=!editFav;malFav();};
+document.getElementById('dedupBtn').onclick=poolPruefen;
+document.getElementById('dedupBody').onclick=e=>{
+  const m=e.target.closest('button[data-merge]');
+  if(m){mergeGruppe(Number(m.dataset.merge));return;}
+  const s=e.target.closest('button[data-mskip]');
+  if(s){dedupGruppen[Number(s.dataset.mskip)].erledigt=true;renderDedup();return;}
+  const w=e.target.closest('button[data-mswapk]');
+  if(w){
+    const g=dedupGruppen[Number(w.dataset.mswapk)]; if(!g) return;
+    const alle=[g.behalten].concat(g.weg).filter(id=>rezept(id));
+    const i=(alle.indexOf(g.behalten)+1)%alle.length;
+    g.behalten=alle[i]; g.weg=alle.filter(id=>id!==g.behalten);
+    renderDedup();
+  }};
+document.getElementById('impRezBtn').onclick=rezeptAusText;
+document.getElementById('impRezClear').onclick=()=>{
+  document.getElementById('impRezText').value='';
+  document.getElementById('impRezStatus').className='status';};
+document.getElementById('ordListe').onclick=e=>{
+  const b=e.target.closest('button[data-ord]'); if(!b) return;
+  const r=katReihe(), i=Number(b.dataset.i), j=b.dataset.ord==='up'?i-1:i+1;
+  if(j<0||j>=r.length) return;
+  [r[i],r[j]]=[r[j],r[i]];
+  S.setup.ladenReihe=r; save(); renderOrd(); renderListe();};
+document.getElementById('ordReset').onclick=()=>{
+  S.setup.ladenReihe=null; save(); renderOrd(); renderListe();};
+document.getElementById('genRezBtn').onclick=generiereRezepte;
+document.getElementById('genRezStop').onclick=e=>{
+  genAbbruch=true; e.target.disabled=true;
+  document.getElementById('genRezStatus').textContent='Bricht nach dem laufenden Schwung ab …';};
+document.getElementById('genWunsch').addEventListener('keydown',e=>{if(e.key==='Enter')generiereRezepte();});
+document.getElementById('genRezNeu').onclick=e=>{
+  const del=e.target.closest('button[data-gdel]');
+  if(del){
+    const r=rezept(del.dataset.gdel); if(!r) return;
+    S.rezepte=S.rezepte.filter(x=>x.id!==del.dataset.gdel);
+    save(); renderRezepte(); del.closest('.rez').remove(); return;
+  }
+  const b=e.target.closest('button[data-edit]'); if(b) oeffneEditor(b.dataset.edit);};
+document.getElementById('newRez').onclick=()=>oeffneEditor(null);
+document.getElementById('rezSuche').oninput=renderRezepte;
+document.getElementById('eAddZ').onclick=()=>{zeile({name:'',menge:'',einheit:'g',kategorie:'Sonstiges'});updateNW();};
+document.getElementById('eZutaten').addEventListener('input',updateNW);
+document.getElementById('eZutaten').addEventListener('change',updateNW);
+['ePort','eKcal','eProt','eKh','eFett'].forEach(id=>{
+  document.getElementById(id).addEventListener('input',updateNW);
+});
+document.getElementById('eAuto').onchange=updateNW;
+document.getElementById('eCook').onclick=()=>{
+  if(!editId){alert('Erst speichern, dann kochen.');return;}
+  speichereRezept();
+  openCook(editId);
+};
+document.getElementById('eBoost').onclick=async()=>{
+  const st=document.getElementById('eStatus');
+  const cur=editorRezept();
+  cur.schritte=document.getElementById('eSchritte').value.trim();
+  if(!cur.zutaten.length){st.className='status bad on';st.textContent='Erst Zutaten eintragen.';return;}
+  st.className='status work on';st.style.background='';st.textContent='Rechne das Rezept proteinreicher …';
+  const prompt='Mach dieses Familienrezept proteinreicher (Ziel: mindestens '+(S.protZiel||40)+' g Protein pro Portion), ohne den Charakter zu verlieren. Erhöhe bevorzugt die Fleisch- bzw. Fisch-Menge so weit, dass das Ziel rechnerisch erreicht wird, oder ergänze passende Proteinquellen wie Magerquark, Skyr, Hülsenfrüchte oder Käse. Es soll kindgerecht und alltagstauglich bleiben. Antworte NUR mit JSON, ohne Markdown: {"zutaten":[{"name":"","menge":0,"einheit":"aus: '+EINH.join(', ')+'","kategorie":"aus: '+KATS.join(' | ')+'"}],"schritte":"angepasste Zubereitung in 2-5 Sätzen","aenderung":"1 Satz, was geändert wurde"}. Alle Mengen gelten für '+cur.basisPortionen+' Portionen. Rezept: '+JSON.stringify(cur);
+  try{
+    const headers={'Content-Type':'application/json'};
+    if(S.setup.apiKey){headers['x-api-key']=S.setup.apiKey;headers['anthropic-version']='2023-06-01';headers['anthropic-dangerous-direct-browser-access']='true';}
+    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers,
+      body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1500,messages:[{role:'user',content:prompt}]})});
+    if(!res.ok) throw new Error('Antwort '+res.status);
+    const data=await res.json();
+    const txt=data.content.map(c=>c.text||'').join('').replace(/```json|```/g,'').trim();
+    const out=JSON.parse(txt.slice(txt.indexOf('{'),txt.lastIndexOf('}')+1));
+    document.getElementById('eZutaten').innerHTML='';
+    (out.zutaten||[]).forEach(z=>zeile({name:z.name,menge:Number(z.menge)||0,
+      einheit:EINH.includes(z.einheit)?z.einheit:'g',
+      kategorie:KATS.includes(z.kategorie)?z.kategorie:'Sonstiges'}));
+    if(out.schritte) document.getElementById('eSchritte').value=out.schritte;
+    updateNW();
+    st.className='status on';st.style.background='var(--paper-2)';
+    st.textContent=(out.aenderung||'Angepasst.')+' Noch nicht gespeichert – erst prüfen, dann „Rezept speichern".';
+  }catch(err){
+    st.className='status bad on';st.style.background='';
+    st.textContent='Hat nicht geklappt: '+err.message;
+  }
+};
+document.getElementById('eSave').onclick=speichereRezept;
+document.getElementById('eDel').onclick=()=>{
+  let n=0;
+  Object.values(S.plaene).forEach(p=>Object.values(p.tage||{}).forEach(e=>{if(e.rezeptId===editId)n++;}));
+  const msg=n?'Rezept löschen? Es steckt noch in '+n+' Plan-Eintr'+(n===1?'ag':'ägen')+' – dort bleibt nur der Name stehen.':'Rezept löschen?';
+  if(!confirm(msg))return;
+  S.rezepte=S.rezepte.filter(r=>r.id!==editId);save();renderRezepte();
+  document.getElementById('sheet').classList.remove('on');};
+document.getElementById('sheetClose').onclick=()=>document.getElementById('sheet').classList.remove('on');
+
+document.getElementById('vorratAdd').onclick=()=>{
+  const v=document.getElementById('vorratNeu').value.trim();
+  if(v){S.vorrat.push(v);document.getElementById('vorratNeu').value='';save();renderVorrat();}};
+document.getElementById('vorratListe').onclick=e=>{
+  const b=e.target.closest('button[data-vdel]'); if(!b)return;
+  S.vorrat.splice(Number(b.dataset.vdel),1);save();renderVorrat();};
+document.getElementById('kuehlListe').onclick=e=>{
+  const del=e.target.closest('button[data-kdel]');
+  if(del){S.kuehlschrank=S.kuehlschrank.filter(k=>k.id!==del.dataset.kdel);save();renderKuehl();return;}
+  const pl=e.target.closest('button[data-kplan]');
+  if(!pl) return;
+  const k=S.kuehlschrank.find(x=>x.id===pl.dataset.kplan); if(!k) return;
+  let d=addD(heute(),1), ziel=null;
+  for(let g=0;g<14;g++){const s=iso(d); if(!planVon(s).tage[s]){ziel=s;break;} d=addD(d,1);}
+  if(!ziel){alert('In den nächsten zwei Wochen ist kein leerer Tag im Plan.');return;}
+  const p2=planVon(ziel), sc=istSchicht(ziel);
+  p2.tage[ziel]= k.art==='rest'
+    ?{rezeptId:k.rezeptId,rezeptName:k.rezeptName,quelle:'kuehlschrank',kuehlId:k.id,kochtag:null,
+      hinweis:'Steht schon fertig im Kühlschrank.',gesperrt:true}
+    :{rezeptId:k.rezeptId,rezeptName:k.rezeptName,quelle:'nachholen',kuehlId:k.id,
+      kochtag:sc?letzterFreierTag(ziel):null,hinweis:'Zutaten sind schon eingekauft.',gesperrt:true};
+  k.geplantFuer=ziel;
+  save();renderPlan();renderKuehl();
+  alert(k.rezeptName+' für '+WDL[parse(ziel).getDay()]+' '+fmt(parse(ziel))+' eingeplant.');
+};
+
+['anker','intervalle','pHaus','pMit','pMittag','pFrueh','apiKey'].forEach(id=>{
+  document.getElementById(id).onchange=()=>{
+    S.setup.anker=document.getElementById('anker').value||S.setup.anker;
+    S.setup.intervalle=document.getElementById('intervalle').value.split(',').map(n=>parseInt(n,10)).filter(n=>n>0);
+    if(!S.setup.intervalle.length)S.setup.intervalle=[3,3,2,3,5,3,2];
+    S.setup.pHaus=Number(document.getElementById('pHaus').value)||3;
+    S.setup.pMit=Number(document.getElementById('pMit').value)||1;
+    S.setup.pMittag=Number(document.getElementById('pMittag').value)||2;
+    S.setup.pFrueh=Number(document.getElementById('pFrueh').value)||2;
+    S.setup.apiKey=document.getElementById('apiKey').value.trim();
+    save();renderKopf();renderSetup();renderPlan();
+  };
+});
+document.getElementById('expBtn').onclick=()=>{
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([JSON.stringify(S,null,1)],{type:'application/json'}));
+  a.download='familientisch-'+iso(heute())+'.json';a.click();};
+document.getElementById('impBtn').onclick=()=>document.getElementById('impFile').click();
+document.getElementById('impFile').onchange=e=>{
+  const f=e.target.files[0];if(!f)return;
+  const r=new FileReader();r.onload=()=>{try{S=JSON.parse(r.result);save();alles();}catch(x){alert('Datei nicht lesbar.');}};
+  r.readAsText(f);};
+document.getElementById('resetBtn').onclick=()=>{
+  if(confirm('Alle Rezepte, Pläne und Einstellungen löschen?')){S=leer();save();alles();}};
+
+function chipsBauen(){
+  const box=document.getElementById('stimmung');box.innerHTML='';
+  STIMMUNG.forEach(t=>{
+    const b=document.createElement('button');b.className='chip';b.textContent=t;
+    b.setAttribute('aria-pressed',stimmungAktiv().includes(t));
+    b.onclick=()=>{
+      let a=stimmungAktiv().slice();
+      a=a.includes(t)?a.filter(x=>x!==t):a.concat(t);
+      S.stimmung=a.length?a:['ausgewogen'];save();chipsBauen();};
+    box.appendChild(b);
+  });
+  const fb=document.getElementById('rezFilter');fb.innerHTML='';
+  TAGS.forEach(t=>{
+    const b=document.createElement('button');b.className='chip';b.textContent=t;
+    b.setAttribute('aria-pressed',(S.filter||[]).includes(t));
+    b.onclick=()=>{const f=(S.filter||[]).slice();
+      S.filter=f.includes(t)?f.filter(x=>x!==t):f.concat(t);save();chipsBauen();renderRezepte();};
+    fb.appendChild(b);
+  });
+  const dc=document.getElementById('dblChip');
+  dc.setAttribute('aria-pressed',!!S.doppelt);
+  dc.onclick=()=>{S.doppelt=!S.doppelt;save();chipsBauen();};
+  const mc=document.getElementById('mittagChip');
+  mc.setAttribute('aria-pressed',!!S.mittagPlanen);
+  mc.onclick=()=>{S.mittagPlanen=!S.mittagPlanen;save();chipsBauen();};
+  const fc=document.getElementById('fruehChip');
+  fc.setAttribute('aria-pressed',!!S.fruehPlanen);
+  fc.onclick=()=>{S.fruehPlanen=!S.fruehPlanen;save();chipsBauen();renderPlan();};
+  const pc=document.getElementById('protChip');
+  pc.setAttribute('aria-pressed',!!S.protBoost);
+  pc.onclick=()=>{S.protBoost=!S.protBoost;save();chipsBauen();};
+  const tc=document.getElementById('trainChip');
+  tc.setAttribute('aria-pressed',!!S.trainExtra);
+  tc.onclick=()=>{S.trainExtra=!S.trainExtra;save();chipsBauen();};
+  const pz=document.getElementById('protZiel');
+  pz.value=S.protZiel||40;
+  pz.onchange=()=>{S.protZiel=Number(pz.value)||40;save();};
+}
+function alles(){renderKopf();chipsBauen();renderPlan();renderListe();renderRezepte();renderVorrat();renderSetup();}
+
+function seedMittag(){
+  const r=(name,zeit,port,prot,zut,schritte)=>({
+    id:'m'+Math.random().toString(36).slice(2,9),name,zeit,basisPortionen:port,protein:prot,budget:1,
+    tags:['mittag','schnell','proteinreich'],schritte,
+    zutaten:zut.map(([n,m,e,k])=>({name:n,menge:m,einheit:e,kategorie:k}))});
+  return [
+    r('Reiswaffeln mit Skyr & Beeren',5,2,28,[
+      ['Skyr natur',500,'g','Molkerei & Eier'],['Reiswaffeln',8,'Stück','Trocken & Konserven'],
+      ['Beeren (frisch oder TK)',250,'g','Tiefkühl'],['Honig',2,'TL','Trocken & Konserven']],
+      'Skyr mit etwas Honig verrühren, auf die Reiswaffeln streichen oder als Bowl anrichten, Beeren dazu.'),
+    r('Vollkornbrot mit Hüttenkäse & Ei',10,2,30,[
+      ['Vollkornbrot',4,'Stück','Backwaren'],['Hüttenkäse',300,'g','Molkerei & Eier'],
+      ['Eier',4,'Stück','Molkerei & Eier'],['Schnittlauch',1,'Bund','Obst & Gemüse']],
+      'Eier kochen oder als Spiegelei braten. Brot mit Hüttenkäse bestreichen, Ei darauf, Schnittlauch drüber, Pfeffer.'),
+    r('Thunfisch-Wraps',10,2,32,[
+      ['Tortilla-Wraps',4,'Stück','Backwaren'],['Thunfisch in Wasser',2,'Dose','Trocken & Konserven'],
+      ['Frischkäse',100,'g','Molkerei & Eier'],['Salatgurke',1,'Stück','Obst & Gemüse'],
+      ['Mais',1,'Dose','Trocken & Konserven']],
+      'Wraps mit Frischkäse bestreichen, abgetropften Thunfisch, Gurkenstreifen und Mais darauf, einrollen.'),
+    r('Magerquark mit Banane & Walnüssen',5,2,30,[
+      ['Magerquark',500,'g','Molkerei & Eier'],['Banane',2,'Stück','Obst & Gemüse'],
+      ['Walnüsse',40,'g','Trocken & Konserven'],['Zimt',1,'TL','Gewürze & Öl']],
+      'Quark mit einem Schluck Milch oder Wasser cremig rühren, Banane in Scheiben dazu, Nüsse und Zimt drüber.'),
+    r('Rührei mit Brot & Tomaten',10,2,26,[
+      ['Eier',6,'Stück','Molkerei & Eier'],['Vollkornbrot',4,'Stück','Backwaren'],
+      ['Tomaten',2,'Stück','Obst & Gemüse'],['Butter',20,'g','Molkerei & Eier']],
+      'Eier verquirlen, in Butter stocken lassen, salzen und pfeffern. Mit Brot und Tomatenscheiben servieren.')
+  ];
+}
+
+function seedFrueh(){
+  const r=(name,zeit,port,zut,schritte)=>({
+    id:'f'+Math.random().toString(36).slice(2,9),name,zeit,basisPortionen:port,budget:1,
+    tags:['frühstück','schnell','proteinreich'],schritte,
+    zutaten:zut.map(([n,m,e,k])=>({name:n,menge:m,einheit:e,kategorie:k}))});
+  return [
+    r('Porridge mit Beeren & Skyr',10,2,[
+      ['Haferflocken',100,'g','Trocken & Konserven'],['Milch',400,'ml','Molkerei & Eier'],
+      ['Skyr natur',200,'g','Molkerei & Eier'],['Beeren (frisch oder TK)',150,'g','Tiefkühl'],
+      ['Honig',2,'TL','Trocken & Konserven']],
+      'Haferflocken in Milch aufkochen und 5 Minuten quellen lassen. Skyr unterrühren, Beeren und Honig obendrauf.'),
+    r('Rührei auf Vollkornbrot',10,2,[
+      ['Eier',5,'Stück','Molkerei & Eier'],['Vollkornbrot',4,'Stück','Backwaren'],
+      ['Butter',15,'g','Molkerei & Eier'],['Schnittlauch',1,'Bund','Obst & Gemüse']],
+      'Eier verquirlen und in Butter bei mittlerer Hitze stocken lassen. Auf dem Brot anrichten, Schnittlauch darüber.'),
+    r('Quark-Bowl mit Banane & Nüssen',5,2,[
+      ['Magerquark',400,'g','Molkerei & Eier'],['Banane',2,'Stück','Obst & Gemüse'],
+      ['Walnüsse',30,'g','Trocken & Konserven'],['Honig',2,'TL','Trocken & Konserven'],
+      ['Zimt',1,'TL','Gewürze & Öl']],
+      'Quark mit einem Schluck Milch cremig rühren. Banane in Scheiben darauf, Nüsse, Honig und Zimt darüber.'),
+    r('Overnight Oats mit Apfelmus',5,2,[
+      ['Haferflocken',100,'g','Trocken & Konserven'],['Naturjoghurt',300,'g','Molkerei & Eier'],
+      ['Milch',150,'ml','Molkerei & Eier'],['Apfelmus',150,'g','Trocken & Konserven'],
+      ['Zimt',1,'TL','Gewürze & Öl']],
+      'Am Vorabend alles verrühren und über Nacht in den Kühlschrank stellen. Morgens mit Apfelmus und Zimt servieren.')
+  ];
+}
+
+(async()=>{ S=await Store.load()||leer(); if(!S.setup)S=leer(); if(!S.kuehlschrank)S.kuehlschrank=[];
+  if(!S.setup.pMittag)S.setup.pMittag=2;
+  if(!S.setup.pFrueh)S.setup.pFrueh=2;
+  if(!S.rezepte.some(r=>(r.tags||[]).includes('mittag'))) S.rezepte.push(...seedMittag());
+  if(!S.rezepte.some(r=>(r.tags||[]).includes('frühstück'))) S.rezepte.push(...seedFrueh());
+  alles();
+  if('serviceWorker' in navigator && location.protocol==='https:'){
+    navigator.serviceWorker.register('sw.js').catch(()=>{});
+  }
+})();
+</script>
+</body>
+</html>
